@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1a2b4a">
+  <title>相談予約（人事・総務担当者様向け） | makes-momo</title>
+  <style>
+    :root {
+      --mm-primary: #1a2b4a;
+      --mm-accent: #2e4a7a;
+      --mm-light: #e8edf5;
+      --mm-text: #1a2b4a;
+      --mm-muted: rgba(26, 43, 74, 0.62);
+      --mm-border: #c5d0e3;
+      --mm-white: #ffffff;
+      --mm-radius: 12px;
+      --mm-shadow: 0 4px 20px rgba(26, 43, 74, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", sans-serif;
+      color: var(--mm-text);
+      background: linear-gradient(165deg, var(--mm-light) 0%, #f2f5fa 45%, #e8edf5 100%);
+      line-height: 1.6;
+      padding: 1.25rem;
+    }
+
+    .wrap {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+
+    header h1 {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.35rem, 4vw, 1.65rem);
+      font-weight: 700;
+      color: var(--mm-primary);
+      letter-spacing: 0.02em;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--mm-muted);
+    }
+
+    .brand {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--mm-primary);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      background: var(--mm-white);
+      border-radius: var(--mm-radius);
+      box-shadow: var(--mm-shadow);
+      border: 1px solid var(--mm-border);
+      padding: clamp(1.25rem, 4vw, 1.75rem);
+    }
+
+    .field {
+      margin-bottom: 1.15rem;
+    }
+
+    .field:last-of-type {
+      margin-bottom: 1.35rem;
+    }
+
+    label,
+    .label-block {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--mm-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .optional {
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--mm-muted);
+    }
+
+    .field-note {
+      margin: 0 0 0.85rem;
+      font-size: 0.8rem;
+      color: var(--mm-muted);
+      line-height: 1.55;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="datetime-local"],
+    textarea {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      font-size: 1rem;
+      border: 1px solid var(--mm-border);
+      border-radius: 8px;
+      background: #f8f9fc;
+      color: var(--mm-text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--mm-accent);
+      box-shadow: 0 0 0 3px rgba(46, 74, 122, 0.2);
+      background: var(--mm-white);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    @media (min-width: 400px) {
+      .radio-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .radio-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--mm-border);
+      border-radius: 8px;
+      background: #f8f9fc;
+      cursor: pointer;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .radio-item:has(input:checked) {
+      border-color: var(--mm-accent);
+      background: var(--mm-light);
+    }
+
+    .radio-item input {
+      accent-color: var(--mm-primary);
+      width: 1.1rem;
+      height: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .radio-item span {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 0.95rem 1.25rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--mm-white);
+      background: var(--mm-primary);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 12px rgba(26, 43, 74, 0.35);
+      transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+    }
+
+    button[type="submit"]:hover {
+      transform: translateY(-1px);
+      background: var(--mm-accent);
+      box-shadow: 0 4px 16px rgba(26, 43, 74, 0.4);
+    }
+
+    button[type="submit"]:active {
+      transform: translateY(0);
+    }
+
+    .success {
+      display: none;
+      text-align: center;
+      padding: clamp(2rem, 8vw, 3rem) 1.25rem;
+    }
+
+    .success.is-visible {
+      display: block;
+    }
+
+    .success-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      background: var(--mm-light);
+      color: var(--mm-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+
+    .success h2 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.1rem, 3.5vw, 1.25rem);
+      color: var(--mm-primary);
+    }
+
+    .success p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--mm-muted);
+    }
+
+    #consultForm.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="brand">MakesMOMO</span>
+      <h1>企業の人事・総務担当者様向け<br>相談予約フォーム</h1>
+      <p>人事・総務のご担当者様からのお問い合わせ・ご相談を承ります。ご入力内容を確認のうえ、折り返しご連絡いたします。</p>
+    </header>
+
+    <div class="card">
+      <form id="consultForm" action="#" method="post" novalidate>
+        <div class="field">
+          <label for="name">ご担当者氏名 <span class="optional">（必須）</span></label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="山田 太郎">
+        </div>
+
+        <div class="field">
+          <label for="company">会社名（御社の正式名称） <span class="optional">（任意）</span></label>
+          <input type="text" id="company" name="company" autocomplete="organization" placeholder="株式会社〇〇">
+        </div>
+
+        <div class="field">
+          <label for="email">メールアドレス <span class="optional">（必須）</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@email.com">
+        </div>
+
+        <div class="field">
+          <span class="label-block">相談方法 <span class="optional">（必須）</span></span>
+          <div class="radio-group" role="radiogroup" aria-label="相談方法">
+            <label class="radio-item">
+              <input type="radio" name="method" value="対面" required>
+              <span>対面</span>
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="method" value="オンライン">
+              <span>オンライン</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="label-block">希望日時</span>
+          <p class="field-note">※ご予約は2週間前までにお申し込みください</p>
+          <label for="datetime1">第1希望日時 <span class="optional">（必須）</span></label>
+          <input type="datetime-local" id="datetime1" name="datetime1" required>
+        </div>
+
+        <div class="field">
+          <label for="datetime2">第2希望日時 <span class="optional">（任意）</span></label>
+          <input type="datetime-local" id="datetime2" name="datetime2">
+        </div>
+
+        <div class="field">
+          <label for="datetime3">第3希望日時 <span class="optional">（任意）</span></label>
+          <input type="datetime-local" id="datetime3" name="datetime3">
+        </div>
+
+        <div class="field">
+          <label for="message">ご相談内容（人事・総務関連） <span class="optional">（必須）</span></label>
+          <textarea id="message" name="message" required placeholder="こちらにご相談内容をご記載ください"></textarea>
+        </div>
+
+        <button type="submit">送信する</button>
+      </form>
+
+      <div id="successPanel" class="success" role="status" aria-live="polite">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h2>送信が完了しました</h2>
+        <p>予約を受け付けました。確認メールをお送りします。</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var form = document.getElementById("consultForm");
+      var success = document.getElementById("successPanel");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        form.classList.add("hidden");
+        success.classList.add("is-visible");
+      });
+    })();
+  </script>
+</body>
+</html>

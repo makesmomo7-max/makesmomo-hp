@@ -1,0 +1,16 @@
+{
+  "name": "makes-momo-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "医療・心理・就労支援サービス紹介用のシンプルなランディングページ",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "landing-page",
+    "html",
+    "css",
+    "js"
+  ]
+}
+
