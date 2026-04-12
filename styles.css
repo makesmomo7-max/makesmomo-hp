@@ -447,6 +447,11 @@ a {
   max-width: 380px;
 }
 
+.stress-check-mhlw-jump {
+  margin: 1rem 0 1.15rem;
+  text-align: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-fade-up {
     animation: none;
