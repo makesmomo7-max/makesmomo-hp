@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>セミナー・ラインケア研修のご案内｜makes-momo</title>
+  <meta name="description" content="心理学等を用いたビジネスセミナー・ラインケア研修のご案内。問題提起：トリセツ（取扱い説明書）とセルフケア。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=20260412g" />
+  <style>
+    .seminar-page main {
+      padding: 0 0 2.5rem;
+    }
+    .seminar-back {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem 1rem 0;
+      font-size: 13px;
+    }
+    .seminar-back a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ── リーフレット（PDF表紙に近い1画面） ── */
+    .leaf {
+      max-width: 820px;
+      margin: 0.5rem auto 2rem;
+      box-shadow: 0 12px 40px rgba(11, 31, 58, 0.12);
+      border-radius: 4px;
+      overflow: hidden;
+      background: #2c2c2c;
+    }
+    .leaf-top {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      min-height: 280px;
+    }
+    @media (max-width: 640px) {
+      .leaf-top {
+        grid-template-columns: 1fr;
+        min-height: 0;
+      }
+    }
+    .leaf-photo {
+      position: relative;
+      min-height: 260px;
+      background-color: #3a3530;
+      background-image: linear-gradient(105deg, rgba(20, 18, 16, 0.45) 0%, rgba(20, 18, 16, 0.25) 100%),
+        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80");
+      background-size: cover;
+      background-position: center 35%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    /* 差し替え用：同フォルダに seminar-hero.jpg を置くと優先（実写リーフレットに近づける） */
+    .leaf-photo--local {
+      background-image: linear-gradient(105deg, rgba(20, 18, 16, 0.5) 0%, rgba(20, 18, 16, 0.2) 100%),
+        url("./seminar-hero.jpg");
+    }
+    .leaf-photo-title {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans JP", sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.75rem, 5.5vw, 2.65rem);
+      letter-spacing: 0.06em;
+      color: #fff;
+      text-align: center;
+      line-height: 1.15;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+    }
+    .leaf-side {
+      background: #252525;
+      color: #fff;
+      padding: 1.75rem 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.75rem;
+    }
+    .leaf-brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.14em;
+      margin: 0;
+    }
+    .leaf-brand-sub {
+      font-size: 0.78rem;
+      font-weight: 400;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.88);
+      margin: 0;
+    }
+    .leaf-qr {
+      margin-top: auto;
+      padding-top: 0.5rem;
+    }
+    .leaf-qr img {
+      display: block;
+      width: 132px;
+      height: 132px;
+      background: #fff;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .leaf-qr-caption {
+      font-size: 0.65rem;
+      color: rgba(255, 255, 255, 0.55);
+      margin-top: 0.35rem;
+    }
+
+    .leaf-bottom {
+      position: relative;
+      background: #f5f0e8;
+      padding: 2rem 1.75rem 2.25rem;
+      overflow: hidden;
+    }
+    .leaf-blob {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .leaf-blob--1 {
+      width: 120px;
+      height: 120px;
+      background: #d4c4e8;
+      top: -30px;
+      right: 8%;
+    }
+    .leaf-blob--2 {
+      width: 80px;
+      height: 80px;
+      background: #e8e0f0;
+      bottom: 12%;
+      left: 5%;
+    }
+    .leaf-pill {
+      display: inline-block;
+      background: #c4b0d8;
+      color: #2a2235;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 0.85rem;
+      position: relative;
+      z-index: 1;
+    }
+    .leaf-h2 {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(1.35rem, 3.8vw, 1.85rem);
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+      margin: 0 0 1rem;
+    }
+    .leaf-note {
+      position: relative;
+      z-index: 1;
+      font-size: 0.88rem;
+      color: #444;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    .seminar-more {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 1rem 2rem;
+    }
+    .seminar-more h2 {
+      font-size: 1.05rem;
+      margin: 0 0 1rem;
+      color: var(--color-text-main);
+    }
+    .seminar-more ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--color-text-muted);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+    .seminar-cta {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+  </style>
+</head>
+<body class="seminar-page" data-hp-revision="20260412g">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html#hero" class="logo" aria-label="ホーム">
+        <span class="logo-text">MakesMOMO</span>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="メニューを開閉" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="./index.html#hero">ホーム</a></li>
+          <li><a href="./index.html#service">サービス</a></li>
+          <li><a href="./index.html#price">料金</a></li>
+          <li><a href="./index.html#contact">お問い合わせ</a></li>
+          <li class="nav-cta-item">
+            <a href="./yoyaku.html" class="nav-cta-link">ご予約はこちら</a>
+          </li>
+          <li class="nav-tel-sp"><a href="tel:" class="tel-link"></a></li>
+        </ul>
+        <div class="header-tel">
+          <a href="tel:" class="tel-link"></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="seminar-back"><a href="./index.html#price">← 料金・プラン（トップ）</a></p>
+
+    <article class="leaf" aria-label="セミナーリーフレット">
+      <div class="leaf-top">
+        <div class="leaf-photo" id="leaf-photo">
+          <!-- 実物の写真に差し替える場合：seminar-hero.jpg を追加し、下の1行のコメントを外すか script で class 付与 -->
+          <p class="leaf-photo-title">BUSINESS<br />SEMINAR</p>
+        </div>
+        <aside class="leaf-side">
+          <p class="leaf-brand">MAKES MOMO</p>
+          <p class="leaf-brand-sub">心理学等を用いたセミナー</p>
+          <div class="leaf-qr">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfY0aNJsXz2kIKYMlD_L8pp1_arBvuPrcPNJvo6rG8Th0KhaA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="お問い合わせ（Googleフォーム）を開く"
+            >
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&amp;data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSfY0aNJsXz2kIKYMlD_L8pp1_arBvuPrcPNJvo6rG8Th0KhaA%2Fviewform"
+                alt=""
+                width="160"
+                height="160"
+              />
+            </a>
+            <p class="leaf-qr-caption">お問い合わせ・ご相談（QR）</p>
+          </div>
+        </aside>
+      </div>
+      <div class="leaf-bottom">
+        <span class="leaf-blob leaf-blob--1" aria-hidden="true"></span>
+        <span class="leaf-blob leaf-blob--2" aria-hidden="true"></span>
+        <span class="leaf-pill">問題提起</span>
+        <h1 class="leaf-h2">トリセツ（取扱い説明書）とセルフケア</h1>
+        <p class="leaf-note">
+          職場のメンタルヘルスや人間関係をテーマに、心理学を活用したセミナー・ラインケア研修をご提供しています。内容のご相談・オーダーメイドも承ります。
+        </p>
+      </div>
+    </article>
+
+    <section class="seminar-more container" style="width: min(820px, 100% - 32px)">
+      <h2>プログラム例</h2>
+      <ul>
+        <li><strong>人間関係・セルフケア</strong>：上司のトリセツ、こころのメンテナンス、テレワークとセルフケア など</li>
+        <li><strong>ラインケア</strong>：部下のメンタルヘルスケア、早期発見・職場復帰支援、コミュニケーション など</li>
+        <li><strong>チャレンジ・からだ</strong>：食・体重・生活習慣に関するテーマ など</li>
+        <li><strong>心理学理論・技法</strong>：アサーション、アンガーマネジメント、リラクセーション など</li>
+        <li><strong>半日〜1日講習</strong>：セルフケアのヒント、職場復帰のポイント など</li>
+      </ul>
+      <div class="seminar-cta">
+        <a href="./index.html#contact" class="btn btn-primary">お問い合わせ（メール・フォーム）</a>
+        <a href="./ryokin.html" class="btn btn-outline">料金表（オプション一覧）</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-main">
+        <p class="footer-logo">makes-momo</p>
+        <a href="./index.html#contact" class="btn btn-primary footer-contact-btn">お問い合わせ</a>
+      </div>
+      <p class="footer-copy">© <span id="js-year"></span> makes-momo. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var img = new Image();
+      img.onload = function () {
+        var el = document.getElementById("leaf-photo");
+        if (el) el.classList.add("leaf-photo--local");
+      };
+      img.src = "./seminar-hero.jpg";
+    })();
+  </script>
+  <script src="./script.js?v=20260412g"></script>
+</body>
+</html>
