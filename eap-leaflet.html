@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>従業員の皆様へ｜巡回健康相談窓口・EAPのご案内｜makes-momo</title>
+  <meta name="description" content="makes-momoの巡回健康相談窓口・EAPの概要、ご利用のイメージ、プライバシーについて。ログイン不要でご覧いただけます。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=20260412m" />
+  <style>
+    .leaflet-page main {
+      padding: 0 0 2.5rem;
+    }
+    .leaflet-wrap {
+      width: min(720px, 100% - 32px);
+      margin: 0 auto;
+      padding: 1rem 0 2rem;
+    }
+    .leaflet-back {
+      font-size: 13px;
+      margin-bottom: 1rem;
+    }
+    .leaflet-back a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .leaflet-hero {
+      background: linear-gradient(145deg, #1a2b4a 0%, #001f3f 55%, #123b6b 100%);
+      color: #fff;
+      padding: 2rem 1.5rem;
+      border-radius: var(--radius-lg);
+      margin-bottom: 1.75rem;
+      box-shadow: 0 10px 30px rgba(0, 31, 63, 0.2);
+    }
+    .leaflet-hero h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.2rem, 3.5vw, 1.45rem);
+      font-weight: 700;
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+    }
+    .leaflet-hero p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.75;
+      opacity: 0.92;
+    }
+    .leaflet-block {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.35rem 1.35rem 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .leaflet-block h2 {
+      margin: 0 0 0.65rem;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      border-left: 3px solid var(--color-primary);
+      padding-left: 0.65rem;
+    }
+    .leaflet-block p,
+    .leaflet-block li {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--color-text-main);
+    }
+    .leaflet-block p {
+      margin: 0 0 0.65rem;
+    }
+    .leaflet-block p:last-child {
+      margin-bottom: 0;
+    }
+    .leaflet-block ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    .leaflet-block li {
+      margin: 0.25rem 0;
+    }
+    .leaflet-note {
+      font-size: 0.84rem;
+      color: var(--color-text-muted);
+      padding: 1rem 1.1rem;
+      background: rgba(11, 31, 58, 0.04);
+      border-radius: var(--radius);
+      margin-top: 1.25rem;
+      line-height: 1.7;
+    }
+    .leaflet-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1.25rem;
+    }
+  </style>
+</head>
+<body class="leaflet-page" data-hp-revision="20260412m">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html#hero" class="logo" aria-label="ホーム">
+        <span class="logo-text">MakesMOMO</span>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="メニューを開閉" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="./index.html#hero">ホーム</a></li>
+          <li><a href="./index.html#service">サービス</a></li>
+          <li><a href="./index.html#price">料金</a></li>
+          <li><a href="./index.html#contact">お問い合わせ</a></li>
+          <li class="nav-cta-item">
+            <a href="./yoyaku.html" class="nav-cta-link">ご予約はこちら</a>
+          </li>
+          <li class="nav-tel-sp"><a href="tel:" class="tel-link"></a></li>
+        </ul>
+        <div class="header-tel">
+          <a href="tel:" class="tel-link"></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="leaflet-wrap">
+      <p class="leaflet-back"><a href="./index.html#price">← 料金・プラン（トップ）</a></p>
+
+      <header class="leaflet-hero">
+        <h1>従業員の皆様へ<br />巡回健康相談窓口・EAPのご案内</h1>
+        <p>
+          職場に専門家がうかがい、こころやからだのこと、仕事や人間関係の悩みを話せる窓口です。このページは誰でも閲覧できます（アプリへのログインは不要です）。
+        </p>
+      </header>
+
+      <section class="leaflet-block" aria-labelledby="leaflet-h2-1">
+        <h2 id="leaflet-h2-1">巡回健康相談窓口とは</h2>
+        <p>
+          会社と契約のうえ、定期的に職場へ専門家（看護師・公認心理士等）がうかがい、従業員の皆様が<strong>安心して相談できる時間</strong>を設けるサービスです。電話・メールでの相談や、専用アプリを使った記録・チャット・予約など、契約内容に応じた形でご利用いただけます。
+        </p>
+      </section>
+
+      <section class="leaflet-block" aria-labelledby="leaflet-h2-2">
+        <h2 id="leaflet-h2-2">相談できること（例）</h2>
+        <ul>
+          <li>ストレスや不安、気分の落ち込み、睡眠など</li>
+          <li>職場の人間関係、上司・部下とのコミュニケーション</li>
+          <li>体調や生活習慣のこと、仕事と治療の両立の悩み など</li>
+        </ul>
+        <p>内容は個人差があります。まずは話してみたいことからご相談ください。</p>
+      </section>
+
+      <section class="leaflet-block" aria-labelledby="leaflet-h2-3">
+        <h2 id="leaflet-h2-3">プライバシー（秘密の保護）</h2>
+        <p>
+          相談内容は、<strong>原則として会社に報告いたしません</strong>（本人の希望がある場合など、例外はあります）。外部の相談窓口として、秘密厳守を大切にしています。
+        </p>
+      </section>
+
+      <section class="leaflet-block" aria-labelledby="leaflet-h2-4">
+        <h2 id="leaflet-h2-4">ご利用方法</h2>
+        <p>
+          訪問日・予約方法・連絡先は、<strong>貴社の担当者（総務・人事など）からの周知</strong>に従ってください。契約事業所の従業員向けWeb（アプリ）のURLは、セキュリティのため<strong>この公開ページからは案内していません</strong>。
+        </p>
+      </section>
+
+      <p class="leaflet-note">
+        印刷用のPDFが必要な企業様は、お問い合わせのうえお渡しすることも可能です。料金・プランは「EAPサービス料金表」のページをご覧ください。
+      </p>
+
+      <div class="leaflet-cta">
+        <a href="./ryokin.html" class="btn btn-primary">EAPサービス料金表を見る</a>
+        <a href="./index.html#contact" class="btn btn-outline">お問い合わせ（法人の方）</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-main">
+        <p class="footer-logo">makes-momo</p>
+        <a href="./index.html#contact" class="btn btn-primary footer-contact-btn">お問い合わせ</a>
+      </div>
+      <p class="footer-copy">© <span id="js-year"></span> makes-momo. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js?v=20260412m"></script>
+</body>
+</html>
