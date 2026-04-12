@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260412g" />
+  <link rel="stylesheet" href="./styles.css?v=20260412h" />
   <style>
     .seminar-page main {
       padding: 0 0 2.5rem;
@@ -172,32 +172,168 @@
       margin: 0;
     }
 
-    .seminar-more {
-      max-width: 820px;
+    .seminar-programs {
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 1rem 2rem;
+      padding: 0 1rem 2.5rem;
     }
-    .seminar-more h2 {
-      font-size: 1.05rem;
-      margin: 0 0 1rem;
+    .seminar-programs-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(11, 31, 58, 0.45);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .seminar-programs-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      margin: 0 0 1.5rem;
+      letter-spacing: 0.02em;
+    }
+    .sem-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(11, 31, 58, 0.12);
+      border: 1px solid rgba(11, 31, 58, 0.1);
+      border-radius: var(--radius, 8px);
+      overflow: hidden;
+      margin-bottom: 1.75rem;
+    }
+    .sem-card {
+      background: #fff;
+      padding: 1.75rem 1.5rem;
+      position: relative;
+    }
+    .sem-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+    }
+    .sem-card--1::before {
+      background: #5a6b4a;
+    }
+    .sem-card--2::before {
+      background: #4a6678;
+    }
+    .sem-card--3::before {
+      background: #b8825a;
+    }
+    .sem-card--4::before {
+      background: #5a7a52;
+    }
+    .sem-card--5::before {
+      background: #80624a;
+    }
+    .sem-card-full {
+      grid-column: 1 / -1;
+    }
+    @media (max-width: 720px) {
+      .sem-cards {
+        grid-template-columns: 1fr;
+      }
+      .sem-card-full {
+        grid-column: 1;
+      }
+    }
+    .sem-card-cat {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+      padding: 0.28rem 0.75rem;
+      border-radius: 2px;
+      margin-bottom: 0.85rem;
+    }
+    .sem-cat-a {
+      background: rgba(90, 107, 74, 0.12);
+      color: #3d4a32;
+    }
+    .sem-cat-b {
+      background: rgba(74, 102, 120, 0.12);
+      color: #334a5a;
+    }
+    .sem-cat-c {
+      background: rgba(184, 130, 90, 0.14);
+      color: #6b4420;
+    }
+    .sem-cat-d {
+      background: rgba(90, 122, 82, 0.12);
+      color: #2d4a28;
+    }
+    .sem-cat-e {
+      background: rgba(128, 98, 74, 0.12);
+      color: #5a4030;
+    }
+    .sem-card-h {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 0 0 0.35rem;
       color: var(--color-text-main);
     }
-    .seminar-more ul {
-      margin: 0;
-      padding-left: 1.2rem;
+    .sem-card-sub {
+      font-size: 0.78rem;
       color: var(--color-text-muted);
-      font-size: 0.92rem;
-      line-height: 1.8;
+      letter-spacing: 0.04em;
+      margin: 0 0 1rem;
+      line-height: 1.5;
+    }
+    .sem-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+    .sem-tag {
+      font-size: 0.78rem;
+      color: var(--color-text-main);
+      padding: 0.32rem 0.7rem;
+      background: rgba(11, 31, 58, 0.04);
+      border: 1px solid rgba(11, 31, 58, 0.1);
+      border-radius: 999px;
+      line-height: 1.35;
+    }
+    .sem-consult {
+      background: #1a2433;
+      color: #fff;
+      padding: 1.75rem 1.5rem;
+      border-radius: var(--radius, 8px);
+      margin-bottom: 1.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .sem-consult h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      letter-spacing: 0.04em;
+    }
+    .sem-consult-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+    .sem-consult-item {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.82);
+      padding: 0.4rem 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
     }
     .seminar-cta {
-      margin-top: 1.5rem;
+      margin-top: 0.5rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
     }
   </style>
 </head>
-<body class="seminar-page" data-hp-revision="20260412g">
+<body class="seminar-page" data-hp-revision="20260412h">
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html#hero" class="logo" aria-label="ホーム">
@@ -265,15 +401,85 @@
       </div>
     </article>
 
-    <section class="seminar-more container" style="width: min(820px, 100% - 32px)">
-      <h2>プログラム例</h2>
-      <ul>
-        <li><strong>人間関係・セルフケア</strong>：上司のトリセツ、こころのメンテナンス、テレワークとセルフケア など</li>
-        <li><strong>ラインケア</strong>：部下のメンタルヘルスケア、早期発見・職場復帰支援、コミュニケーション など</li>
-        <li><strong>チャレンジ・からだ</strong>：食・体重・生活習慣に関するテーマ など</li>
-        <li><strong>心理学理論・技法</strong>：アサーション、アンガーマネジメント、リラクセーション など</li>
-        <li><strong>半日〜1日講習</strong>：セルフケアのヒント、職場復帰のポイント など</li>
-      </ul>
+    <section class="seminar-programs" aria-labelledby="seminar-programs-heading">
+      <p class="seminar-programs-label">Program</p>
+      <h2 id="seminar-programs-heading" class="seminar-programs-title">プログラム一覧</h2>
+
+      <div class="sem-cards">
+        <div class="sem-card sem-card--1">
+          <span class="sem-card-cat sem-cat-a">人間関係</span>
+          <h3 class="sem-card-h">トリセツとセルフケア</h3>
+          <p class="sem-card-sub">取扱い説明書とセルフケア</p>
+          <div class="sem-tags">
+            <span class="sem-tag">上司のトリセツ</span>
+            <span class="sem-tag">こころのメンテナンスノート</span>
+            <span class="sem-tag">眠れないあなたに</span>
+            <span class="sem-tag">テレワークによるこころへの影響とセルフケア</span>
+          </div>
+        </div>
+
+        <div class="sem-card sem-card--2">
+          <span class="sem-card-cat sem-cat-b">ラインケア</span>
+          <h3 class="sem-card-h">部下のメンタルヘルスをケア</h3>
+          <p class="sem-card-sub">管理職のための対応スキル</p>
+          <div class="sem-tags">
+            <span class="sem-tag">メンタル不調者への対応</span>
+            <span class="sem-tag">メンタル不調の早期発見・対応</span>
+            <span class="sem-tag">職場復帰支援</span>
+            <span class="sem-tag">職場復帰した職員への対応</span>
+            <span class="sem-tag">職場のコミュニケーションのヒント</span>
+            <span class="sem-tag">相談を受けた際の心構え</span>
+          </div>
+        </div>
+
+        <div class="sem-card sem-card--3">
+          <span class="sem-card-cat sem-cat-c">チャレンジプロジェクト</span>
+          <h3 class="sem-card-h">からだと向き合う</h3>
+          <p class="sem-card-sub">身体的健康へのアプローチ</p>
+          <div class="sem-tags">
+            <span class="sem-tag">カロリー・糖質・脂質マップ</span>
+            <span class="sem-tag">たばこ</span>
+            <span class="sem-tag">お酒</span>
+            <span class="sem-tag">食行動</span>
+            <span class="sem-tag">食事</span>
+            <span class="sem-tag">体重コントロール</span>
+            <span class="sem-tag">ストレッチ</span>
+          </div>
+        </div>
+
+        <div class="sem-card sem-card--4">
+          <span class="sem-card-cat sem-cat-d">理論・技法</span>
+          <h3 class="sem-card-h">心理学</h3>
+          <p class="sem-card-sub">実践的な心理技法</p>
+          <div class="sem-tags">
+            <span class="sem-tag">アサーション</span>
+            <span class="sem-tag">アンガーマネジメント</span>
+            <span class="sem-tag">リラクセーション</span>
+          </div>
+        </div>
+
+        <div class="sem-card sem-card--5 sem-card-full">
+          <span class="sem-card-cat sem-cat-e">こころの健康づくり</span>
+          <h3 class="sem-card-h">半日〜1日講習会</h3>
+          <p class="sem-card-sub">まとまった時間でじっくり学ぶ集中プログラム</p>
+          <div class="sem-tags">
+            <span class="sem-tag">今日から役立つセルフケアのヒント</span>
+            <span class="sem-tag">職場復帰の実際とポイント</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sem-consult">
+        <h2>個別カスタマイズ・ご相談も承ります</h2>
+        <div class="sem-consult-items">
+          <span class="sem-consult-item">人事評価における面談ガイドライン</span>
+          <span class="sem-consult-item">心の健康づくり計画</span>
+          <span class="sem-consult-item">面接指導等実施要領</span>
+          <span class="sem-consult-item">試し出勤実施要領作成</span>
+          <span class="sem-consult-item">長期療養が必要な従業員支援要領作成</span>
+        </div>
+      </div>
+
       <div class="seminar-cta">
         <a href="./index.html#contact" class="btn btn-primary">お問い合わせ（メール・フォーム）</a>
         <a href="./ryokin.html" class="btn btn-outline">料金表（オプション一覧）</a>
@@ -301,6 +507,6 @@
       img.src = "./seminar-hero.jpg";
     })();
   </script>
-  <script src="./script.js?v=20260412g"></script>
+  <script src="./script.js?v=20260412h"></script>
 </body>
 </html>
