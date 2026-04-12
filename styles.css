@@ -2041,6 +2041,48 @@ a {
   text-align: center;
 }
 
+.site-qr-footer {
+  margin: 0 0 20px;
+  padding: 20px 0 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-qr-footer-label {
+  margin: 0 0 10px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.04em;
+}
+
+.site-qr-footer-img {
+  display: block;
+  width: 140px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.site-qr-footer-url {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+}
+
+.site-qr-footer-url a {
+  color: rgba(226, 232, 240, 0.95);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-qr-footer-url a:hover {
+  color: #ffffff;
+}
+
 /* ===================== レスポンシブ（768px以下：ハンバーガーメニュー） ===================== */
 @media (max-width: 768px) {
   .container {
