@@ -968,8 +968,23 @@ a {
   letter-spacing: 0.02em;
 }
 
+.subsidy-qualifications-lead {
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--color-text-main);
+}
+
+.subsidy-qualifications-sub {
+  margin: 0.85rem 0 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
 .subsidy-qualifications-list {
-  margin: 0;
+  margin: 0 0 0.5rem;
   padding-left: 1.25rem;
   color: var(--color-text-main);
   line-height: 1.85;
