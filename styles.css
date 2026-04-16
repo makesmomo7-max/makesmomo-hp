@@ -435,6 +435,14 @@ a {
   line-height: 1.6;
 }
 
+.price-footnotes-scope {
+  margin: 12px auto 0;
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 42rem;
+}
+
 .price-subsidy-jump {
   margin-top: 1.25rem;
   padding-top: 1rem;
