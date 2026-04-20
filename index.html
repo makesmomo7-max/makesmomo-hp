@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260420g" />
+  <link rel="stylesheet" href="./styles.css?v=20260420h" />
 </head>
-<body data-hp-revision="20260420g">
+<body data-hp-revision="20260420h">
   <!-- 公開HP：主軸はEAP・巡回相談。ストレスチェックはオプション。更新確認: data-hp-revision と styles.css の ?v= -->
   <!-- ===================== ステップ1: ヘッダー + グローバルナビ ===================== -->
   <header class="site-header">
@@ -513,211 +513,24 @@
       </div>
     </section>
 
-    <!-- ===================== オプション：ストレスチェック制度 ===================== -->
+    <!-- ===================== オプション：ストレスチェック（コンパクト） ===================== -->
     <section id="stress-check-option" class="section section-alt">
       <div class="container">
-        <p class="section-en">Stress Check</p>
-        <h2 class="section-title">義務のストレスチェックを、一気通貫で。</h2>
-        <p class="section-lead">受検 → 面談 → 集団分析まで、まるごとお任せ。</p>
-        <div class="section-banner" aria-hidden="true">
-          <img
-            src="./memo-male-hands-counselor.jpg"
-            alt=""
-            loading="lazy"
-            class="section-banner-image"
-            onerror="this.parentElement.style.display='none'"
-          />
-          <div class="section-banner-overlay"></div>
+        <p class="section-en">Stress Check Option</p>
+        <h2 class="section-title">ストレスチェックは、必要な事業所のみのオプションです</h2>
+        <div class="sc-option-compact">
+          <p class="sc-option-compact-lead">主軸のEAPとは分けて、法令対応が必要な場合だけ追加できます。</p>
+          <ul class="sc-option-compact-list">
+            <li>50人以上の事業所は年1回の実施義務に対応</li>
+            <li>受検（紙・Web）から面接指導・集団分析まで一括支援</li>
+            <li>20名未満は一律30,000円〜（詳細は料金セクションへ）</li>
+          </ul>
+          <div class="sc-option-compact-actions">
+            <a href="#price" class="btn btn-primary">料金・実施範囲を見る</a>
+            <a class="btn btn-outline" href="https://www.mhlw.go.jp/bunya/roudoukijun/anzeneisei12/index.html" target="_blank" rel="noopener noreferrer">制度の公式情報を見る</a>
+          </div>
+          <p class="sc-option-compact-note">※厚生労働省「労働安全衛生調査」では、強いストレスを感じる労働者は6割超。</p>
         </div>
-
-        <ul class="sc-stats" aria-label="ストレスチェックの基礎数値">
-          <li class="sc-stat">
-            <span class="sc-stat-num">50<small>人</small></span>
-            <span class="sc-stat-label">以上で<br>実施義務</span>
-          </li>
-          <li class="sc-stat">
-            <span class="sc-stat-num">年1<small>回</small></span>
-            <span class="sc-stat-label">実施が必要</span>
-          </li>
-          <li class="sc-stat">
-            <span class="sc-stat-num">57<small>項目</small></span>
-            <span class="sc-stat-label">標準検査票</span>
-          </li>
-          <li class="sc-stat">
-            <span class="sc-stat-num">6<small>割超</small></span>
-            <span class="sc-stat-label">働く人の<br>強いストレス<sup>*</sup></span>
-          </li>
-        </ul>
-
-        <div class="sc-after" aria-label="実施前後の変化">
-          <div class="sc-after-col sc-after-col-before" aria-label="実施前">
-            <p class="sc-after-label">Before</p>
-            <ul>
-              <li>法令対応の進め方が不明</li>
-              <li>高ストレス者に気づけない</li>
-              <li>職場改善の根拠がない</li>
-            </ul>
-          </div>
-          <div class="sc-after-arrow" aria-hidden="true">→</div>
-          <div class="sc-after-col sc-after-col-after" aria-label="実施後">
-            <p class="sc-after-label">After</p>
-            <ul>
-              <li>法令対応（労安法66条の10）完了</li>
-              <li>高ストレス者へ早期に面談</li>
-              <li>集団分析で職場改善の根拠が得られる</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="sc-official-jump">
-          <a
-            class="btn btn-outline"
-            href="https://www.mhlw.go.jp/bunya/roudoukijun/anzeneisei12/index.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            厚生労働省・ストレスチェック制度（公式）を見る
-          </a>
-        </p>
-        <p class="sc-footnote">*厚生労働省「労働安全衛生調査」より</p>
-      </div>
-    </section>
-
-    <!-- ===================== オプション：受検方法 ===================== -->
-    <section id="method" class="section">
-      <div class="container">
-        <p class="section-en">Method</p>
-        <h2 class="section-title">2つの受検方法から、職場に合う形で。</h2>
-        <p class="section-lead">どちらも同じ57項目。実施後の支援まで同じ品質です。</p>
-
-        <div class="method-compare">
-          <article class="method-card" aria-labelledby="method-card-paper-title">
-            <div class="method-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/>
-                <path d="M14 3v5h5"/>
-                <circle cx="9" cy="12" r="0.8" fill="currentColor"/>
-                <circle cx="13" cy="12" r="0.8" fill="currentColor"/>
-                <circle cx="17" cy="12" r="0.8"/>
-                <circle cx="9" cy="16" r="0.8"/>
-                <circle cx="13" cy="16" r="0.8" fill="currentColor"/>
-                <circle cx="17" cy="16" r="0.8"/>
-              </svg>
-            </div>
-            <h3 class="method-card-title" id="method-card-paper-title">マークシート</h3>
-            <p class="method-card-strength">紙で、全員に届きやすい</p>
-            <ul class="method-card-points">
-              <li>PC・スマホが苦手な方も安心</li>
-              <li>工場・現場の配布に向く</li>
-              <li>回収・集計は当社が担当</li>
-            </ul>
-          </article>
-
-          <article class="method-card method-card-web" aria-labelledby="method-card-web-title">
-            <div class="method-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="7" height="7" rx="1"/>
-                <rect x="14" y="3" width="7" height="7" rx="1"/>
-                <rect x="3" y="14" width="7" height="7" rx="1"/>
-                <path d="M14 14h3v3h-3zM17 17h4M14 20h3M20 14v3"/>
-              </svg>
-            </div>
-            <h3 class="method-card-title" id="method-card-web-title">Web（QR／メール）</h3>
-            <p class="method-card-strength">スマホで、約60秒で回答</p>
-            <ul class="method-card-points">
-              <li>QRコードまたはメールで配布</li>
-              <li>集計・可視化が早い</li>
-              <li>在宅・リモートにも対応</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="method-combo">
-          <p class="method-combo-title">1項目から申し込み可能</p>
-          <div class="method-combo-grid">
-            <div class="method-combo-item">ストレスチェック</div>
-            <div class="method-combo-item">集団分析</div>
-            <div class="method-combo-item">面接指導</div>
-          </div>
-          <p class="method-combo-note">※集団分析のみでの申し込みは不可。50人未満の事業所もOK。助成金活用の相談も承ります。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== オプション：ストレスチェックの流れ ===================== -->
-    <section id="flow" class="section section-alt">
-      <div class="container">
-        <p class="section-en">Flow</p>
-        <h2 class="section-title">4ステップで、ストレスチェック完了。</h2>
-        <p class="section-lead">お申し込みから結果通知まで、当社が伴走します。</p>
-
-        <div class="flow-diagram">
-          <div class="flow-step">
-            <span class="flow-num">1</span>
-            <div class="flow-scheme-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" class="flow-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path>
-                <path d="M9 7h6"></path>
-                <path d="M9 11h6"></path>
-                <path d="M10 19h4"></path>
-              </svg>
-            </div>
-            <h3>お申し込み</h3>
-            <ul class="flow-points">
-              <li>お電話またはフォームでご相談</li>
-              <li>実施人数・希望の受検方法を確認</li>
-            </ul>
-          </div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-step">
-            <span class="flow-num">2</span>
-            <div class="flow-scheme-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" class="flow-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
-                <path d="M19.4 15a1.8 1.8 0 0 0 .4 2l.1.1-2 3.5-.1-.1a1.8 1.8 0 0 0-2-.4 1.8 1.8 0 0 0-1 1.6V23h-4v-.8a1.8 1.8 0 0 0-1-1.6 1.8 1.8 0 0 0-2 .4l-.1.1-2-3.5.1-.1a1.8 1.8 0 0 0 .4-2 1.8 1.8 0 0 0-1.6-1H1v-4h.8a1.8 1.8 0 0 0 1.6-1 1.8 1.8 0 0 0-.4-2l-.1-.1 2-3.5.1.1a1.8 1.8 0 0 0 2 .4 1.8 1.8 0 0 0 1-1.6V1h4v.8a1.8 1.8 0 0 0 1 1.6 1.8 1.8 0 0 0 2-.4l.1-.1 2 3.5-.1.1a1.8 1.8 0 0 0-.4 2 1.8 1.8 0 0 0 1.6 1H23v4h-.8a1.8 1.8 0 0 0-1.6 1Z"></path>
-              </svg>
-            </div>
-            <h3>実施準備</h3>
-            <ul class="flow-points">
-              <li>マークシート／Webの準備</li>
-              <li>実施日・対象者の調整</li>
-            </ul>
-          </div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-step">
-            <span class="flow-num">3</span>
-            <div class="flow-scheme-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" class="flow-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"></path>
-                <path d="M14 3v5h5"></path>
-                <path d="M8 12h8"></path>
-                <path d="M8 16h6"></path>
-              </svg>
-            </div>
-            <h3>ストレスチェック実施</h3>
-            <ul class="flow-points">
-              <li>従業員の皆様に受検いただきます</li>
-              <li>WebはQRコード／メールでご案内</li>
-            </ul>
-          </div>
-          <div class="flow-arrow" aria-hidden="true">→</div>
-          <div class="flow-step">
-            <span class="flow-num">4</span>
-            <div class="flow-scheme-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" class="flow-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 19V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13"></path>
-                <path d="M4 19h16"></path>
-                <path d="M8 15l2-2 2 2 4-4"></path>
-              </svg>
-            </div>
-            <h3>結果通知・面接指導</h3>
-            <ul class="flow-points">
-              <li>個人結果の通知＋高ストレス者のご案内</li>
-              <li>集団分析の報告／面接指導の支援</li>
-            </ul>
-          </div>
-        </div>
-        <p class="flow-note">※実施状況の報告書作成も対応いたします。</p>
       </div>
     </section>
 
@@ -796,6 +609,6 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=20260420g"></script>
+  <script src="./script.js?v=20260420h"></script>
 </body>
 </html>
