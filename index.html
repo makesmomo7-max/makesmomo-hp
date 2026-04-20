@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260420f" />
+  <link rel="stylesheet" href="./styles.css?v=20260420g" />
 </head>
-<body data-hp-revision="20260420f">
+<body data-hp-revision="20260420g">
   <!-- 公開HP：主軸はEAP・巡回相談。ストレスチェックはオプション。更新確認: data-hp-revision と styles.css の ?v= -->
   <!-- ===================== ステップ1: ヘッダー + グローバルナビ ===================== -->
   <header class="site-header">
@@ -24,7 +24,7 @@
         </button>
         <ul class="nav-list">
           <li><a href="#hero">ホーム</a></li>
-          <li><a href="#service">サービス</a></li>
+          <li><a href="#promise">サービス</a></li>
           <li><a href="#price">料金</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
           <li class="nav-cta-item">
@@ -64,8 +64,8 @@
             人を活かす経営へ。
           </h1>
           <blockquote class="hero-quote hero-fade-up hero-fade-up--2b">
-            <p class="hero-quote-text">“夢なき者に、成功なし。”</p>
-            <cite class="hero-quote-cite">— 渋沢栄一</cite>
+            <p class="hero-quote-text">“人間は、本性上、社会的動物である。”</p>
+            <cite class="hero-quote-cite">— アリストテレス</cite>
           </blockquote>
           <p class="hero-promise hero-fade-up hero-fade-up--2b">
             EAP・巡回健康相談の専任サービス／岡山県内
@@ -86,47 +86,77 @@
           </ul>
           <div class="hero-actions hero-fade-up hero-fade-up--4">
             <a href="./yoyaku.html" class="btn hero-cta-service">ご予約はこちら</a>
-            <a href="#eap" class="btn hero-cta-service">サービスを見る</a>
+            <a href="#promise" class="btn hero-cta-service">サービスを見る</a>
           </div>
           <p class="hero-footnote hero-fade-up hero-fade-up--4">*1 厚生労働省「労働安全衛生調査」／*2 年度・要領により助成率・上限は変動</p>
         </div>
       </div>
     </section>
 
-    <!-- ===================== 使用後の変化：Before → After ===================== -->
+    <!-- ===================== EAP導入後の変化：Before → After ===================== -->
     <section id="promise" class="section section-promise" aria-labelledby="promise-title">
       <div class="container">
-        <p class="section-en">After</p>
-        <h2 class="section-title" id="promise-title">導入後、職場はこう変わります</h2>
-        <div class="section-banner" aria-hidden="true">
-          <img
-            src="./lake-single-tree.jpg"
-            alt=""
-            loading="lazy"
-            class="section-banner-image"
-            onerror="this.parentElement.style.display='none'"
-          />
-          <div class="section-banner-overlay"></div>
+        <p class="section-en">EAP</p>
+        <h2 class="section-title" id="promise-title">EAP導入で、職場はこう変わります</h2>
+        <p class="section-lead">専用Webアプリと月1〜2回の訪問で、個人支援と職場改善を同時に進める仕組みです。</p>
+
+        <div class="eap-highlight-ribbon" aria-label="EAP Webアプリの主な特徴">
+          <span class="eap-ribbon-item"><strong>アプリ使用料</strong><span>0<small>円</small></span></span>
+          <span class="eap-ribbon-divider" aria-hidden="true"></span>
+          <span class="eap-ribbon-item"><strong>訪問</strong><span>月1〜2<small>回</small></span></span>
+          <span class="eap-ribbon-divider" aria-hidden="true"></span>
+          <span class="eap-ribbon-item"><strong>AI相談</strong><span>24<small>時間</small></span></span>
+          <span class="eap-ribbon-divider" aria-hidden="true"></span>
+          <span class="eap-ribbon-item"><strong>上司通知</strong><span>0<small>件</small></span></span>
         </div>
+
         <div class="promise-grid">
           <div class="promise-col promise-col-before" aria-label="導入前">
             <p class="promise-col-label">Before</p>
             <ul class="promise-list">
-              <li>相談先が社内だけで抱え込む</li>
-              <li>休職・離職が突然起こる</li>
-              <li>高ストレス者への面談が進まない</li>
+              <li>相談先が社内中心で、話しにくい</li>
+              <li>不調の兆しが見えにくく、対応が後手になる</li>
+              <li>職場全体の傾向を把握しにくい</li>
             </ul>
           </div>
           <div class="promise-arrow" aria-hidden="true">→</div>
           <div class="promise-col promise-col-after" aria-label="導入後">
             <p class="promise-col-label">After</p>
             <ul class="promise-list">
-              <li>上司に知られず、専門家へすぐ相談</li>
-              <li>早期に気づき、休職・離職を予防</li>
-              <li>面談・集団分析まで一気通貫で対応</li>
+              <li>会社に知られず予約相談できる</li>
+              <li>Webアプリ記録＋訪問で早期対応しやすい</li>
+              <li>匿名化した集団分析で改善点を共有できる</li>
             </ul>
           </div>
         </div>
+        <div class="eap-app-grid" aria-label="EAP Webアプリの主要機能">
+          <article class="eap-feature">
+            <div class="eap-feature-icon" aria-hidden="true">📝</div>
+            <h3 class="eap-feature-title">コンディション記録</h3>
+            <p class="eap-feature-text">気分・睡眠・体調をタップ中心で記録。</p>
+          </article>
+          <article class="eap-feature">
+            <div class="eap-feature-icon" aria-hidden="true">💬</div>
+            <h3 class="eap-feature-title">AI相談（24時間）</h3>
+            <p class="eap-feature-text">いつでも相談できる一次受け窓口。</p>
+          </article>
+          <article class="eap-feature">
+            <div class="eap-feature-icon" aria-hidden="true">📅</div>
+            <h3 class="eap-feature-title">専門家へ予約相談</h3>
+            <p class="eap-feature-text">担当者へ直接予約。個別相談内容は会社へ共有しません。</p>
+          </article>
+          <article class="eap-feature">
+            <div class="eap-feature-icon" aria-hidden="true">📊</div>
+            <h3 class="eap-feature-title">集団分析レポート</h3>
+            <p class="eap-feature-text">匿名化したデータで職場の傾向を可視化。</p>
+          </article>
+        </div>
+        <div class="eap-cta-row">
+          <a href="./yoyaku.html" class="btn btn-primary">導入のご相談</a>
+          <a href="#price" class="btn btn-outline">料金を見る</a>
+          <a href="./eap-leaflet.html" class="btn btn-outline" aria-label="【従業員向け】巡回健康相談窓口のご案内ページを開く">従業員向け案内</a>
+        </div>
+        <p class="eap-note">※外部窓口として秘密厳守を徹底。個人の相談内容は会社に共有されません。</p>
       </div>
     </section>
 
@@ -199,12 +229,12 @@
       </div>
     </section>
 
-    <!-- ===================== ステップ1.5: サービス紹介（静止画カード） ===================== -->
+    <!-- ===================== 提供サービス（主軸＋オプション） ===================== -->
     <section id="service" class="section service-section">
       <div class="container">
         <p class="section-en">Service</p>
-        <h2 class="section-title">巡回健康相談・EAPを主軸に、職場の相談体制をつくる</h2>
-        <p class="section-lead">専門家が職場へうかがい、従業員が安心して相談できる土台を整えます。ストレスチェックの実施は、法令対応や助成金活用が必要な事業所向けに、必要なときだけオプションで組み合わせられます。</p>
+        <h2 class="section-title">提供サービス（EAP主軸＋必要なオプション）</h2>
+        <p class="section-lead">主軸は巡回健康相談・EAP。ストレスチェックは必要な事業所のみオプションで組み合わせできます。</p>
         <div class="service-cards">
           <article class="service-card">
             <div class="service-card-media" aria-hidden="true">
@@ -254,94 +284,6 @@
             </div>
           </article>
         </div>
-      </div>
-    </section>
-
-    <!-- ===================== 主軸：EAPアプリ＋巡回相談 ===================== -->
-    <section id="eap" class="section section-alt">
-      <div class="container">
-        <p class="section-en">Core</p>
-        <h2 class="section-title">専用Webアプリ × 月1〜2回の訪問</h2>
-        <p class="section-lead">アプリで記録、訪問で対話。会社に知られず相談できる仕組み。</p>
-
-        <div class="eap-highlight-ribbon" aria-label="EAP Webアプリの主な特徴">
-          <span class="eap-ribbon-item"><strong>アプリ使用料</strong><span>0<small>円</small></span></span>
-          <span class="eap-ribbon-divider" aria-hidden="true"></span>
-          <span class="eap-ribbon-item"><strong>訪問</strong><span>月1〜2<small>回</small></span></span>
-          <span class="eap-ribbon-divider" aria-hidden="true"></span>
-          <span class="eap-ribbon-item"><strong>AI相談</strong><span>24<small>時間</small></span></span>
-          <span class="eap-ribbon-divider" aria-hidden="true"></span>
-          <span class="eap-ribbon-item"><strong>上司通知</strong><span>0<small>件</small></span></span>
-        </div>
-
-        <div class="eap-phone-gallery" aria-label="Webアプリの実画面">
-          <figure class="phone-mock">
-            <div class="phone-frame">
-              <img src="./images/app-home.png" alt="EAP Webアプリのホーム画面" loading="lazy" />
-            </div>
-            <figcaption>ホーム画面</figcaption>
-          </figure>
-          <figure class="phone-mock">
-            <div class="phone-frame">
-              <img src="./images/app-chat.png" alt="AI相談（24時間）画面" loading="lazy" />
-            </div>
-            <figcaption>AI相談（24時間）</figcaption>
-          </figure>
-          <figure class="phone-mock">
-            <div class="phone-frame">
-              <img src="./images/app-check.png" alt="コンディション記録画面" loading="lazy" />
-            </div>
-            <figcaption>コンディション記録</figcaption>
-          </figure>
-        </div>
-        <p class="eap-phone-note">※ストア配布のネイティブアプリではなく、ブラウザで開ける「Webアプリ」です。スマホのホーム画面に追加すれば通常のアプリと同じように使えます。</p>
-
-        <div class="eap-app-grid" aria-label="EAP Webアプリの主要機能">
-          <article class="eap-feature">
-            <div class="eap-feature-icon" aria-hidden="true">📝</div>
-            <h3 class="eap-feature-title">コンディション記録</h3>
-            <p class="eap-feature-text">気分・睡眠・体調をタップ中心で記録。</p>
-          </article>
-          <article class="eap-feature">
-            <div class="eap-feature-icon" aria-hidden="true">💬</div>
-            <h3 class="eap-feature-title">AI相談（24時間）</h3>
-            <p class="eap-feature-text">いつでも話せる。その場で吐き出せる。</p>
-          </article>
-          <article class="eap-feature">
-            <div class="eap-feature-icon" aria-hidden="true">📅</div>
-            <h3 class="eap-feature-title">専門家に予約相談</h3>
-            <p class="eap-feature-text">会社に知られず、担当者（看護師・公認心理師）へ直接予約。</p>
-          </article>
-          <article class="eap-feature">
-            <div class="eap-feature-icon" aria-hidden="true">📊</div>
-            <h3 class="eap-feature-title">集団分析レポート</h3>
-            <p class="eap-feature-text">匿名化した集団データで職場の傾向を可視化。</p>
-          </article>
-        </div>
-
-        <div class="eap-flow-mini" aria-label="仕組みの流れ">
-          <div class="eap-flow-mini-step">
-            <span class="eap-flow-mini-num">1</span>
-            <span class="eap-flow-mini-label">従業員がアプリに記録</span>
-          </div>
-          <span class="eap-flow-mini-arrow" aria-hidden="true">→</span>
-          <div class="eap-flow-mini-step">
-            <span class="eap-flow-mini-num">2</span>
-            <span class="eap-flow-mini-label">匿名化して集団分析</span>
-          </div>
-          <span class="eap-flow-mini-arrow" aria-hidden="true">→</span>
-          <div class="eap-flow-mini-step">
-            <span class="eap-flow-mini-num">3</span>
-            <span class="eap-flow-mini-label">企業へレポート・月1〜2回訪問</span>
-          </div>
-        </div>
-
-        <div class="eap-cta-row">
-          <a href="./yoyaku.html" class="btn btn-primary">導入のご相談</a>
-          <a href="./ryokin.html" class="btn btn-outline">料金プランを見る</a>
-          <a href="./eap-leaflet.html" class="btn btn-outline" aria-label="【従業員向け】巡回健康相談窓口のご案内ページを開く">従業員向け案内</a>
-        </div>
-        <p class="eap-note">※外部窓口として秘密厳守を徹底。個人の相談内容は会社に共有されません。</p>
       </div>
     </section>
 
@@ -463,6 +405,7 @@
       <div class="container">
         <p class="section-en">Price</p>
         <h2 class="section-title">料金・プラン</h2>
+        <p class="section-lead">料金・費用に関するご案内は、このセクションに集約しています。</p>
         <div class="price-integrated-box" aria-label="サービス・資料の案内">
           <div class="price-integrated-grid">
             <div class="price-integrated-col">
@@ -853,6 +796,6 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=20260420f"></script>
+  <script src="./script.js?v=20260420g"></script>
 </body>
 </html>
