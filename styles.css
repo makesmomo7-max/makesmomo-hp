@@ -397,27 +397,38 @@ a {
   animation-delay: 0.62s;
 }
 
-/* === ヒーロー：一言で伝える強み === */
-.hero-oneline {
-  margin: 0 0 18px;
-  font-size: clamp(1.1rem, 3.4vw, 1.75rem);
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  line-height: 1.5;
-  color: #ffffff;
-  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
-  padding: 0.55em 1.1em;
-  border-radius: 999px;
-  background: rgba(245, 158, 11, 0.18);
-  border: 1px solid rgba(245, 158, 11, 0.55);
+/* === ヒーロー：名言（PD）ブロック === */
+.hero-quote {
+  margin: 0 auto 22px;
+  padding: 14px 22px;
+  max-width: 560px;
+  border-left: 3px solid var(--color-accent-orange, #f59e0b);
+  border-right: 3px solid var(--color-accent-orange, #f59e0b);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  display: inline-block;
-  max-width: 100%;
+  text-align: center;
 }
 
-.hero-oneline-break {
-  display: none;
+.hero-quote-text {
+  margin: 0;
+  font-size: clamp(1rem, 2.6vw, 1.25rem);
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+.hero-quote-cite {
+  display: block;
+  margin-top: 6px;
+  font-size: clamp(0.78rem, 1.8vw, 0.9rem);
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .hero-title {
@@ -521,9 +532,42 @@ a {
     margin-top: 0;
     text-align: left;
   }
-  .hero-oneline-break {
-    display: inline;
-  }
+}
+
+/* === 各セクション共通：Unsplashバナー画像 === */
+.section-banner {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 1.2rem auto 1.6rem;
+  height: clamp(140px, 24vw, 260px);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.section-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.95);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-banner:hover .section-banner-image {
+  transform: scale(1.04);
+}
+
+.section-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 31, 58, 0.05) 0%,
+    rgba(11, 31, 58, 0.25) 100%
+  );
+  pointer-events: none;
 }
 
 /* === 使用後の変化（Before → After） === */
