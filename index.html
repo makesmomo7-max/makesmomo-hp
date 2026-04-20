@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260420c" />
+  <link rel="stylesheet" href="./styles.css?v=20260420d" />
 </head>
-<body data-hp-revision="20260420c">
+<body data-hp-revision="20260420d">
   <!-- 公開HP：主軸はEAP・巡回相談。ストレスチェックはオプション。更新確認: data-hp-revision と styles.css の ?v= -->
   <!-- ===================== ステップ1: ヘッダー + グローバルナビ ===================== -->
   <header class="site-header">
@@ -100,10 +100,11 @@
         <h2 class="section-title" id="promise-title">導入後、職場はこう変わります</h2>
         <div class="section-banner" aria-hidden="true">
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"
+            src="./handshake-dark-light.jpg"
             alt=""
             loading="lazy"
             class="section-banner-image"
+            onerror="this.parentElement.style.display='none'"
           />
           <div class="section-banner-overlay"></div>
         </div>
@@ -176,10 +177,11 @@
         </p>
         <div class="section-banner" aria-hidden="true">
           <img
-            src="https://images.unsplash.com/photo-1573879031149-8b66e16c84c0?auto=format&fit=crop&w=1600&q=80"
+            src="./partnership-1.jpg"
             alt=""
             loading="lazy"
             class="section-banner-image"
+            onerror="this.parentElement.style.display='none'"
           />
           <div class="section-banner-overlay"></div>
         </div>
@@ -288,48 +290,69 @@
       </div>
     </section>
 
-    <!-- ===================== 主軸：EAP・巡回健康相談 ===================== -->
+    <!-- ===================== 主軸：EAPアプリ＋巡回相談 ===================== -->
     <section id="eap" class="section section-alt">
       <div class="container">
         <p class="section-en">Core</p>
-        <h2 class="section-title">巡回健康相談窓口・従業員支援プログラム（EAP）</h2>
-        <p class="section-lead">主軸サービスとして、職場に「相談できる場所」をつくります。専用アプリと訪問を組み合わせ、日々の負担や変化に早めに気づける体制をご一緒に整えます。</p>
-        <div class="eap-content">
-          <div class="eap-text">
-            <h3>職場の上司などに悩みを知られることなく、相談できる仕組みです。</h3>
-            <p>ストレスチェックの面接指導は高ストレス者に限定され、申し出がつながりにくい現場も少なくありません。一方で、日々の悩みや不調を抱えた従業員はもっと多くいます。巡回健康相談窓口とEAPは、対象を広げ「話してみよう」と思える導線をつくります。</p>
-            <p>ストレスチェックは法令上の義務や助成金活用など、必要に応じて<strong>オプション</strong>で組み合わせ可能です。セット導入でアフターフォローを充実させることも、EAP単体で相談体制から始めることも、事業所の状況に合わせてご提案します。外部EAP相談窓口はオプションでご利用いただけます。</p>
-            <p style="margin-top: 1rem">
-              <a href="./ryokin.html" class="btn btn-primary">EAPサービス料金表（月額プラン・オプション）</a>
-            </p>
-            <a
-              href="./eap-leaflet.html"
-              class="btn btn-outline"
-              style="margin-top: 0.65rem; display: inline-block"
-              aria-label="【従業員向け】巡回健康相談窓口のご案内ページを開く"
-            >
-              【従業員向け】案内を見る
-            </a>
-            <p class="eap-contract-note">
-              契約事業所向けの従業員用WebのURLは、貴社担当者より個別にご案内いたします。公開ページからはリンクしません。ご利用いただける主な機能の例は次のとおりです。
-            </p>
-            <ul class="eap-services-plain" aria-label="従業員向けWebの機能例（リンクではありません）">
-              <li>従業員向けEAP</li>
-              <li>コンディション記録</li>
-              <li>AIチャット</li>
-              <li>専門家への予約</li>
-            </ul>
-            <p>※外部窓口として秘密厳守を徹底しています。安心して配布・掲示いただけます。</p>
+        <h2 class="section-title">専用EAPアプリ × 月1〜2回の訪問</h2>
+        <p class="section-lead">アプリで記録、訪問で対話。会社に知られず相談できる仕組み。</p>
+
+        <div class="eap-highlight-ribbon" aria-label="EAPアプリの主な特徴">
+          <span class="eap-ribbon-item"><strong>アプリ使用料</strong><span>0<small>円</small></span></span>
+          <span class="eap-ribbon-divider" aria-hidden="true"></span>
+          <span class="eap-ribbon-item"><strong>訪問</strong><span>月1〜2<small>回</small></span></span>
+          <span class="eap-ribbon-divider" aria-hidden="true"></span>
+          <span class="eap-ribbon-item"><strong>AI相談</strong><span>24<small>時間</small></span></span>
+          <span class="eap-ribbon-divider" aria-hidden="true"></span>
+          <span class="eap-ribbon-item"><strong>上司通知</strong><span>0<small>件</small></span></span>
+        </div>
+
+        <div class="eap-app-grid" aria-label="EAPアプリの主要機能">
+          <article class="eap-feature">
+            <div class="eap-feature-icon" aria-hidden="true">📝</div>
+            <h3 class="eap-feature-title">コンディション記録</h3>
+            <p class="eap-feature-text">気分・睡眠・体調をタップ中心で記録。</p>
+          </article>
+          <article class="eap-feature">
+            <div class="eap-feature-icon" aria-hidden="true">💬</div>
+            <h3 class="eap-feature-title">AI相談（24時間）</h3>
+            <p class="eap-feature-text">いつでも話せる。その場で吐き出せる。</p>
+          </article>
+          <article class="eap-feature">
+            <div class="eap-feature-icon" aria-hidden="true">📅</div>
+            <h3 class="eap-feature-title">専門家に予約相談</h3>
+            <p class="eap-feature-text">会社に知られず、担当者（看護師・公認心理師）へ直接予約。</p>
+          </article>
+          <article class="eap-feature">
+            <div class="eap-feature-icon" aria-hidden="true">📊</div>
+            <h3 class="eap-feature-title">集団分析レポート</h3>
+            <p class="eap-feature-text">匿名化した集団データで職場の傾向を可視化。</p>
+          </article>
+        </div>
+
+        <div class="eap-flow-mini" aria-label="仕組みの流れ">
+          <div class="eap-flow-mini-step">
+            <span class="eap-flow-mini-num">1</span>
+            <span class="eap-flow-mini-label">従業員がアプリに記録</span>
           </div>
-          <div class="eap-visual">
-            <img
-              src="./wellness.jpg.jpg"
-              alt="巡回健康相談窓口のイメージ"
-              class="eap-image"
-              onerror="this.style.display='none'; this.parentElement.classList.add('eap-placeholder');"
-            />
+          <span class="eap-flow-mini-arrow" aria-hidden="true">→</span>
+          <div class="eap-flow-mini-step">
+            <span class="eap-flow-mini-num">2</span>
+            <span class="eap-flow-mini-label">匿名化して集団分析</span>
+          </div>
+          <span class="eap-flow-mini-arrow" aria-hidden="true">→</span>
+          <div class="eap-flow-mini-step">
+            <span class="eap-flow-mini-num">3</span>
+            <span class="eap-flow-mini-label">企業へレポート・月1〜2回訪問</span>
           </div>
         </div>
+
+        <div class="eap-cta-row">
+          <a href="./yoyaku.html" class="btn btn-primary">導入のご相談</a>
+          <a href="./ryokin.html" class="btn btn-outline">料金プランを見る</a>
+          <a href="./eap-leaflet.html" class="btn btn-outline" aria-label="【従業員向け】巡回健康相談窓口のご案内ページを開く">従業員向け案内</a>
+        </div>
+        <p class="eap-note">※外部窓口として秘密厳守を徹底。個人の相談内容は会社に共有されません。</p>
       </div>
     </section>
 
@@ -566,10 +589,11 @@
         <p class="section-lead">受検 → 面談 → 集団分析まで、まるごとお任せ。</p>
         <div class="section-banner" aria-hidden="true">
           <img
-            src="https://images.unsplash.com/photo-1758874384683-0accd9fb26ee?auto=format&fit=crop&w=1600&q=80"
+            src="./memo-male-hands-counselor.jpg"
             alt=""
             loading="lazy"
             class="section-banner-image"
+            onerror="this.parentElement.style.display='none'"
           />
           <div class="section-banner-overlay"></div>
         </div>
@@ -772,10 +796,11 @@
         <h2 class="section-title">お問い合わせはこちら（メールフォーム）</h2>
         <div class="section-banner" aria-hidden="true">
           <img
-            src="https://images.unsplash.com/photo-1559136656-3db4bf6c35f8?auto=format&fit=crop&w=1600&q=80"
+            src="./meeting-room.jpg"
             alt=""
             loading="lazy"
             class="section-banner-image"
+            onerror="this.parentElement.style.display='none'"
           />
           <div class="section-banner-overlay"></div>
         </div>
@@ -839,6 +864,6 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=20260420c"></script>
+  <script src="./script.js?v=20260420d"></script>
 </body>
 </html>
