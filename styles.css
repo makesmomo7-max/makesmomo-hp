@@ -1620,17 +1620,40 @@ a {
 }
 
 .philosophy-card {
-  background: #ffffff;
-  border: 1px solid var(--color-border);
+  background: linear-gradient(165deg, #ffffff 0%, #f4f8ff 100%);
+  border: 1px solid rgba(18, 59, 107, 0.16);
   border-radius: var(--radius-lg);
   padding: 18px 16px;
   box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, #123b6b 0%, #2f6aac 50%, #001f3f 100%);
+}
+
+.philosophy-card:nth-child(2) {
+  background: linear-gradient(165deg, #ffffff 0%, #edf5ff 100%);
+}
+
+.philosophy-card:nth-child(3) {
+  background: linear-gradient(165deg, #ffffff 0%, #eef7ff 100%);
 }
 
 .philosophy-card-title {
   margin: 0 0 8px;
-  color: var(--color-primary);
+  background: linear-gradient(120deg, #123b6b 0%, #2d5f99 52%, #001f3f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .philosophy-card-text {
@@ -1642,11 +1665,19 @@ a {
 
 .philosophy-values {
   margin: 0;
-  padding-left: 1rem;
+  padding-left: 0;
+  list-style: none;
   display: grid;
   gap: 0.45rem;
   color: var(--color-text-main);
   font-size: 0.9rem;
+}
+
+.philosophy-values li {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(18, 59, 107, 0.16);
+  background: rgba(18, 59, 107, 0.05);
 }
 
 .philosophy-tagline {
