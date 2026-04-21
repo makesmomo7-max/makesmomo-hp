@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260421x" />
+  <link rel="stylesheet" href="./styles.css?v=20260421y" />
 </head>
-<body data-hp-revision="20260421x">
+<body data-hp-revision="20260421y">
   <!-- 公開HP：主軸はEAP・巡回相談。ストレスチェックはオプション。更新確認: data-hp-revision と styles.css の ?v= -->
   <!-- ===================== ステップ1: ヘッダー + グローバルナビ ===================== -->
   <header class="site-header">
@@ -470,52 +470,41 @@
       <div class="container">
         <p class="section-en">Price</p>
         <h2 class="section-title">料金・プラン</h2>
-        <p class="section-lead">料金・費用に関するご案内は、このセクションに集約しています。</p>
-        <div class="price-integrated-box" aria-label="サービス・資料の案内">
-          <div class="price-integrated-grid">
-            <div class="price-integrated-col">
-              <h3 class="price-integrated-col-title">EAP・巡回健康相談（主軸）</h3>
-              <a href="./ryokin.html" class="btn btn-primary price-integrated-pdf-btn" style="margin-top: 0.35rem">EAP（従業員支援）サービス料金表を見る</a>
-            </div>
+        <p class="section-lead">まず主軸プランを選び、必要なときだけオプションを追加する構成です。</p>
+        <div class="price-quick-layout" aria-label="料金プランの早見表">
+          <article class="price-quick-main">
+            <p class="price-quick-badge">まずはこれ（主軸）</p>
+            <h3 class="price-quick-title">EAP・巡回健康相談</h3>
+            <ul class="price-quick-points">
+              <li>月1〜2回の訪問 + Webアプリで運用</li>
+              <li>個別相談と職場改善を同時に支援</li>
+              <li>導入規模に応じて個別見積もり</li>
+            </ul>
+            <a href="./ryokin.html" class="btn btn-primary">EAP料金表を見る</a>
+          </article>
 
-            <div class="price-integrated-col">
-              <h3 class="price-integrated-col-title">【従業員向け】案内</h3>
-              <a
-                href="./eap-leaflet.html"
-                class="btn btn-outline price-integrated-pdf-btn"
-                aria-label="【従業員向け】巡回健康相談・EAPの案内ページを開く"
-              >
-                従業員向け案内を見る
-              </a>
-            </div>
-
-            <div class="price-integrated-col">
-              <h3 class="price-integrated-col-title">ストレスチェック（オプション）</h3>
-              <p class="price-integrated-strong">20名未満一律30,000円〜</p>
-              <p class="method-small" style="margin-top: 0.5rem; text-align: center">主軸のEAPとは別に、必要なときだけお申し込みいただけます。</p>
-            </div>
-
-            <div class="price-integrated-col">
-              <h3 class="price-integrated-col-title">セミナー・ラインケア研修</h3>
-              <a
-                href="./seminar.html"
-                class="btn btn-outline price-integrated-pdf-btn"
-                aria-label="セミナー・ラインケアのご案内ページを開く"
-              >
-                セミナー案内を見る
-              </a>
-            </div>
+          <div class="price-quick-options">
+            <article class="price-quick-option">
+              <h3>ストレスチェック（必要時のみ）</h3>
+              <p class="price-quick-strong">20名未満：一律30,000円〜</p>
+              <p>法令対応が必要な場合だけ追加できます。</p>
+            </article>
+            <article class="price-quick-option">
+              <h3>【従業員向け】案内</h3>
+              <p>社内周知に使える案内ページを準備しています。</p>
+              <a href="./eap-leaflet.html" class="btn btn-outline" aria-label="【従業員向け】巡回健康相談・EAPの案内ページを開く">従業員向け案内を見る</a>
+            </article>
+            <article class="price-quick-option">
+              <h3>セミナー・ラインケア研修</h3>
+              <p>管理職向け・現場向けに合わせて実施できます。</p>
+              <a href="./seminar.html" class="btn btn-outline" aria-label="セミナー・ラインケアのご案内ページを開く">セミナー案内を見る</a>
+            </article>
           </div>
-
-          <div class="price-footnotes">
-            <p class="price-footnotes-area"><strong>訪問対応エリア：岡山県内</strong></p>
-            <p class="price-footnotes-scope">
-              料金表に記載の金額は新規のお問い合わせ向けの標準案内です。試験運用中にご契約いただいた法人様は、個別にご案内した条件が適用されます。
-            </p>
-          </div>
-          <div class="price-subsidy-jump">
-            <a href="#subsidy-industrial-health" class="btn btn-outline price-subsidy-jump-btn">助成金で負担を軽くする</a>
-          </div>
+        </div>
+        <div class="price-quick-foot">
+          <p><strong>訪問対応エリア：</strong>岡山県内</p>
+          <p>※料金表は新規お問い合わせ向けの標準案内です。試験運用中にご契約いただいた法人様は個別条件が適用されます。</p>
+          <a href="#subsidy-industrial-health" class="btn btn-outline">助成金で負担を軽くする</a>
         </div>
       </div>
     </section>
@@ -817,6 +806,6 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=20260421x"></script>
+  <script src="./script.js?v=20260421y"></script>
 </body>
 </html>
