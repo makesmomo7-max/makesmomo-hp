@@ -1620,11 +1620,15 @@ a {
 }
 
 .philosophy-card {
-  background: linear-gradient(165deg, #ffffff 0%, #f4f8ff 100%);
-  border: 1px solid rgba(18, 59, 107, 0.16);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(153, 194, 240, 0.22), transparent 42%),
+    linear-gradient(165deg, #ffffff 0%, #f3f8ff 62%, #edf5ff 100%);
+  border: 1px solid rgba(18, 59, 107, 0.18);
   border-radius: var(--radius-lg);
   padding: 18px 16px;
-  box-shadow: var(--shadow-soft);
+  box-shadow:
+    0 8px 20px rgba(11, 31, 58, 0.08),
+    0 2px 8px rgba(47, 106, 172, 0.08);
   position: relative;
   overflow: hidden;
 }
@@ -1634,26 +1638,38 @@ a {
   position: absolute;
   inset: 0 auto 0 0;
   width: 4px;
-  background: linear-gradient(180deg, #123b6b 0%, #2f6aac 50%, #001f3f 100%);
+  background: linear-gradient(180deg, #123b6b 0%, #4c7fbe 48%, #001f3f 100%);
+}
+
+.philosophy-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 12px 10px 12px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(18, 59, 107, 0), rgba(18, 59, 107, 0.22), rgba(18, 59, 107, 0));
 }
 
 .philosophy-card:nth-child(2) {
-  background: linear-gradient(165deg, #ffffff 0%, #edf5ff 100%);
+  background:
+    radial-gradient(circle at 90% 12%, rgba(181, 205, 236, 0.2), transparent 40%),
+    linear-gradient(165deg, #ffffff 0%, #edf5ff 100%);
 }
 
 .philosophy-card:nth-child(3) {
-  background: linear-gradient(165deg, #ffffff 0%, #eef7ff 100%);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(173, 206, 245, 0.2), transparent 42%),
+    linear-gradient(165deg, #ffffff 0%, #eef7ff 100%);
 }
 
 .philosophy-card-title {
   margin: 0 0 8px;
-  background: linear-gradient(120deg, #123b6b 0%, #2d5f99 52%, #001f3f 100%);
+  background: linear-gradient(120deg, #123b6b 0%, #3a74b5 45%, #001f3f 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 1.02rem;
+  font-size: 1.06rem;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 
 .philosophy-card-text {
@@ -1676,17 +1692,19 @@ a {
 .philosophy-values li {
   padding: 8px 10px;
   border-radius: 10px;
-  border: 1px solid rgba(18, 59, 107, 0.16);
-  background: rgba(18, 59, 107, 0.05);
+  border: 1px solid rgba(18, 59, 107, 0.2);
+  background: linear-gradient(140deg, rgba(18, 59, 107, 0.08), rgba(58, 116, 181, 0.06));
 }
 
 .philosophy-tagline {
   margin-top: 14px;
   padding: 16px;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  background: #ffffff;
-  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(18, 59, 107, 0.2);
+  background: linear-gradient(160deg, #ffffff 0%, #f2f8ff 100%);
+  box-shadow:
+    0 8px 22px rgba(11, 31, 58, 0.08),
+    0 2px 8px rgba(47, 106, 172, 0.08);
 }
 
 .philosophy-tagline-en {
