@@ -1242,6 +1242,36 @@ a {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.section-tint {
+  background:
+    linear-gradient(180deg, rgba(0, 31, 63, 0.04) 0%, rgba(0, 31, 63, 0.07) 100%);
+}
+
+.section-midnight {
+  background:
+    radial-gradient(circle at 85% 12%, rgba(255, 255, 255, 0.08), transparent 34%),
+    linear-gradient(165deg, #001226 0%, #001a36 42%, #001f3f 100%);
+  color: #ffffff;
+}
+
+.section-midnight .section-en {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.section-midnight .section-title {
+  color: #ffffff;
+}
+
+.section-midnight .section-lead {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.section-midnight .flow-note,
+.section-midnight .sc-option-compact-note,
+.section-midnight .subsidy-note-small {
+  color: rgba(255, 255, 255, 0.76);
+}
+
 /* ===================== サービス紹介（静止画カード） ===================== */
 .service-cards {
   display: grid;
@@ -1776,7 +1806,7 @@ a {
 
 /* ===================== 1分セルフチェック ===================== */
 .self-check-section {
-  background: #ffffff;
+  background: transparent;
 }
 
 .self-check-form {
@@ -3054,6 +3084,12 @@ a {
 /* ===================== ステップ7: 問い合わせ ===================== */
 .section-contact {
   background: linear-gradient(180deg, var(--color-bg-alt) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.section-midnight.section-contact {
+  background:
+    radial-gradient(circle at 80% 8%, rgba(255, 255, 255, 0.08), transparent 36%),
+    linear-gradient(160deg, #001226 0%, #001f3f 62%, #082b54 100%);
 }
 
 .contact-inner {
