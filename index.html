@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260421y" />
+  <link rel="stylesheet" href="./styles.css?v=20260421z" />
 </head>
-<body data-hp-revision="20260421y">
+<body data-hp-revision="20260421z">
   <!-- 公開HP：主軸はEAP・巡回相談。ストレスチェックはオプション。更新確認: data-hp-revision と styles.css の ?v= -->
   <!-- ===================== ステップ1: ヘッダー + グローバルナビ ===================== -->
   <header class="site-header">
@@ -471,6 +471,13 @@
         <p class="section-en">Price</p>
         <h2 class="section-title">料金・プラン</h2>
         <p class="section-lead">まず主軸プランを選び、必要なときだけオプションを追加する構成です。</p>
+        <div class="price-scheme" aria-label="料金プランの選び方">
+          <div class="price-scheme-step"><span>1</span>主軸プランを選ぶ</div>
+          <div class="price-scheme-arrow" aria-hidden="true">→</div>
+          <div class="price-scheme-step"><span>2</span>必要なオプションを追加</div>
+          <div class="price-scheme-arrow" aria-hidden="true">→</div>
+          <div class="price-scheme-step"><span>3</span>助成金で負担を調整</div>
+        </div>
         <div class="price-quick-layout" aria-label="料金プランの早見表">
           <article class="price-quick-main">
             <p class="price-quick-badge">まずはこれ（主軸）</p>
@@ -485,16 +492,19 @@
 
           <div class="price-quick-options">
             <article class="price-quick-option">
-              <h3>ストレスチェック（必要時のみ）</h3>
+              <p class="price-quick-label">法令対応オプション</p>
+              <h3>ストレスチェック</h3>
               <p class="price-quick-strong">20名未満：一律30,000円〜</p>
               <p>法令対応が必要な場合だけ追加できます。</p>
             </article>
             <article class="price-quick-option">
-              <h3>【従業員向け】案内</h3>
+              <p class="price-quick-label">社内周知サポート</p>
+              <h3>従業員向け案内</h3>
               <p>社内周知に使える案内ページを準備しています。</p>
               <a href="./eap-leaflet.html" class="btn btn-outline" aria-label="【従業員向け】巡回健康相談・EAPの案内ページを開く">従業員向け案内を見る</a>
             </article>
             <article class="price-quick-option">
+              <p class="price-quick-label">組織強化オプション</p>
               <h3>セミナー・ラインケア研修</h3>
               <p>管理職向け・現場向けに合わせて実施できます。</p>
               <a href="./seminar.html" class="btn btn-outline" aria-label="セミナー・ラインケアのご案内ページを開く">セミナー案内を見る</a>
@@ -806,6 +816,6 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=20260421y"></script>
+  <script src="./script.js?v=20260421z"></script>
 </body>
 </html>
