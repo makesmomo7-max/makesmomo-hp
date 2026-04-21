@@ -1223,6 +1223,25 @@ a {
   letter-spacing: 0.04em;
 }
 
+.irodori-navy {
+  background: linear-gradient(120deg, #123b6b 0%, #1d5ea7 45%, #001f3f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 0 0.02em;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  border-bottom: 2px solid rgba(18, 59, 107, 0.2);
+}
+
+.section-midnight .irodori-navy,
+.section-dark .irodori-navy {
+  background: linear-gradient(120deg, #d8e7fb 0%, #a9c8f2 42%, #7fb0e8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-bottom-color: rgba(216, 231, 251, 0.42);
+}
+
 .section-lead {
   margin: 0 0 42px;
   color: var(--color-text-muted);
