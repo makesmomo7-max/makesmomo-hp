@@ -2932,6 +2932,48 @@ a {
 }
 
 /* ===================== ステップ4: ストレスチェックの流れ ===================== */
+.flow-phase-scheme {
+  margin: 0 auto 12px;
+  max-width: 980px;
+  padding: 10px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.flow-phase-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.flow-phase-chip span {
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #0b1f3a;
+  background: #ffffff;
+}
+
+.flow-phase-arrow {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 700;
+}
+
 .flow-diagram {
   display: flex;
   flex-wrap: wrap;
@@ -2965,6 +3007,18 @@ a {
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 12px;
+}
+
+.flow-phase-label {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(11, 31, 58, 0.74);
+  background: rgba(0, 31, 63, 0.1);
 }
 
 .flow-step h3 {
@@ -3839,6 +3893,20 @@ a {
 
   .flow-arrow {
     transform: rotate(90deg);
+  }
+
+  .flow-phase-scheme {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .flow-phase-chip {
+    justify-content: center;
+  }
+
+  .flow-phase-arrow {
+    transform: rotate(90deg);
+    align-self: center;
   }
 
   .eap-content {
