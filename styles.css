@@ -1899,12 +1899,20 @@ a {
 /* ===================== 1分セルフチェック ===================== */
 .self-check-section {
   position: relative;
-  overflow: visible;
-  background: #ffffff;
+  overflow: hidden;
+  background: #f7fbff;
 }
 
 .self-check-section::before {
-  display: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.82)),
+    url("./lake-single-tree.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
 }
 
 .self-check-section .container {
