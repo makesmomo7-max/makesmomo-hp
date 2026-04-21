@@ -2682,23 +2682,25 @@ a {
   overflow: hidden;
 }
 
-#contact::before {
-  content: "";
+.contact-bg {
   position: absolute;
   inset: 0;
-  background-image: url("./bg_4talk.png");
-  background-size: cover;
-  background-position: center;
   z-index: 0;
 }
 
-#contact::after {
-  content: "";
+.contact-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-bg-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.9);
-  z-index: 1;
-  pointer-events: none;
+  background:
+    linear-gradient(160deg, rgba(0, 18, 38, 0.82), rgba(0, 31, 63, 0.68)),
+    radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.06), transparent 34%);
 }
 
 #contact .container {
