@@ -1223,6 +1223,25 @@ a {
   line-height: 1.8;
 }
 
+.section-dark {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.08), transparent 40%),
+    linear-gradient(160deg, #00152d 0%, #001f3f 58%, #0a2a52 100%);
+  color: #ffffff;
+}
+
+.section-dark .section-en {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.section-dark .section-title {
+  color: #ffffff;
+}
+
+.section-dark .section-lead {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* ===================== サービス紹介（静止画カード） ===================== */
 .service-cards {
   display: grid;
@@ -1538,6 +1557,88 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* ===================== インパクト（図解 + 数字） ===================== */
+.impact-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.impact-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 18px 16px;
+}
+
+.impact-card-kicker {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.72);
+  text-transform: uppercase;
+}
+
+.impact-card-num {
+  margin: 6px 0 0;
+  font-size: clamp(1.9rem, 4.6vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.impact-card-num small {
+  font-size: 0.42em;
+  margin-left: 4px;
+}
+
+.impact-card-text {
+  margin: 8px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.impact-card--point {
+  border-color: rgba(245, 158, 11, 0.85);
+  box-shadow: 0 12px 26px rgba(245, 158, 11, 0.22);
+}
+
+.impact-card--point .impact-card-num {
+  color: var(--color-accent-orange, #f59e0b);
+}
+
+.impact-flow {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.impact-flow-step {
+  min-width: 110px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.impact-flow-arrow {
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 700;
 }
 
 /* ===================== ステップ3: 受検方法比較表 ===================== */
@@ -3403,6 +3504,18 @@ a {
 
   .philosophy-grid {
     grid-template-columns: 1fr;
+  }
+
+  .impact-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-flow {
+    flex-direction: column;
+  }
+
+  .impact-flow-arrow {
+    transform: rotate(90deg);
   }
 
   .flow-diagram {
