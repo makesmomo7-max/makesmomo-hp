@@ -1930,8 +1930,7 @@ a {
   gap: 0.55rem;
 }
 
-.self-check-group legend {
-  display: block;
+.self-check-group-title {
   margin: 0 0 0.4rem;
   padding: 0;
   font-weight: 700;
