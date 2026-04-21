@@ -1470,6 +1470,76 @@ a {
   gap: 12px;
 }
 
+/* ===================== 企業理念 ===================== */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.philosophy-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.philosophy-card-title {
+  margin: 0 0 8px;
+  color: var(--color-primary);
+  font-size: 1.02rem;
+}
+
+.philosophy-card-text {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.philosophy-values {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.45rem;
+  color: var(--color-text-main);
+  font-size: 0.9rem;
+}
+
+.philosophy-tagline {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.philosophy-tagline-en {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.philosophy-tagline-ja {
+  margin: 4px 0 0;
+  color: var(--color-text-main);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.philosophy-actions {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 /* ===================== ステップ3: 受検方法比較表 ===================== */
 .method-table-wrap {
   overflow-x: auto;
@@ -3329,6 +3399,10 @@ a {
 
   .trust-banner-content {
     padding: 22px 18px;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
   }
 
   .flow-diagram {
