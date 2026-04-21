@@ -1272,6 +1272,48 @@ a {
   color: rgba(255, 255, 255, 0.76);
 }
 
+/* Flowセクションは視認性優先でコンパクト表示 */
+#eap-flow.section-midnight {
+  padding: 52px 0;
+}
+
+#eap-flow.section-midnight .flow-diagram {
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+#eap-flow.section-midnight .flow-step {
+  min-width: 170px;
+  max-width: 220px;
+  padding: 16px 14px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+#eap-flow.section-midnight .flow-step h3,
+#eap-flow.section-midnight .flow-points,
+#eap-flow.section-midnight .flow-points li {
+  color: #0b1f3a;
+}
+
+#eap-flow.section-midnight .flow-icon {
+  color: #0b1f3a;
+}
+
+#eap-flow.section-midnight .flow-num {
+  background: rgba(245, 158, 11, 0.16);
+  color: #0b1f3a;
+  border-color: rgba(11, 31, 58, 0.18);
+}
+
+#eap-flow.section-midnight .flow-arrow {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+#eap-flow.section-midnight .cycle-diagram {
+  display: none;
+}
+
 /* ===================== サービス紹介（静止画カード） ===================== */
 .service-cards {
   display: grid;
