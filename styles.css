@@ -1192,6 +1192,7 @@ a {
 /* ===================== 共通セクション ===================== */
 .section {
   padding: 72px 0;
+  scroll-margin-top: 88px;
 }
 
 .section-alt {
@@ -1930,7 +1931,9 @@ a {
 }
 
 .self-check-group legend {
-  padding: 0 0.45rem;
+  display: block;
+  margin: 0 0 0.4rem;
+  padding: 0;
   font-weight: 700;
   color: var(--color-primary);
 }
