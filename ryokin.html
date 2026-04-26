@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260426a" />
+  <link rel="stylesheet" href="./styles.css?v=20260426b" />
   <style>
     .ryokin-page {
       --sage: #3b6d4a;
@@ -140,53 +140,8 @@
       border-radius: 6px;
       line-height: 1.55;
     }
-    .ryokin-doc .price-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12.5px;
-      table-layout: fixed;
-    }
-    .ryokin-doc .price-table th {
-      background: var(--sage-dark);
-      color: #eaf3ee;
-      font-weight: 500;
-      padding: 0.65rem 0.75rem;
-      text-align: center;
-      font-size: 11.5px;
-    }
-    .ryokin-doc .price-table th:first-child {
-      text-align: left;
-      width: 22%;
-    }
-    .ryokin-doc .price-table td {
-      padding: 0.6rem 0.75rem;
-      border-bottom: 1px solid var(--border);
-      text-align: center;
-      color: var(--ink);
-    }
-    .ryokin-doc .price-table td:first-child {
-      text-align: left;
-      font-weight: 500;
-    }
-    .ryokin-doc .price-table tr:nth-child(even) td {
-      background: rgba(234, 243, 238, 0.5);
-    }
     .ryokin-doc .rec-col {
       background: rgba(234, 243, 238, 0.7) !important;
-    }
-    .ryokin-doc .rec-head {
-      background: var(--sage) !important;
-    }
-    .ryokin-doc .badge {
-      display: inline-block;
-      background: #fff;
-      color: var(--sage-dark);
-      font-size: 9px;
-      padding: 2px 6px;
-      border-radius: 20px;
-      vertical-align: middle;
-      margin-left: 4px;
-      font-weight: 700;
     }
     .ryokin-doc .compare-table {
       width: 100%;
@@ -415,15 +370,7 @@
       margin-bottom: 0.25rem;
     }
     .ryokin-toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.65rem 1rem;
       margin-bottom: 1.15rem;
-      padding: 0.65rem 0.85rem;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 8px;
     }
     .ryokin-print-btn {
       display: inline-flex;
@@ -442,11 +389,6 @@
     }
     .ryokin-print-btn:hover {
       filter: brightness(1.05);
-    }
-    .ryokin-print-hint {
-      font-size: 12px;
-      color: var(--muted);
-      margin: 0;
     }
     .ryokin-doc .price-glance {
       background: #fff;
@@ -551,12 +493,6 @@
     .ryokin-doc .price-glance-peek--padded {
       margin-top: 0.3rem;
     }
-    .ryokin-doc .ryokin-table-caption {
-      font-size: 12.5px;
-      color: var(--muted);
-      margin: 0.25rem 0 0.85rem;
-      line-height: 1.55;
-    }
     @media (max-width: 640px) {
       .ryokin-doc .price-glance-name {
         min-height: 0;
@@ -600,7 +536,6 @@
         break-inside: avoid;
         page-break-inside: avoid;
       }
-      .ryokin-doc .price-table,
       .ryokin-doc .compare-table,
       .ryokin-doc .option-table {
         break-inside: avoid;
@@ -612,7 +547,7 @@
     }
   </style>
 </head>
-<body class="ryokin-page" data-hp-revision="20260426a">
+<body class="ryokin-page" data-hp-revision="20260426b">
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html#hero" class="logo" aria-label="ホーム">
@@ -644,19 +579,12 @@
       <p class="ryokin-back"><a href="./index.html#promise">← EAPのご案内（トップ）</a></p>
       <div class="ryokin-toolbar js-no-print" role="region" aria-label="印刷">
         <button type="button" class="ryokin-print-btn" id="ryokinPrintBtn">この料金表を印刷（PDFに保存可）</button>
-        <p class="ryokin-print-hint">用紙への印刷や「PDFに保存」は、ブラウザの印刷（Ctrl+P / ⌘+P）から行えます。</p>
       </div>
       <div class="ryokin-doc">
         <div class="header">
           <p class="tagline-pre">service pricing</p>
           <div class="brand">makes-momo</div>
           <p class="tagline">AIと専門家が支える、こころと組織の健康パートナー</p>
-        </div>
-
-        <div class="scope-note" role="note">
-          <p>
-            本ページに記載の月額・オプション料金は、<strong>新規のお問い合わせ・ご契約</strong>を想定した標準的なご案内です。サービス立ち上げの試験運用中に個別条件でご契約いただいた法人様には、別途ご案内した条件が適用されます。
-          </p>
         </div>
 
         <div class="section">
@@ -674,7 +602,7 @@
           </div>
           <div class="price-glance" aria-label="月額料金の早見表">
             <p class="price-glance-title" role="heading" aria-level="2">ひと目で分かる 月額料金（税別）</p>
-            <p class="price-glance-lead">金額は従業員数の目安で変わります。詳細は下の一覧表をご参照ください。全プランに専用Webアプリ料が含まれ、守秘の方針は共通です。</p>
+            <p class="price-glance-lead">金額は従業員数の目安で変わります。全プランに専用Webアプリ料が含まれ、守秘の方針は共通です。</p>
             <div class="price-glance-tiers">
               <div class="price-glance-tier">
                 <p class="price-glance-tier-head">従業員 20名以下</p>
@@ -744,37 +672,6 @@
               </div>
             </div>
           </div>
-          <p class="ryokin-table-caption">下表は税別の正式な掲出です。上の早見図（万円表記）と照らし合わせてお読みください。</p>
-          <table class="price-table">
-            <thead>
-              <tr>
-                <th>従業員数</th>
-                <th>社長・人事・総務担当者向け EAP<br /><span style="font-weight: 300; font-size: 10px">（アプリ・集団分析／担当者との面談のみ）</span></th>
-                <th class="rec-head">ライト<br /><span style="font-weight: 300; font-size: 10px">月1回訪問・枠30分</span><span class="badge">★おすすめ</span><br /><span style="font-weight: 300; font-size: 9px">（アプリ・集団分析／担当者との面談、従業員面談）</span></th>
-                <th>スタンダード<br /><span style="font-weight: 300; font-size: 10px">月2回訪問・枠30分</span><br /><span style="font-weight: 300; font-size: 9px">（アプリ・集団分析／担当者との面談、従業員面談）</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>20名以下</td>
-                <td>18,000円</td>
-                <td class="rec-col">32,000円</td>
-                <td>58,000円</td>
-              </tr>
-              <tr>
-                <td>20〜50名</td>
-                <td>25,000円</td>
-                <td class="rec-col">52,000円</td>
-                <td>88,000円</td>
-              </tr>
-              <tr>
-                <td>50名以上</td>
-                <td>応相談</td>
-                <td class="rec-col">応相談</td>
-                <td>応相談</td>
-              </tr>
-            </tbody>
-          </table>
           <div class="slots-wrap" style="margin-top: 0.85rem">
             <h4>▸ 各プランに含まれる目安（1か月）</h4>
             <div class="slots-grid">
@@ -967,7 +864,7 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=20260426a"></script>
+  <script src="./script.js?v=20260426b"></script>
   <script>
     (function () {
       var btn = document.getElementById("ryokinPrintBtn");
