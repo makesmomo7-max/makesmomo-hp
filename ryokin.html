@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260416f" />
+  <link rel="stylesheet" href="./styles.css?v=20260426a" />
   <style>
     .ryokin-page {
       --sage: #3b6d4a;
@@ -414,9 +414,205 @@
       font-weight: 600;
       margin-bottom: 0.25rem;
     }
+    .ryokin-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.65rem 1rem;
+      margin-bottom: 1.15rem;
+      padding: 0.65rem 0.85rem;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .ryokin-print-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      background: var(--sage);
+      border: 1px solid var(--sage-dark);
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .ryokin-print-btn:hover {
+      filter: brightness(1.05);
+    }
+    .ryokin-print-hint {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0;
+    }
+    .ryokin-doc .price-glance {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1rem 1.15rem;
+      margin-bottom: 1.35rem;
+    }
+    .ryokin-doc .price-glance-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--sage-dark);
+      margin: 0 0 0.35rem;
+      letter-spacing: 0.04em;
+    }
+    .ryokin-doc .price-glance-lead {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 0 0.9rem;
+      line-height: 1.5;
+    }
+    .ryokin-doc .price-glance-tiers {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .ryokin-doc .price-glance-tier {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .ryokin-doc .price-glance-tier-head {
+      background: var(--sage-light);
+      padding: 0.4rem 0.65rem;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--sage-dark);
+    }
+    .ryokin-doc .price-glance-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      padding: 0.6rem 0.6rem 0.65rem;
+    }
+    .ryokin-doc .price-glance-card {
+      text-align: center;
+      padding: 0.55rem 0.4rem 0.6rem;
+      background: #fafbfa;
+      border-radius: 6px;
+      border: 1px solid #e5ebe7;
+    }
+    .ryokin-doc .price-glance-card--rec {
+      background: rgba(234, 243, 238, 0.9);
+      border-color: var(--sage-mid);
+      box-shadow: 0 0 0 1px var(--sage) inset;
+    }
+    .ryokin-doc .price-glance-name {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.35;
+      min-height: 2.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ryokin-doc .price-glance-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--sage-dark);
+      background: #fff;
+      border: 1px solid var(--sage-mid);
+      border-radius: 99px;
+      padding: 0 0.4rem;
+      margin-top: 0.2rem;
+    }
+    .ryokin-doc .price-glance-amount {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--sage-dark);
+      letter-spacing: 0.02em;
+      margin: 0.2rem 0 0.1rem;
+    }
+    .ryokin-doc .price-glance-amount small {
+      font-size: 0.72em;
+      font-weight: 600;
+    }
+    .ryokin-doc .price-glance-amount--plain {
+      font-size: 1.15rem;
+    }
+    .ryokin-doc .price-glance-unit {
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .ryokin-doc .price-glance-peek {
+      font-size: 10.5px;
+      color: var(--muted);
+      line-height: 1.4;
+      margin: 0.2rem 0 0;
+    }
+    .ryokin-doc .price-glance-peek--padded {
+      margin-top: 0.3rem;
+    }
+    .ryokin-doc .ryokin-table-caption {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin: 0.25rem 0 0.85rem;
+      line-height: 1.55;
+    }
+    @media (max-width: 640px) {
+      .ryokin-doc .price-glance-name {
+        min-height: 0;
+        display: block;
+      }
+      .ryokin-doc .price-glance-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    @page {
+      size: A4;
+      margin: 10mm 12mm;
+    }
+    @media print {
+      .ryokin-page .ryokin-toolbar,
+      .ryokin-page .ryokin-back,
+      .ryokin-page .ryokin-cta-bottom,
+      .ryokin-page .site-header,
+      .ryokin-page .site-footer,
+      .ryokin-page .nav-toggle,
+      .ryokin-page .js-no-print {
+        display: none !important;
+      }
+      .ryokin-page {
+        background: #fff !important;
+      }
+      .ryokin-page main,
+      .ryokin-inner {
+        padding: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+      .ryokin-doc {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .ryokin-doc .header {
+        padding-top: 0.5rem;
+      }
+      .ryokin-doc .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .ryokin-doc .price-table,
+      .ryokin-doc .compare-table,
+      .ryokin-doc .option-table {
+        break-inside: avoid;
+      }
+      .ryokin-doc tr {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
   </style>
 </head>
-<body class="ryokin-page" data-hp-revision="20260416f">
+<body class="ryokin-page" data-hp-revision="20260426a">
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html#hero" class="logo" aria-label="ホーム">
@@ -446,6 +642,10 @@
   <main>
     <div class="ryokin-inner">
       <p class="ryokin-back"><a href="./index.html#promise">← EAPのご案内（トップ）</a></p>
+      <div class="ryokin-toolbar js-no-print" role="region" aria-label="印刷">
+        <button type="button" class="ryokin-print-btn" id="ryokinPrintBtn">この料金表を印刷（PDFに保存可）</button>
+        <p class="ryokin-print-hint">用紙への印刷や「PDFに保存」は、ブラウザの印刷（Ctrl+P / ⌘+P）から行えます。</p>
+      </div>
       <div class="ryokin-doc">
         <div class="header">
           <p class="tagline-pre">service pricing</p>
@@ -472,6 +672,79 @@
               <strong>守秘の考え方：</strong>従業員の個別相談は、まずチャット・オンライン相談から開始できます。個別相談内容は<strong>本人同意なく会社へ共有しません</strong>。会社向けには、個人が特定されない集計・傾向情報を報告します（生命・身体の安全に関わる緊急時等を除く）。
             </p>
           </div>
+          <div class="price-glance" aria-label="月額料金の早見表">
+            <p class="price-glance-title" role="heading" aria-level="2">ひと目で分かる 月額料金（税別）</p>
+            <p class="price-glance-lead">金額は従業員数の目安で変わります。詳細は下の一覧表をご参照ください。全プランに専用Webアプリ料が含まれ、守秘の方針は共通です。</p>
+            <div class="price-glance-tiers">
+              <div class="price-glance-tier">
+                <p class="price-glance-tier-head">従業員 20名以下</p>
+                <div class="price-glance-row">
+                  <div class="price-glance-card">
+                    <p class="price-glance-name">社長・人事・総務向けEAP<br /><span class="price-glance-badge">面談中心</span></p>
+                    <p class="price-glance-amount">1.8<small>万円</small></p>
+                    <p class="price-glance-unit">税別 ／ 月</p>
+                    <p class="price-glance-peek">従業員面談・訪問は含まない想定</p>
+                  </div>
+                  <div class="price-glance-card price-glance-card--rec">
+                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">おすすめ</span></p>
+                    <p class="price-glance-amount">3.2<small>万円</small></p>
+                    <p class="price-glance-unit">税別 ／ 月</p>
+                    <p class="price-glance-peek">従業員面談・集団分析など</p>
+                  </div>
+                  <div class="price-glance-card">
+                    <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
+                    <p class="price-glance-amount">5.8<small>万円</small></p>
+                    <p class="price-glance-unit">税別 ／ 月</p>
+                    <p class="price-glance-peek">従業員面談・集団分析など</p>
+                  </div>
+                </div>
+              </div>
+              <div class="price-glance-tier">
+                <p class="price-glance-tier-head">従業員 20名〜50名</p>
+                <div class="price-glance-row">
+                  <div class="price-glance-card">
+                    <p class="price-glance-name">社長・人事・総務向けEAP<br /><span class="price-glance-badge">面談中心</span></p>
+                    <p class="price-glance-amount">2.5<small>万円</small></p>
+                    <p class="price-glance-unit">税別 ／ 月</p>
+                    <p class="price-glance-peek">従業員面談・訪問は含まない想定</p>
+                  </div>
+                  <div class="price-glance-card price-glance-card--rec">
+                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">おすすめ</span></p>
+                    <p class="price-glance-amount">5.2<small>万円</small></p>
+                    <p class="price-glance-unit">税別 ／ 月</p>
+                    <p class="price-glance-peek">従業員面談・集団分析など</p>
+                  </div>
+                  <div class="price-glance-card">
+                    <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
+                    <p class="price-glance-amount">8.8<small>万円</small></p>
+                    <p class="price-glance-unit">税別 ／ 月</p>
+                    <p class="price-glance-peek">従業員面談・集団分析など</p>
+                  </div>
+                </div>
+              </div>
+              <div class="price-glance-tier">
+                <p class="price-glance-tier-head">従業員 50名以上</p>
+                <div class="price-glance-row">
+                  <div class="price-glance-card">
+                    <p class="price-glance-name">社長・人事・総務向けEAP</p>
+                    <p class="price-glance-amount price-glance-amount--plain">応相談</p>
+                    <p class="price-glance-peek price-glance-peek--padded">規模に合わせてお見積り</p>
+                  </div>
+                  <div class="price-glance-card price-glance-card--rec">
+                    <p class="price-glance-name">ライト <span class="price-glance-badge">おすすめ</span><br /><small>月1回訪問</small></p>
+                    <p class="price-glance-amount price-glance-amount--plain">応相談</p>
+                    <p class="price-glance-peek price-glance-peek--padded">規模に合わせてお見積り</p>
+                  </div>
+                  <div class="price-glance-card">
+                    <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
+                    <p class="price-glance-amount price-glance-amount--plain">応相談</p>
+                    <p class="price-glance-peek price-glance-peek--padded">規模に合わせてお見積り</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="ryokin-table-caption">下表は税別の正式な掲出です。上の早見図（万円表記）と照らし合わせてお読みください。</p>
           <table class="price-table">
             <thead>
               <tr>
@@ -666,7 +939,7 @@
           <p>makes-momo &nbsp;|&nbsp; お問い合わせはお気軽にどうぞ</p>
         </div>
       </div>
-      <p class="ryokin-cta-bottom">
+      <p class="ryokin-cta-bottom js-no-print">
         <a href="./index.html#contact" class="btn btn-primary">お問い合わせ</a>
       </p>
     </div>
@@ -694,6 +967,16 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=20260416f"></script>
+  <script src="./script.js?v=20260426a"></script>
+  <script>
+    (function () {
+      var btn = document.getElementById("ryokinPrintBtn");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          window.print();
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

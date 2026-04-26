@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>career_support_worksheets (A4 duplex)</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 12mm 12mm 12mm 12mm;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Yu Gothic", "Meiryo", "Noto Sans JP", system-ui, -apple-system,
+          "Segoe UI", Arial, sans-serif;
+        color: #111827;
+      }
+      .page {
+        width: 100%;
+        height: auto;
+        page-break-after: always;
+      }
+      .title {
+        font-size: 16pt;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        margin: 0 0 3mm 0;
+      }
+      .subtitle {
+        font-size: 10.5pt;
+        color: #4b5563;
+        margin: 0 0 3mm 0;
+      }
+      .note {
+        font-size: 10pt;
+        margin: 0 0 4mm 0;
+        color: #111827;
+      }
+
+      .box {
+        border: 1px solid #111827;
+        border-radius: 2mm;
+        overflow: hidden;
+        margin: 0 0 3.2mm 0;
+      }
+      .boxHeader {
+        background: #f3f4f6;
+        padding: 2.2mm 3mm;
+        display: flex;
+        gap: 4mm;
+        align-items: baseline;
+        border-bottom: 1px solid #d1d5db;
+      }
+      .boxHeader .label {
+        font-weight: 800;
+        font-size: 11pt;
+        white-space: nowrap;
+      }
+      .boxHeader .hint {
+        font-size: 9.5pt;
+        color: #4b5563;
+      }
+      .boxBody {
+        padding: 3mm 3mm 3mm 3mm;
+        font-size: 11pt;
+        line-height: 1.5;
+        min-height: 20mm;
+      }
+      .lined {
+        background-image: repeating-linear-gradient(
+          to bottom,
+          transparent 0,
+          transparent 8.2mm,
+          #d1d5db 8.2mm,
+          #d1d5db 8.35mm
+        );
+        background-position: 0 2mm;
+      }
+
+      .keywords {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2mm;
+        margin: 0 0 3mm 0;
+        font-weight: 800;
+      }
+      .keywords span {
+        font-size: 11pt;
+      }
+      .smallTag {
+        font-size: 10pt;
+        color: #374151;
+        margin: 0 0 3mm 0;
+        font-weight: 700;
+      }
+      .spacer {
+        height: 1mm;
+      }
+      .footerHint {
+        margin-top: 2mm;
+        font-size: 9.5pt;
+        color: #4b5563;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page 1: Work 1 blank -->
+    <section class="page">
+      <div class="title">☆ ワーク① 自分の支援活動を1分間で伝えるシート（空白）</div>
+      <div class="subtitle">A4で書き込みやすいレイアウト</div>
+      <div class="note">
+        1. まずご自身で記入（目安10分）　2. ペアになり1分で伝える　3. 難しかったところを共有
+      </div>
+
+      <div class="box">
+        <div class="boxHeader"><span class="label">自己紹介</span><span class="hint">（名前・所属・役割）</span></div>
+        <div class="boxBody lined" style="min-height: 18mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">支援の対象者</span><span class="hint">（誰を・どんな状況の方を）</span></div>
+        <div class="boxBody lined" style="min-height: 22mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">提供している支援内容</span><span class="hint">（具体的に何をしているか）</span></div>
+        <div class="boxBody lined" style="min-height: 26mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">支援のこだわり・強み</span><span class="hint">（自分らしいアプローチ）</span></div>
+        <div class="boxBody lined" style="min-height: 24mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">支援を通じて目指す変化</span><span class="hint">（相談者にどうなってほしいか）</span></div>
+        <div class="boxBody lined" style="min-height: 24mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">関心を持たせるフレーズ</span><span class="hint">（「もっと聞きたい」と感じる一言）</span></div>
+        <div class="boxBody lined" style="min-height: 20mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">クロージング</span><span class="hint">（繋がりたいこと・一緒にしたいこと）</span></div>
+        <div class="boxBody lined" style="min-height: 18mm"></div>
+      </div>
+    </section>
+
+    <!-- Page 2: Work 2 blank -->
+    <section class="page">
+      <div class="title">☆ ワーク② 支援者のためのACTIONフレームワーク（空白）</div>
+      <div class="subtitle">
+        エレベータートークで書き出した素材をもとに、ACTIONの枠を埋めてみましょう。
+      </div>
+      <div class="keywords">
+        <span>Attention</span><span>Network</span><span>Only One</span><span>Change</span><span>Trust</span><span>Imagination</span>
+      </div>
+      <div class="smallTag">コミュニケーション戦略</div>
+
+      <div class="box">
+        <div class="boxHeader"><span class="label">Attention</span><span class="hint">（相手を引き込むメッセージ）</span></div>
+        <div class="boxBody lined" style="min-height: 26mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Change</span><span class="hint">（支援による具体的な変化）</span></div>
+        <div class="boxBody lined" style="min-height: 26mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Trust</span><span class="hint">（信頼・実績・資格）</span></div>
+        <div class="boxBody lined" style="min-height: 26mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Imagination</span><span class="hint">（相談者の変化ストーリー）</span></div>
+        <div class="boxBody lined" style="min-height: 26mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Only One</span><span class="hint">（自分・自団体だけの強み）</span></div>
+        <div class="boxBody lined" style="min-height: 26mm"></div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Network</span><span class="hint">（連携・つながり・紹介）</span></div>
+        <div class="boxBody lined" style="min-height: 26mm"></div>
+      </div>
+    </section>
+
+    <!-- Page 3: Work 1 example -->
+    <section class="page">
+      <div class="title">☆ ワーク① 自分の支援活動を1分間で伝えるシート（記入例）</div>
+      <div class="subtitle">話すための素材を、先に“文章化”しておくと1分にまとめやすいです</div>
+      <div class="note">
+        1. まずご自身で記入（目安10分）　2. ペアになり1分で伝える　3. 難しかったところを共有
+      </div>
+
+      <div class="box">
+        <div class="boxHeader"><span class="label">自己紹介</span><span class="hint">（名前・所属・役割）</span></div>
+        <div class="boxBody">〇〇と申します。△△センターで就労支援員として働いています。</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">支援の対象者</span><span class="hint">（誰を・どんな状況の方を）</span></div>
+        <div class="boxBody">就職活動に不安を感じている方やブランクのある方を中心に支援しています。</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">提供している支援内容</span><span class="hint">（具体的に何をしているか）</span></div>
+        <div class="boxBody">自己理解のワーク、履歴書・職務経歴書の作成支援、面接練習を行っています。</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">支援のこだわり・強み</span><span class="hint">（自分らしいアプローチ）</span></div>
+        <div class="boxBody">相談者の「なりたい姿」を丁寧に引き出すことを大切にしています。</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">支援を通じて目指す変化</span><span class="hint">（相談者にどうなってほしいか）</span></div>
+        <div class="boxBody">「自分でキャリアを選べる」という自信を持って就職できるようになってほしいです。</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">関心を持たせるフレーズ</span><span class="hint">（「もっと聞きたい」と感じる一言）</span></div>
+        <div class="boxBody">「諦めかけていた方が3ヶ月後に自分らしい仕事に出会えた事例があります。」</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">クロージング</span><span class="hint">（繋がりたいこと・一緒にしたいこと）</span></div>
+        <div class="boxBody">もし連携できそうなケースがあれば、ぜひご相談ください。</div>
+      </div>
+    </section>
+
+    <!-- Page 4: Work 2 example -->
+    <section class="page">
+      <div class="title">☆ ワーク② 支援者のためのACTIONフレームワーク（記入例）</div>
+      <div class="subtitle">
+        エレベータートークの要素を「引き込み→変化→信頼→物語→独自性→つながり」に整理します
+      </div>
+      <div class="keywords">
+        <span>Attention</span><span>Network</span><span>Only One</span><span>Change</span><span>Trust</span><span>Imagination</span>
+      </div>
+      <div class="smallTag">コミュニケーション戦略</div>
+
+      <div class="box">
+        <div class="boxHeader"><span class="label">Attention</span><span class="hint">（相手を引き込むメッセージ）</span></div>
+        <div class="boxBody">「就職に自信がない方が3ヶ月で自分らしい仕事に出会えるよう支援しています。」</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Change</span><span class="hint">（支援による具体的な変化）</span></div>
+        <div class="boxBody">自己理解が深まり、自分で納得してキャリアを選べるようになる。</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Trust</span><span class="hint">（信頼・実績・資格）</span></div>
+        <div class="boxBody">国家資格キャリアコンサルタント。支援歴〇年、担当数〇名以上。</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Imagination</span><span class="hint">（相談者の変化ストーリー）</span></div>
+        <div class="boxBody">「最初は自信がなかった〇〇さんが面接で自分の言葉で話せるようになりました。」</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Only One</span><span class="hint">（自分・自団体だけの強み）</span></div>
+        <div class="boxBody">障害のある方の就職支援に特化。地域の医療・福祉機関と密な連携を持つ。</div>
+      </div>
+      <div class="box">
+        <div class="boxHeader"><span class="label">Network</span><span class="hint">（連携・つながり・紹介）</span></div>
+        <div class="boxBody">ハローワーク・病院・特例子会社・福祉事業所と日常的に連携している。</div>
+      </div>
+
+      <div class="footerHint">印刷設定の目安：A4 / 100% / 余白なし（または最小）/ 両面（長辺とじ）</div>
+    </section>
+  </body>
+</html>
+

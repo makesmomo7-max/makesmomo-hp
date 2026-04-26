@@ -8,8 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260412s" />
+  <link rel="stylesheet" href="./styles.css?v=20260426a" />
   <style>
+    .leaflet-page {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
     .leaflet-page main {
       padding: 0 0 2.5rem;
     }
@@ -17,6 +21,39 @@
       width: min(720px, 100% - 32px);
       margin: 0 auto;
       padding: 1rem 0 2rem;
+    }
+    .leaflet-printbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem 1rem;
+      margin-bottom: 1.1rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--color-surface, #f8f9fa);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+    .leaflet-print-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.45rem 1rem;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      background: var(--color-primary, #0b1f3a);
+      border: 1px solid #081428;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .leaflet-print-hint {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+    .leaflet-print-only {
+      display: none;
     }
     .leaflet-back {
       font-size: 13px;
@@ -98,9 +135,58 @@
       gap: 0.65rem;
       margin-top: 1.25rem;
     }
+    @page {
+      size: A4;
+      margin: 10mm 12mm;
+    }
+    @media print {
+      .leaflet-page .site-header,
+      .leaflet-page .site-footer,
+      .leaflet-page .leaflet-back,
+      .leaflet-page .leaflet-printbar,
+      .leaflet-page .js-no-print {
+        display: none !important;
+      }
+      .leaflet-page main {
+        padding: 0 !important;
+      }
+      .leaflet-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .leaflet-hero,
+      .leaflet-block {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+      }
+      .leaflet-hero {
+        color: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .leaflet-note {
+        background: rgba(11, 31, 58, 0.06) !important;
+        -webkit-print-color-adjust: exact;
+      }
+      .leaflet-print-only {
+        display: block;
+        margin-top: 1.2rem;
+        padding-top: 0.6rem;
+        border-top: 1px solid #ccc;
+        font-size: 10.5pt;
+        color: #333;
+        line-height: 1.5;
+      }
+      .leaflet-print-only a {
+        color: #0b1f3a;
+      }
+    }
   </style>
 </head>
-<body class="leaflet-page" data-hp-revision="20260412n">
+<body class="leaflet-page" data-hp-revision="20260426a">
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html#hero" class="logo" aria-label="ホーム">
@@ -130,6 +216,11 @@
   <main>
     <div class="leaflet-wrap">
       <p class="leaflet-back"><a href="./index.html#price">← 料金・プラン（トップ）</a></p>
+
+      <div class="leaflet-printbar js-no-print" role="region" aria-label="印刷">
+        <button type="button" class="leaflet-print-btn" id="leafletPrintBtn">この案内を印刷（PDFに保存可）</button>
+        <p class="leaflet-print-hint">A4で配布用に。ブラウザの「PDFに保存」でデータとしても共有できます。</p>
+      </div>
 
       <header class="leaflet-hero">
         <h1>従業員の皆様へ<br />巡回健康相談窓口・EAPのご案内</h1>
@@ -170,13 +261,18 @@
       </section>
 
       <p class="leaflet-note">
-        印刷用のPDFが必要な企業様は、お問い合わせのうえお渡しすることも可能です。料金・プランは「EAPサービス料金表」のページをご覧ください。
+        本ページの「印刷」からA4用紙やPDF（保存）にできます。掲示物・周知用としてご利用ください。別体裁の事業所カスタムPDFをご希望の企業様は、お問い合わせください。料金表は「EAPサービス料金表」ページにまとまっています。
       </p>
 
-      <div class="leaflet-cta">
+      <div class="leaflet-cta js-no-print">
         <a href="./ryokin.html" class="btn btn-primary">EAPサービス料金表を見る</a>
         <a href="./index.html#contact" class="btn btn-outline">お問い合わせ（法人の方）</a>
       </div>
+
+      <p class="leaflet-print-only" aria-hidden="true">
+        makes-momo 従業員向け案内 &nbsp;|&nbsp; 料金の詳細：<a href="https://www.makesmomo.com/ryokin.html">makesmomo.com/ryokin.html</a>
+        &nbsp;|&nbsp; お問い合わせ：<a href="https://www.makesmomo.com/#contact">makesmomo.com/#contact</a>
+      </p>
     </div>
   </main>
 
@@ -202,6 +298,12 @@
     </div>
   </footer>
 
-  <script src="./script.js?v=20260412s"></script>
+  <script src="./script.js?v=20260426a"></script>
+  <script>
+    (function () {
+      var b = document.getElementById("leafletPrintBtn");
+      if (b) b.addEventListener("click", function () { window.print(); });
+    })();
+  </script>
 </body>
 </html>

@@ -4,7 +4,12 @@
   "private": true,
   "description": "医療・心理・就労支援サービス紹介用のシンプルなランディングページ",
   "scripts": {
-    "start": "npx serve ."
+    "start": "npx serve .",
+    "pdf:career-worksheets": "node tools/generate_career_support_worksheets_pdf.mjs",
+    "pdf:career-worksheets-2p": "node tools/generate_career_support_worksheets_pdf.mjs --pages 1-2 --out career_support_worksheets_A4_1sheet_duplex.pdf"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.15.0"
   },
   "keywords": [
     "landing-page",
