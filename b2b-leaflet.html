@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="./styles.css?v=20260427c" />
+  <link rel="stylesheet" href="./styles.css?v=20260427d" />
   <style>
     .b2b-leaf {
       --navy: #001f3f;
@@ -316,8 +316,6 @@
       border-radius: 12px;
       padding: 0.7rem 0.65rem 0.6rem;
       text-align: center;
-      display: flex;
-      flex-direction: column;
     }
     .b2b-plan--rec {
       border-color: var(--navy);
@@ -362,18 +360,6 @@
       line-height: 1.4;
       color: var(--color-text-muted);
       margin-top: 0.45rem;
-    }
-    .b2b-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
-      margin-top: auto;
-      padding-top: 0.4rem;
-    }
-    .b2b-cta-row .btn {
-      font-size: 0.72rem;
-      padding: 0.4rem 0.65rem;
     }
     .b2b-stat-hint {
       font-size: 0.62rem;
@@ -606,14 +592,6 @@
         margin-top: 0.25rem;
         line-height: 1.28;
       }
-      .b2b-cta-row {
-        padding-top: 0.3rem;
-        gap: 0.25rem;
-      }
-      .b2b-cta-row .btn {
-        font-size: 6.2pt;
-        padding: 0.25rem 0.5rem;
-      }
       .b2b-price-note {
         font-size: 6.2pt;
         line-height: 1.35;
@@ -636,7 +614,7 @@
     }
   </style>
 </head>
-<body class="b2b-leaf" data-hp-revision="20260427c">
+<body class="b2b-leaf" data-hp-revision="20260427d">
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html#hero" class="logo" aria-label="ホーム">
@@ -762,9 +740,6 @@
             <p class="b2b-plan-price">1.8<small>万円</small>〜／月</p>
             <p class="b2b-plan-sub">従業員20名以下 税別</p>
             <p class="b2b-plan-foot">従業員面談・職場巡回はプランの対象外想定。詳細は本サイトの料金表に準じます。</p>
-            <div class="b2b-cta-row">
-              <a class="btn btn-outline" href="./ryokin.html">詳しい料金表</a>
-            </div>
           </div>
           <div class="b2b-plan b2b-plan--rec">
             <span class="b2b-plan-rec" aria-label="推奨プラン">おすすめ</span>
@@ -773,10 +748,6 @@
             <p class="b2b-plan-price">3.2<small>万円</small>／月</p>
             <p class="b2b-plan-sub">従業員20名以下 税別</p>
             <p class="b2b-plan-foot">人気帯。訪問枠はプラン定義に沿って。オプションで拡充可能。</p>
-            <div class="b2b-cta-row">
-              <a class="btn btn-primary" href="./yoyaku.html">予約</a>
-              <a class="btn btn-outline" href="./ryokin.html">料金表</a>
-            </div>
           </div>
           <div class="b2b-plan">
             <h3 class="b2b-plan-label">スタンダード</h3>
@@ -784,9 +755,6 @@
             <p class="b2b-plan-price">5.8<small>万円</small>／月</p>
             <p class="b2b-plan-sub">従業員20名以下 税別</p>
             <p class="b2b-plan-foot">訪問多め。大型人数帯は応相談。交通費は距離に応じ別途。</p>
-            <div class="b2b-cta-row">
-              <a class="btn btn-outline" href="./index.html#contact">相談する</a>
-            </div>
           </div>
         </div>
         <p class="b2b-price-note">
@@ -824,7 +792,7 @@
       <p class="footer-copy">© <span id="js-year"></span> makes-momo. All Rights Reserved.</p>
     </div>
   </footer>
-  <script src="./script.js?v=20260427c"></script>
+  <script src="./script.js?v=20260427d"></script>
   <script>
     (function () {
       var p = document.getElementById("b2bPrint");
