@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>法人向けサービス紹介（1枚リーフレット）｜makes-momo</title>
+  <meta
+    name="description"
+    content="職場向けEAP・巡回健康相談（岡山）の概要。Webアプリ、訪問相談、料金の目安を1枚に整理。"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css?v=20260427a" />
+  <style>
+    .b2b-leaf {
+      --navy: #001f3f;
+      --navy-2: #123b6b;
+      --rose-bg: #fdf2f4;
+      --rose-border: #f9c4d0;
+      --ok-bg: #e8f2fc;
+      --ok-border: #93c5fd;
+      --sage: #0f766e;
+      font-family: "Noto Sans JP", var(--font-sans);
+      background: #f4f6f8;
+      color: var(--color-text-main);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .b2b-leaf main {
+      padding: 0 0 2rem;
+    }
+    .b2b-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1rem 1rem 0;
+    }
+    .b2b-nav {
+      font-size: 13px;
+      margin-bottom: 0.75rem;
+    }
+    .b2b-nav a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .b2b-printbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem 1rem;
+      margin-bottom: 0.9rem;
+      padding: 0.5rem 0.75rem;
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+    }
+    .b2b-printbar button {
+      font: inherit;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 0.45rem 1rem;
+      color: #fff;
+      background: var(--navy);
+      border: 1px solid #0a1628;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .b2b-printbar p {
+      margin: 0;
+      font-size: 12px;
+      color: var(--color-text-muted);
+    }
+    .b2b-sheet {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(11, 31, 58, 0.1);
+      overflow: hidden;
+    }
+    .b2b-hero {
+      padding: 1.35rem 1.5rem 1.1rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #e8f0f9 100%);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .b2b-hero-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .b2b-logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+    }
+    .b2b-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+      background: var(--navy-2);
+      padding: 0.25rem 0.6rem;
+      border-radius: 99px;
+    }
+    .b2b-hero h1 {
+      margin: 0 0 0.45rem;
+      font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--navy);
+    }
+    .b2b-hero-lead {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--color-text-muted);
+    }
+    .b2b-compare {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0.5rem 0.35rem;
+      align-items: stretch;
+      padding: 1.1rem 1.25rem;
+    }
+    .b2b-compare-title {
+      grid-column: 1 / -1;
+      margin: 0 0 0.2rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+    }
+    .b2b-compare-bad,
+    .b2b-compare-good {
+      border-radius: 12px;
+      padding: 0.75rem 0.85rem;
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+    .b2b-compare-bad {
+      background: var(--rose-bg);
+      border: 1px solid var(--rose-border);
+    }
+    .b2b-compare-good {
+      background: var(--ok-bg);
+      border: 1px solid var(--ok-border);
+    }
+    .b2b-compare-bad p,
+    .b2b-compare-good p {
+      margin: 0 0 0.4rem;
+      font-weight: 600;
+      font-size: 0.78rem;
+    }
+    .b2b-compare-bad p {
+      color: #9d174d;
+    }
+    .b2b-compare-good p {
+      color: var(--navy);
+    }
+    .b2b-compare ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .b2b-compare li {
+      position: relative;
+      padding-left: 1.15rem;
+      margin: 0.3rem 0;
+    }
+    .b2b-compare-bad li::before {
+      content: "×";
+      position: absolute;
+      left: 0;
+      color: #e11d48;
+      font-weight: 700;
+    }
+    .b2b-compare-good li::before {
+      content: "○";
+      position: absolute;
+      left: 0;
+      color: var(--sage);
+      font-weight: 700;
+    }
+    .b2b-compare-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    @media (max-width: 640px) {
+      .b2b-compare {
+        grid-template-columns: 1fr;
+      }
+      .b2b-compare-arrow {
+        transform: rotate(90deg);
+        padding: 0.25rem 0;
+      }
+    }
+    .b2b-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      padding: 0 1.25rem 1rem;
+    }
+    @media (max-width: 560px) {
+      .b2b-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+    .b2b-stat {
+      text-align: center;
+      background: linear-gradient(180deg, #123b6b, #0c2744);
+      color: #fff;
+      border-radius: 12px;
+      padding: 0.7rem 0.5rem;
+    }
+    .b2b-stat-num {
+      display: block;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .b2b-stat-label {
+      display: block;
+      font-size: 0.7rem;
+      line-height: 1.4;
+      opacity: 0.92;
+      margin-top: 0.2rem;
+    }
+    .b2b-stat-foot {
+      display: block;
+      font-size: 0.62rem;
+      margin-top: 0.3rem;
+      opacity: 0.75;
+    }
+    .b2b-feat-h {
+      padding: 0 1.25rem 0.35rem;
+      margin: 0;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+    }
+    .b2b-feat {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      padding: 0 1.25rem 1.05rem;
+    }
+    @media (max-width: 560px) {
+      .b2b-feat {
+        grid-template-columns: 1fr;
+      }
+    }
+    .b2b-feat-card {
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 0.65rem 0.8rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+    .b2b-feat-icon {
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 8px;
+      background: var(--color-bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .b2b-feat-card h3 {
+      margin: 0 0 0.2rem;
+      font-size: 0.88rem;
+      color: var(--navy);
+    }
+    .b2b-feat-card p {
+      margin: 0;
+      font-size: 0.78rem;
+      line-height: 1.55;
+      color: var(--color-text-muted);
+    }
+    .b2b-price {
+      padding: 0.35rem 1.25rem 0.2rem;
+      margin: 0;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+    }
+    .b2b-pricing {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      padding: 0.5rem 1.25rem 0.9rem;
+    }
+    @media (max-width: 720px) {
+      .b2b-pricing {
+        grid-template-columns: 1fr;
+      }
+    }
+    .b2b-plan {
+      position: relative;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 0.7rem 0.65rem 0.6rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    .b2b-plan--rec {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 2px rgba(0, 31, 63, 0.12);
+    }
+    .b2b-plan-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin: 0 0 0.1rem;
+    }
+    .b2b-plan-rec {
+      position: absolute;
+      top: -0.4rem;
+      right: 0.5rem;
+      font-size: 9px;
+      font-weight: 700;
+      color: #fff;
+      background: var(--navy);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+    .b2b-plan-desc {
+      font-size: 0.65rem;
+      line-height: 1.4;
+      color: var(--color-text-muted);
+      min-height: 2.2em;
+      margin: 0.15rem 0 0.4rem;
+    }
+    .b2b-plan-price {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .b2b-plan-sub {
+      font-size: 0.62rem;
+      color: var(--color-text-muted);
+      margin: 0.15rem 0 0;
+    }
+    .b2b-plan-foot {
+      font-size: 0.6rem;
+      line-height: 1.4;
+      color: var(--color-text-muted);
+      margin-top: 0.45rem;
+    }
+    .b2b-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+      margin-top: auto;
+      padding-top: 0.4rem;
+    }
+    .b2b-cta-row .btn {
+      font-size: 0.72rem;
+      padding: 0.4rem 0.65rem;
+    }
+    .b2b-stat-hint {
+      font-size: 0.62rem;
+      line-height: 1.45;
+      color: var(--color-text-muted);
+      margin: -0.15rem 1.25rem 0.45rem;
+    }
+    .b2b-price-note {
+      font-size: 0.65rem;
+      line-height: 1.55;
+      color: var(--color-text-muted);
+      margin: 0 1.25rem 0.85rem;
+    }
+    .b2b-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem 1.15rem;
+      background: #f8fafc;
+      border-top: 1px solid var(--color-border);
+    }
+    .b2b-footer p {
+      margin: 0;
+    }
+    .b2b-footer .footer-brand {
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .b2b-footer-qr {
+      text-align: center;
+    }
+    .b2b-footer-qr img {
+      width: 88px;
+      height: 88px;
+    }
+    .b2b-footer-qr a {
+      font-size: 0.7rem;
+      color: var(--navy-2);
+      text-decoration: underline;
+    }
+    .b2b-foot-tag {
+      display: block;
+      font-size: 0.68rem;
+      color: var(--color-text-muted);
+    }
+    .b2b-print-hint {
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+      padding: 0.4rem 1rem 0;
+    }
+    @page {
+      size: A4;
+      margin: 8mm 10mm;
+    }
+    @media print {
+      .b2b-nav,
+      .b2b-printbar,
+      .b2b-print-hint,
+      .site-header,
+      .site-footer,
+      .js-no-print {
+        display: none !important;
+      }
+      .b2b-leaf {
+        background: #fff !important;
+      }
+      .b2b-sheet {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body class="b2b-leaf" data-hp-revision="20260427a">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html#hero" class="logo" aria-label="ホーム">
+        <span class="logo-text">MakesMOMO</span>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="メニューを開閉" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="./index.html#hero">ホーム</a></li>
+          <li><a href="./index.html#promise">サービス</a></li>
+          <li><a href="./ryokin.html">料金</a></li>
+          <li><a href="./index.html#contact">お問い合わせ</a></li>
+        </ul>
+        <div class="header-tel">
+          <a href="tel:" class="tel-link"></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="b2b-wrap">
+      <p class="b2b-nav">
+        <a href="./index.html#promise">← トップ（サービス紹介）</a>
+      </p>
+      <div class="b2b-printbar js-no-print">
+        <button type="button" id="b2bPrint">このリーフレットを印刷（PDFに保存可）</button>
+        <p>配布・社内説明用。A4想定です。</p>
+      </div>
+
+      <div class="b2b-sheet">
+        <div class="b2b-hero">
+          <div class="b2b-hero-top">
+            <span class="b2b-logo">MakesMOMO</span>
+            <span class="b2b-badge">職場向けEAP・巡回健康相談</span>
+          </div>
+          <h1>職場に、話せる窓口と専用アプリを。<br />個人の支援と職場の傾向把握を、同時に。</h1>
+          <p class="b2b-hero-lead">
+            看護師・公認心理師の専門家がデザインする、持ち運べる「保健室」のように使える伴走型サービスです。チャット相談・自己記録・専門家面談・訪問を一つの導線につなぎ、岡山県内の事業所を対象にご案内しています。
+          </p>
+        </div>
+
+        <div class="b2b-compare" aria-label="導入のイメージ">
+          <p class="b2b-compare-title">導入のイメージ</p>
+          <div class="b2b-compare-bad">
+            <p>導入前</p>
+            <ul>
+              <li>相談先が社内中心で、話しにくい</li>
+              <li>不調の兆しを見落としやすい</li>
+              <li>職場全体の傾向を把握しにくい</li>
+            </ul>
+          </div>
+          <div class="b2b-compare-arrow" aria-hidden="true">→</div>
+          <div class="b2b-compare-good">
+            <p>makes-momoで</p>
+            <ul>
+              <li>まずWebアプリで相談・記録を始めやすい</li>
+              <li>記録と訪問を組み合わせ早期対応しやすい</li>
+              <li>個人が特定されない形で職場改善に活用</li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="b2b-stats" aria-label="サービスを数値で">
+          <li class="b2b-stat">
+            <span class="b2b-stat-num">0<small>円</small></span>
+            <span class="b2b-stat-label">専用Webアプリの<br />利用料（全プラン込み）※</span>
+            <span class="b2b-stat-foot">月額プラン内</span>
+          </li>
+          <li class="b2b-stat">
+            <span class="b2b-stat-num">1〜2</span>
+            <span class="b2b-stat-label">専門家の定期訪問（ライト〜<br />スタンダード想定）／月</span>
+            <span class="b2b-stat-foot">訪問回数はプランによります</span>
+          </li>
+          <li class="b2b-stat">
+            <span class="b2b-stat-num">24<small>時間</small></span>
+            <span class="b2b-stat-label">いつでも話を始められる<br />一次窓口（AI相談）※</span>
+            <span class="b2b-stat-foot">緊急窓口ではありません</span>
+          </li>
+        </ul>
+        <p class="b2b-stat-hint">※プラン内の定義に沿った利用。プラン外は別途。詳細は料金表・契約内容に従います。</p>
+
+        <p class="b2b-feat-h">主な仕組み（例）</p>
+        <div class="b2b-feat" aria-label="主な仕組み">
+          <div class="b2b-feat-card">
+            <div class="b2b-feat-icon" aria-hidden="true">📝</div>
+            <div>
+              <h3>コンディション記録</h3>
+              <p>気分・睡眠・体調をタップ中心で記録し、自己ケアの習慣化に。</p>
+            </div>
+          </div>
+          <div class="b2b-feat-card">
+            <div class="b2b-feat-icon" aria-hidden="true">💬</div>
+            <div>
+              <h3>AI相談（24時間）</h3>
+              <p>夜間・休日も、まず話を始められる補助的な一次窓口。</p>
+            </div>
+          </div>
+          <div class="b2b-feat-card">
+            <div class="b2b-feat-icon" aria-hidden="true">🩺</div>
+            <div>
+              <h3>看護師・公認心理師の面談</h3>
+              <p>必要に応じ対面・オンライン。個別内容の会社への共有は本人同意原則。</p>
+            </div>
+          </div>
+          <div class="b2b-feat-card">
+            <div class="b2b-feat-icon" aria-hidden="true">📈</div>
+            <div>
+              <h3>集団分析（匿名化）と周知</h3>
+              <p>職場の傾向を定量的に。補助金・他施策との併用も相談可能。</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="b2b-price">月額料金（税別）目安 ／ 従業員〜20名の場合</p>
+        <div class="b2b-pricing" aria-label="主なプランの月額目安">
+          <div class="b2b-plan">
+            <h3 class="b2b-plan-label">社長・人事・総務向けEAP</h3>
+            <p class="b2b-plan-desc">専用アプリ・面談中心。定期訪問は対象外想定</p>
+            <p class="b2b-plan-price">1.8<small>万円</small>〜／月</p>
+            <p class="b2b-plan-sub">従業員20名以下 税別</p>
+            <p class="b2b-plan-foot">従業員面談・職場巡回はプランの対象外想定。詳細は本サイトの料金表に準じます。</p>
+            <div class="b2b-cta-row">
+              <a class="btn btn-outline" href="./ryokin.html">詳しい料金表</a>
+            </div>
+          </div>
+          <div class="b2b-plan b2b-plan--rec">
+            <span class="b2b-plan-rec" aria-label="推奨プラン">おすすめ</span>
+            <h3 class="b2b-plan-label">ライト</h3>
+            <p class="b2b-plan-desc">月1回訪問・従業員面談＋上記</p>
+            <p class="b2b-plan-price">3.2<small>万円</small>／月</p>
+            <p class="b2b-plan-sub">従業員20名以下 税別</p>
+            <p class="b2b-plan-foot">人気帯。訪問枠はプラン定義に沿って。オプションで拡充可能。</p>
+            <div class="b2b-cta-row">
+              <a class="btn btn-primary" href="./yoyaku.html">予約</a>
+              <a class="btn btn-outline" href="./ryokin.html">料金表</a>
+            </div>
+          </div>
+          <div class="b2b-plan">
+            <h3 class="b2b-plan-label">スタンダード</h3>
+            <p class="b2b-plan-desc">月2回訪問・従業員面談＋上記</p>
+            <p class="b2b-plan-price">5.8<small>万円</small>／月</p>
+            <p class="b2b-plan-sub">従業員20名以下 税別</p>
+            <p class="b2b-plan-foot">訪問多め。大型人数帯は応相談。交通費は距離に応じ別途。</p>
+            <div class="b2b-cta-row">
+              <a class="btn btn-outline" href="./index.html#contact">相談する</a>
+            </div>
+          </div>
+        </div>
+        <p class="b2b-price-note">
+          表示は税抜。20名超・50名超は帯に応じて額が変動します。ストレスチェック等はオプション。助成金利用は別途個別相談のうえご案内。訪問は岡山県内。契約前に必ず最新のEAP料金表・案内文でご確認ください。
+        </p>
+
+        <div class="b2b-footer">
+          <div>
+            <p class="footer-brand">makes-momo</p>
+            <p class="b2b-foot-tag">職場向けEAP・巡回健康相談 ほか、ストレスチェック等に対応</p>
+            <p class="b2b-foot-tag" style="margin-top: 0.35rem">
+              <a href="https://www.makesmomo.com/">www.makesmomo.com</a>
+            </p>
+            <a href="./index.html#contact" class="btn btn-primary" style="margin-top: 0.75rem; display: inline-block"
+              >お問い合わせ</a
+            >
+          </div>
+          <div class="b2b-footer-qr">
+            <p style="font-size: 0.7rem; margin: 0 0 0.2rem; color: var(--color-text-muted)">公式サイト</p>
+            <img
+              src="./makesmomo-site-qr.png"
+              width="88"
+              height="88"
+              alt="makesmomo 公式サイトへつながるQRコード"
+              loading="lazy"
+            />
+            <a href="https://www.makesmomo.com/">makesmomo.com</a>
+          </div>
+        </div>
+        <p class="b2b-print-hint js-no-print">印刷品質はブラウザの「背景グラフィック」有効推奨。</p>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="js-year"></span> makes-momo. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="./script.js?v=20260427a"></script>
+  <script>
+    (function () {
+      var p = document.getElementById("b2bPrint");
+      if (p) p.addEventListener("click", function () { window.print(); });
+    })();
+  </script>
+</body>
+</html>
