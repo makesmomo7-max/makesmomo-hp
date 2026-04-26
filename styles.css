@@ -1945,23 +1945,31 @@ a {
   color: var(--color-text-muted);
 }
 
-/* ===================== 1分セルフチェック ===================== */
+/* ===================== 1分セルフチェック（自然風景を背景） ===================== */
 .self-check-section {
   position: relative;
   overflow: hidden;
-  background: #f7fbff;
+  background: #c9ddd4;
 }
 
 .self-check-section::before {
   content: "";
   position: absolute;
   inset: 0;
+  /* 湖・霧・木立の写真を前面に。薄い色膜で本文の可読性を補助 */
   background-image:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.82)),
+    linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.42) 0%,
+      rgba(230, 242, 234, 0.28) 50%,
+      rgba(210, 228, 216, 0.38) 100%
+    ),
     url("./lake-single-tree.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 38%;
   z-index: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 .self-check-section .container {
@@ -1975,8 +1983,14 @@ a {
   color: inherit;
 }
 
+.self-check-section .section-en,
+.self-check-section .section-title {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 0 18px rgba(255, 255, 255, 0.5);
+}
+
 .self-check-section .section-lead {
   color: var(--color-text-muted);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .self-check-form {
