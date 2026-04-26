@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="./styles.css?v=20260427b" />
+  <link rel="stylesheet" href="./styles.css?v=20260427c" />
   <style>
     .b2b-leaf {
       --navy: #001f3f;
@@ -423,7 +423,7 @@
     }
     @page {
       size: A4 portrait;
-      margin: 5mm 6mm;
+      margin: 10mm;
     }
     @media print {
       .b2b-nav,
@@ -438,180 +438,205 @@
       }
       .b2b-leaf main {
         padding: 0 !important;
+        display: block;
       }
       .b2b-wrap {
         max-width: none;
+        width: 100%;
         padding: 0;
         margin: 0;
       }
       .b2b-sheet {
         box-shadow: none;
         border-radius: 0;
-        font-size: 7.2pt;
-        line-height: 1.32;
-        zoom: 0.96;
+        /* A4(297mm) − 上下マージ20mm 程度の有効面に合わせる */
+        min-height: 275mm;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        font-size: 8.5pt;
+        line-height: 1.4;
+        /* 縮小をやめ、1面内で可読性優先 */
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        page-break-inside: avoid;
+        break-inside: avoid;
       }
       .b2b-h1-br {
         display: none;
       }
+      /* 印刷時も2文目を表示し、行間バランスを取る */
       .b2b-hero-lead-more {
-        display: none;
+        display: inline;
       }
       .b2b-hero {
-        padding: 0.4rem 0.65rem 0.35rem;
+        padding: 0.55rem 0.7rem 0.45rem;
+        flex-shrink: 0;
       }
       .b2b-hero-top {
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.4rem;
       }
       .b2b-logo {
-        font-size: 12pt;
+        font-size: 13.5pt;
       }
       .b2b-badge {
-        font-size: 6.5pt;
-        padding: 0.1rem 0.35rem;
+        font-size: 7.5pt;
+        padding: 0.15rem 0.5rem;
       }
       .b2b-hero h1 {
-        font-size: 11.5pt;
-        line-height: 1.22;
-        margin: 0 0 0.2rem;
+        font-size: 12.5pt;
+        line-height: 1.25;
+        margin: 0 0 0.3rem;
       }
       .b2b-hero-lead {
-        font-size: 7.2pt;
-        line-height: 1.35;
+        font-size: 7.8pt;
+        line-height: 1.4;
       }
       .b2b-compare {
-        padding: 0.4rem 0.55rem 0.35rem;
-        gap: 0.25rem 0.2rem;
+        padding: 0.5rem 0.65rem 0.4rem;
+        gap: 0.35rem 0.3rem;
+        flex-shrink: 0;
       }
       .b2b-compare-bad,
       .b2b-compare-good {
-        padding: 0.4rem 0.45rem;
-        font-size: 7pt;
-        line-height: 1.35;
+        padding: 0.5rem 0.5rem;
+        font-size: 7.6pt;
+        line-height: 1.4;
       }
       .b2b-compare-bad p,
       .b2b-compare-good p {
-        font-size: 6.5pt;
-        margin: 0 0 0.2rem;
+        font-size: 7pt;
+        margin: 0 0 0.25rem;
       }
       .b2b-compare li {
-        margin: 0.1rem 0;
+        margin: 0.12rem 0;
       }
       .b2b-compare-title {
-        font-size: 6.5pt;
-        margin: 0 0 0.1rem;
+        font-size: 7pt;
+        margin: 0 0 0.15rem;
       }
       .b2b-compare-arrow {
-        font-size: 11pt;
-      }
-      .b2b-stats {
-        padding: 0 0.55rem 0.3rem;
-        gap: 0.25rem;
-      }
-      .b2b-stat {
-        padding: 0.3rem 0.25rem;
-        border-radius: 6px;
-      }
-      .b2b-stat-num {
         font-size: 12pt;
       }
+      .b2b-stats {
+        padding: 0.1rem 0.65rem 0.4rem;
+        gap: 0.4rem;
+        flex-shrink: 0;
+      }
+      .b2b-stat {
+        padding: 0.45rem 0.3rem;
+        border-radius: 8px;
+      }
+      .b2b-stat-num {
+        font-size: 14pt;
+      }
       .b2b-stat-label {
-        font-size: 6.2pt;
-        margin-top: 0.1rem;
+        font-size: 6.8pt;
+        margin-top: 0.12rem;
       }
       .b2b-stat-foot {
-        font-size: 5.5pt;
-        margin-top: 0.1rem;
+        font-size: 6pt;
+        margin-top: 0.12rem;
       }
       .b2b-stat-hint {
-        font-size: 5.5pt;
-        margin: 0.05rem 0.55rem 0.2rem;
-        line-height: 1.3;
+        font-size: 6.2pt;
+        margin: 0.1rem 0.65rem 0.3rem;
+        line-height: 1.35;
+        flex-shrink: 0;
       }
       .b2b-feat-h {
-        font-size: 6.5pt;
-        padding: 0 0.55rem 0.1rem;
+        font-size: 7.2pt;
+        padding: 0.1rem 0.65rem 0.2rem;
+        flex-shrink: 0;
       }
       .b2b-feat {
-        padding: 0 0.55rem 0.4rem;
-        gap: 0.25rem;
+        padding: 0 0.65rem 0.45rem;
+        gap: 0.35rem;
+        min-height: 0;
+        align-content: start;
       }
       .b2b-feat-card {
-        padding: 0.3rem 0.4rem;
-        border-radius: 6px;
+        padding: 0.4rem 0.45rem;
+        border-radius: 8px;
       }
       .b2b-feat-icon {
-        width: 1.5rem;
-        height: 1.5rem;
-        font-size: 0.85rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.95rem;
       }
       .b2b-feat-card h3 {
-        font-size: 7.2pt;
-        margin: 0 0 0.1rem;
+        font-size: 8pt;
+        margin: 0 0 0.12rem;
       }
       .b2b-feat-card p {
-        font-size: 6.2pt;
-        line-height: 1.3;
+        font-size: 6.8pt;
+        line-height: 1.35;
       }
       .b2b-price {
-        font-size: 6.5pt;
-        padding: 0.15rem 0.55rem 0.05rem;
+        font-size: 7.2pt;
+        padding: 0.2rem 0.65rem 0.1rem;
+        flex-shrink: 0;
       }
       .b2b-pricing {
-        padding: 0.2rem 0.55rem 0.4rem;
-        gap: 0.3rem;
+        padding: 0.3rem 0.65rem 0.5rem;
+        gap: 0.4rem;
+        flex-shrink: 0;
       }
       .b2b-plan {
-        padding: 0.4rem 0.35rem 0.3rem;
-        border-radius: 6px;
+        padding: 0.5rem 0.4rem 0.4rem;
+        border-radius: 8px;
       }
       .b2b-plan-label {
-        font-size: 6.5pt;
+        font-size: 7.2pt;
       }
       .b2b-plan-desc {
-        font-size: 5.8pt;
+        font-size: 6.4pt;
         min-height: 0;
-        margin: 0.05rem 0 0.2rem;
+        margin: 0.08rem 0 0.25rem;
+        line-height: 1.3;
       }
       .b2b-plan-price {
-        font-size: 7.5pt;
+        font-size: 8.5pt;
       }
       .b2b-plan-sub {
-        font-size: 5.5pt;
+        font-size: 6.2pt;
       }
       .b2b-plan-foot {
-        font-size: 5.2pt;
-        margin-top: 0.2rem;
-        line-height: 1.25;
+        font-size: 5.8pt;
+        margin-top: 0.25rem;
+        line-height: 1.28;
       }
       .b2b-cta-row {
-        padding-top: 0.2rem;
-        gap: 0.2rem;
+        padding-top: 0.3rem;
+        gap: 0.25rem;
       }
       .b2b-cta-row .btn {
-        font-size: 5.5pt;
-        padding: 0.2rem 0.4rem;
+        font-size: 6.2pt;
+        padding: 0.25rem 0.5rem;
       }
       .b2b-price-note {
-        font-size: 5.5pt;
-        line-height: 1.3;
-        margin: 0 0.55rem 0.3rem;
+        font-size: 6.2pt;
+        line-height: 1.35;
+        margin: 0.15rem 0.65rem 0.35rem;
+        flex-shrink: 0;
       }
       .b2b-footer {
-        padding: 0.4rem 0.55rem 0.4rem;
-        gap: 0.5rem;
+        margin-top: auto;
+        padding: 0.55rem 0.65rem 0.5rem;
+        gap: 0.65rem;
         page-break-inside: avoid;
+        flex-shrink: 0;
+        border-top: 1px solid rgba(11, 31, 58, 0.1);
+        align-items: center;
       }
       .b2b-footer-qr img {
-        width: 58px;
-        height: 58px;
+        width: 70px;
+        height: 70px;
       }
     }
   </style>
 </head>
-<body class="b2b-leaf" data-hp-revision="20260427b">
+<body class="b2b-leaf" data-hp-revision="20260427c">
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html#hero" class="logo" aria-label="ホーム">
@@ -799,7 +824,7 @@
       <p class="footer-copy">© <span id="js-year"></span> makes-momo. All Rights Reserved.</p>
     </div>
   </footer>
-  <script src="./script.js?v=20260427b"></script>
+  <script src="./script.js?v=20260427c"></script>
   <script>
     (function () {
       var p = document.getElementById("b2bPrint");
