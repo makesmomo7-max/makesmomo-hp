@@ -1,8 +1,8 @@
 {
-  "name": "makes-momo-site",
+  "name": "makesmomo-hp",
   "version": "1.0.0",
   "private": true,
-  "description": "医療・心理・就労支援サービス紹介用のシンプルなランディングページ",
+  "description": "MakesMOMO 公開ホームページ / 営業LP",
   "scripts": {
     "start": "npx serve .",
     "pdf:career-worksheets": "node tools/generate_career_support_worksheets_pdf.mjs",

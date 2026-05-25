@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260426b" />
+  <link rel="stylesheet" href="./styles.css?v=20260523d" />
   <style>
     .ryokin-page {
       --sage: #3b6d4a;
@@ -146,7 +146,7 @@
     .ryokin-doc .compare-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 12.5px;
+      font-size: 13.5px;
       table-layout: fixed;
       margin-top: 0.75rem;
     }
@@ -172,7 +172,7 @@
       padding: 0.55rem 0.75rem;
       border-bottom: 1px solid var(--border);
       text-align: center;
-      font-size: 12px;
+      font-size: 13px;
       color: var(--muted);
     }
     .ryokin-doc .compare-table td:first-child {
@@ -335,6 +335,94 @@
       color: var(--muted);
       padding: 3px 0;
     }
+    .ryokin-doc .price-revise-note {
+      font-size: 11px;
+      color: var(--sage-dark);
+      background: #fff8e6;
+      border: 1px solid #e8c96a;
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+    .ryokin-doc .onboard-eap {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 0.85rem;
+      margin-top: 1rem;
+    }
+    .ryokin-doc .onboard-eap h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--sage-dark);
+      text-align: center;
+      margin-bottom: 0.35rem;
+    }
+    .ryokin-doc .onboard-eap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.4rem;
+      font-size: 10px;
+    }
+    .ryokin-doc .onboard-eap-item {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem 0.45rem;
+      text-align: center;
+    }
+    .ryokin-doc .onboard-eap-item strong {
+      display: block;
+      font-size: 10px;
+      color: var(--sage-dark);
+    }
+    .ryokin-doc .onboard-eap-price {
+      font-weight: 800;
+      color: var(--sage);
+      margin: 0.15rem 0;
+    }
+    .ryokin-doc .subsidy-table-wrap {
+      overflow-x: auto;
+      margin-top: 0.5rem;
+    }
+    .ryokin-doc .subsidy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+    .ryokin-doc .subsidy-table th,
+    .ryokin-doc .subsidy-table td {
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.4rem;
+      vertical-align: top;
+    }
+    .ryokin-doc .subsidy-table th {
+      background: var(--sage-light);
+      font-weight: 700;
+      color: var(--sage-dark);
+    }
+    .ryokin-doc .subsidy-table .col-qr {
+      text-align: center;
+      width: 72px;
+    }
+    .ryokin-doc .subsidy-table .col-qr img {
+      display: block;
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 2px;
+    }
+    .ryokin-doc .subsidy-table .col-qr a {
+      font-size: 8px;
+      word-break: break-all;
+      color: var(--sage-dark);
+    }
+    .ryokin-doc .subsidy-flow {
+      font-size: 10.5px;
+      color: var(--muted);
+      margin: 0.5rem 0 0;
+      line-height: 1.5;
+    }
     .ryokin-doc .notes {
       background: var(--sage-light);
       border-radius: 8px;
@@ -371,24 +459,64 @@
     }
     .ryokin-toolbar {
       margin-bottom: 1.15rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
     }
+    .ryokin-toolbar-group {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .ryokin-toolbar-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-right: 0.15rem;
+    }
+    .ryokin-zoom-btn,
     .ryokin-print-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.4rem;
-      padding: 0.45rem 1rem;
+      padding: 0.45rem 0.75rem;
       font-size: 13px;
       font-weight: 600;
-      color: #fff;
-      background: var(--sage);
-      border: 1px solid var(--sage-dark);
       border-radius: 6px;
       cursor: pointer;
       font-family: inherit;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--ink);
+    }
+    .ryokin-zoom-btn:hover,
+    .ryokin-print-btn:hover {
+      filter: brightness(1.02);
+    }
+    .ryokin-zoom-btn[aria-pressed="true"] {
+      background: var(--sage-light);
+      border-color: var(--sage);
+      color: var(--sage-dark);
+    }
+    .ryokin-zoom-btn--icon {
+      min-width: 2.25rem;
+      font-size: 15px;
+      line-height: 1;
+      padding: 0.4rem 0.55rem;
+    }
+    .ryokin-print-btn {
+      color: #fff;
+      background: var(--sage);
+      border-color: var(--sage-dark);
     }
     .ryokin-print-btn:hover {
       filter: brightness(1.05);
+    }
+    .ryokin-doc-wrap {
+      width: 100%;
     }
     .ryokin-doc .price-glance {
       background: #fff;
@@ -503,8 +631,8 @@
       }
     }
     @page {
-      size: A4;
-      margin: 10mm 12mm;
+      size: A4 portrait;
+      margin: 8mm 10mm;
     }
     @media print {
       .ryokin-page .ryokin-toolbar,
@@ -525,29 +653,110 @@
         max-width: 100% !important;
         margin: 0 !important;
       }
+      .ryokin-doc-wrap {
+        zoom: 1 !important;
+      }
       .ryokin-doc {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        font-size: 10.5pt;
+        line-height: 1.45;
       }
       .ryokin-doc .header {
-        padding-top: 0.5rem;
+        padding: 0.2rem 0 0.45rem;
+        margin-bottom: 0.45rem;
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+      .ryokin-doc .brand {
+        font-size: 1.35rem;
+      }
+      .ryokin-doc .tagline {
+        font-size: 10pt;
       }
       .ryokin-doc .section {
+        margin-top: 0.65rem;
+        break-inside: auto;
+        page-break-inside: auto;
+      }
+      .ryokin-doc .sec-title {
+        font-size: 10pt;
+        margin-bottom: 0.35rem;
+        break-after: avoid;
+      }
+      .ryokin-doc .app-banner,
+      .ryokin-doc .scope-note,
+      .ryokin-doc .slots-wrap,
+      .ryokin-doc .price-glance {
+        padding: 0.4rem 0.55rem;
+        margin-bottom: 0.45rem;
+      }
+      .ryokin-doc .app-banner,
+      .ryokin-doc .scope-note {
+        font-size: 9.5pt;
+      }
+      .ryokin-doc .price-glance-tiers {
+        gap: 0.35rem;
+      }
+      .ryokin-doc .price-glance-tier {
         break-inside: avoid;
         page-break-inside: avoid;
+      }
+      .ryokin-doc .price-glance-name {
+        font-size: 8.5pt;
+        min-height: 0;
+      }
+      .ryokin-doc .price-glance-peek,
+      .ryokin-doc .price-glance-unit {
+        font-size: 8pt;
+      }
+      .ryokin-doc .compare-table {
+        font-size: 9.5pt;
+      }
+      .ryokin-doc .compare-table thead {
+        display: table-header-group;
       }
       .ryokin-doc .compare-table,
-      .ryokin-doc .option-table {
-        break-inside: avoid;
+      .ryokin-doc .option-table,
+      .ryokin-doc .subsidy-table {
+        break-inside: auto;
+        page-break-inside: auto;
       }
-      .ryokin-doc tr {
+      .ryokin-doc .compare-table tr,
+      .ryokin-doc .option-table tr,
+      .ryokin-doc .subsidy-table tr {
         break-inside: avoid;
         page-break-inside: avoid;
+      }
+      .ryokin-doc .option-table {
+        font-size: 9.5pt;
+      }
+      .ryokin-doc .notes {
+        margin-top: 0.65rem;
+        padding: 0.5rem 0.65rem;
+      }
+      .ryokin-doc .notes p {
+        font-size: 8.5pt;
+      }
+      body.ryokin-print-large .ryokin-doc {
+        font-size: 11.5pt;
+        line-height: 1.5;
+      }
+      body.ryokin-print-large .ryokin-doc .compare-table,
+      body.ryokin-print-large .ryokin-doc .option-table {
+        font-size: 10.5pt;
+      }
+      body.ryokin-print-large .ryokin-doc .app-banner,
+      body.ryokin-print-large .ryokin-doc .scope-note {
+        font-size: 10.5pt;
+      }
+      body.ryokin-print-large .ryokin-doc .notes p {
+        font-size: 9.5pt;
       }
     }
   </style>
 </head>
-<body class="ryokin-page" data-hp-revision="20260426b">
+<body class="ryokin-page" data-hp-revision="20260523e">
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html#hero" class="logo" aria-label="ホーム">
@@ -577,10 +786,22 @@
   <main>
     <div class="ryokin-inner">
       <p class="ryokin-back"><a href="./index.html#promise">← EAPのご案内（トップ）</a></p>
-      <div class="ryokin-toolbar js-no-print" role="region" aria-label="印刷">
-        <button type="button" class="ryokin-print-btn" id="ryokinPrintBtn">この料金表を印刷（PDFに保存可）</button>
+      <div class="ryokin-toolbar js-no-print" role="region" aria-label="表示と印刷">
+        <div class="ryokin-toolbar-group" aria-label="表示の拡大縮小">
+          <span class="ryokin-toolbar-label">表示</span>
+          <button type="button" class="ryokin-zoom-btn ryokin-zoom-btn--icon" id="ryokinZoomOut" title="表示を縮小" aria-label="表示を縮小">−</button>
+          <button type="button" class="ryokin-zoom-btn" id="ryokinZoomReset" aria-pressed="true" data-zoom="100">100%</button>
+          <button type="button" class="ryokin-zoom-btn" id="ryokinZoom110" data-zoom="110">110%</button>
+          <button type="button" class="ryokin-zoom-btn" id="ryokinZoom125" data-zoom="125">125%</button>
+          <button type="button" class="ryokin-zoom-btn ryokin-zoom-btn--icon" id="ryokinZoomIn" title="表示を拡大" aria-label="表示を拡大">＋</button>
+        </div>
+        <div class="ryokin-toolbar-group" aria-label="印刷">
+          <button type="button" class="ryokin-zoom-btn" id="ryokinPrintLargeBtn" aria-pressed="false">印刷用：文字大</button>
+          <button type="button" class="ryokin-print-btn" id="ryokinPrintBtn">印刷・PDF保存</button>
+        </div>
       </div>
-      <div class="ryokin-doc">
+      <div class="ryokin-doc-wrap" id="ryokinDocWrap">
+      <div class="ryokin-doc" id="ryokinDoc">
         <div class="header">
           <p class="tagline-pre">service pricing</p>
           <div class="brand">makes-momo</div>
@@ -590,9 +811,14 @@
         <div class="section">
           <p class="sec-title">基本プラン（月額・税別）</p>
           <div class="app-banner">
-            <p class="app-banner-main"><strong>全プラン</strong>に <strong>専用Webアプリ</strong> 利用料込み（チャット相談・コンディション記録・相談予約）</p>
+            <p class="app-banner-main"><strong>全プラン共通（月額込み）：</strong>専用Webアプリ<strong>利用料</strong>・<strong>アプリ管理</strong>（初期設定・運用サポート）・<strong>集団分析</strong>（個人特定なし）</p>
             <p class="app-banner-sub">
-              <strong>社長・人事・総務担当者向け EAP</strong>は、アプリ記録と集団分析をもとに、<strong>社長・人事・総務担当者との面談</strong>を実施します。従業員向けの定期巡回・訪問日の対面相談枠は<strong>ライト・スタンダード</strong>に含まれます。
+              <strong>おすすめ（主軸）はライト・スタンダード</strong>です。職場への定期訪問と、訪問日の<strong>従業員向け対面面談枠（各30分・予約制）</strong>を月額に含みます。<strong>アプリ利用と集団分析のみ</strong>のプランは、訪問・面談を含まない<strong>入口</strong>です（訪問・面談はオプションで追加可能）。
+            </p>
+          </div>
+          <div class="scope-note" role="note" style="margin-bottom: 0.75rem">
+            <p>
+              <strong>面談枠について：</strong>含まれるのは<strong>職場全体の予約枠</strong>です（1枠＝30分）。<strong>全従業員に毎月30分ずつを個別保証するものではありません。</strong>例：従業員10名・ライト＝月1回の訪問につき<strong>30分×1枠</strong>。日常はアプリで相談し、対面が必要な方が訪問日に予約します。
             </p>
           </div>
           <div class="scope-note" role="note" style="margin-bottom: 1rem">
@@ -602,51 +828,74 @@
           </div>
           <div class="price-glance" aria-label="月額料金の早見表">
             <p class="price-glance-title" role="heading" aria-level="2">ひと目で分かる 月額料金（税別）</p>
-            <p class="price-glance-lead">金額は従業員数の目安で変わります。全プランに専用Webアプリ料が含まれ、守秘の方針は共通です。</p>
+            <p class="price-glance-lead">月額は従業員数の帯で変わります。<strong>アプリ利用・管理・集団分析は全プラン込み。</strong>訪問と従業員向け面談枠は<strong>ライト・スタンダード</strong>に含みます（枠数は下表・各枠30分）。</p>
             <div class="price-glance-tiers">
               <div class="price-glance-tier">
-                <p class="price-glance-tier-head">従業員 20名以下</p>
+                <p class="price-glance-tier-head">従業員 〜10名</p>
                 <div class="price-glance-row">
                   <div class="price-glance-card">
-                    <p class="price-glance-name">社長・人事・総務向けEAP<br /><span class="price-glance-badge">面談中心</span></p>
-                    <p class="price-glance-amount">1.8<small>万円</small></p>
+                    <p class="price-glance-name">アプリ利用と<br />集団分析のみ<br /><span class="price-glance-badge">入口</span></p>
+                    <p class="price-glance-amount">3.3<small>万円</small></p>
                     <p class="price-glance-unit">税別 ／ 月</p>
-                    <p class="price-glance-peek">従業員面談・訪問は含まない想定</p>
+                    <p class="price-glance-peek">訪問・面談枠なし</p>
                   </div>
                   <div class="price-glance-card price-glance-card--rec">
-                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">おすすめ</span></p>
-                    <p class="price-glance-amount">3.2<small>万円</small></p>
+                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">主軸</span></p>
+                    <p class="price-glance-amount">5.3<small>万円</small></p>
                     <p class="price-glance-unit">税別 ／ 月</p>
-                    <p class="price-glance-peek">従業員面談・集団分析など</p>
+                    <p class="price-glance-peek">10名時：訪問1回＝30分×1枠</p>
                   </div>
                   <div class="price-glance-card">
                     <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
-                    <p class="price-glance-amount">5.8<small>万円</small></p>
+                    <p class="price-glance-amount">8.9<small>万円</small></p>
                     <p class="price-glance-unit">税別 ／ 月</p>
-                    <p class="price-glance-peek">従業員面談・集団分析など</p>
+                    <p class="price-glance-peek">10名時：各訪問30分×2枠</p>
                   </div>
                 </div>
               </div>
               <div class="price-glance-tier">
-                <p class="price-glance-tier-head">従業員 20名〜50名</p>
+                <p class="price-glance-tier-head">従業員 11〜20名</p>
                 <div class="price-glance-row">
                   <div class="price-glance-card">
-                    <p class="price-glance-name">社長・人事・総務向けEAP<br /><span class="price-glance-badge">面談中心</span></p>
-                    <p class="price-glance-amount">2.5<small>万円</small></p>
+                    <p class="price-glance-name">アプリ利用と<br />集団分析のみ<br /><span class="price-glance-badge">入口</span></p>
+                    <p class="price-glance-amount">4.9<small>万円</small></p>
                     <p class="price-glance-unit">税別 ／ 月</p>
-                    <p class="price-glance-peek">従業員面談・訪問は含まない想定</p>
+                    <p class="price-glance-peek">満枠20名 目安 ¥2,440/人</p>
                   </div>
                   <div class="price-glance-card price-glance-card--rec">
-                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">おすすめ</span></p>
-                    <p class="price-glance-amount">5.2<small>万円</small></p>
+                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">主軸</span></p>
+                    <p class="price-glance-amount">7.9<small>万円</small></p>
                     <p class="price-glance-unit">税別 ／ 月</p>
-                    <p class="price-glance-peek">従業員面談・集団分析など</p>
+                    <p class="price-glance-peek">満枠20名 目安 ¥3,940/人</p>
                   </div>
                   <div class="price-glance-card">
                     <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
-                    <p class="price-glance-amount">8.8<small>万円</small></p>
+                    <p class="price-glance-amount">12.9<small>万円</small></p>
                     <p class="price-glance-unit">税別 ／ 月</p>
-                    <p class="price-glance-peek">従業員面談・集団分析など</p>
+                    <p class="price-glance-peek">満枠20名 目安 ¥6,440/人</p>
+                  </div>
+                </div>
+              </div>
+              <div class="price-glance-tier">
+                <p class="price-glance-tier-head">従業員 21名〜50名</p>
+                <div class="price-glance-row">
+                  <div class="price-glance-card">
+                    <p class="price-glance-name">アプリ利用と<br />集団分析のみ<br /><span class="price-glance-badge">入口</span></p>
+                    <p class="price-glance-amount">6.9<small>万円</small></p>
+                    <p class="price-glance-unit">税別 ／ 月</p>
+                    <p class="price-glance-peek">満枠50名 目安 ¥1,376/人</p>
+                  </div>
+                  <div class="price-glance-card price-glance-card--rec">
+                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">主軸</span></p>
+                    <p class="price-glance-amount">11.9<small>万円</small></p>
+                    <p class="price-glance-unit">税別 ／ 月</p>
+                    <p class="price-glance-peek">満枠50名 目安 ¥2,376/人</p>
+                  </div>
+                  <div class="price-glance-card">
+                    <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
+                    <p class="price-glance-amount">19.9<small>万円</small></p>
+                    <p class="price-glance-unit">税別 ／ 月</p>
+                    <p class="price-glance-peek">満枠50名 目安 ¥3,976/人</p>
                   </div>
                 </div>
               </div>
@@ -654,12 +903,12 @@
                 <p class="price-glance-tier-head">従業員 50名以上</p>
                 <div class="price-glance-row">
                   <div class="price-glance-card">
-                    <p class="price-glance-name">社長・人事・総務向けEAP</p>
+                    <p class="price-glance-name">アプリ利用と<br />集団分析のみ</p>
                     <p class="price-glance-amount price-glance-amount--plain">応相談</p>
                     <p class="price-glance-peek price-glance-peek--padded">規模に合わせてお見積り</p>
                   </div>
                   <div class="price-glance-card price-glance-card--rec">
-                    <p class="price-glance-name">ライト <span class="price-glance-badge">おすすめ</span><br /><small>月1回訪問</small></p>
+                    <p class="price-glance-name">ライト <span class="price-glance-badge">主軸</span><br /><small>月1回訪問</small></p>
                     <p class="price-glance-amount price-glance-amount--plain">応相談</p>
                     <p class="price-glance-peek price-glance-peek--padded">規模に合わせてお見積り</p>
                   </div>
@@ -675,10 +924,10 @@
           <div class="slots-wrap" style="margin-top: 0.85rem">
             <h4>▸ 各プランに含まれる目安（1か月）</h4>
             <div class="slots-grid">
-              <p>担当者向けEAP：<span>人事・役員面談（対面/オンライン）</span></p>
-              <p>ライト：<span>訪問月1回＋従業員相談枠（1回あたり30分枠）</span></p>
-              <p>スタンダード：<span>訪問月2回＋従業員相談枠（1回あたり30分枠）</span></p>
-              <p>全プラン共通：<span>Webアプリ利用・集団分析</span></p>
+              <p>全プラン共通：<span>アプリ利用・管理・集団分析</span></p>
+              <p>アプリ利用と集団分析のみ：<span>上記3項目のみ（訪問・面談はオプション）</span></p>
+              <p>ライト（主軸）：<span>訪問月1回＋面談枠（下表）</span></p>
+              <p>スタンダード：<span>訪問月2回＋面談枠（6〜10名は訪問あたり2枠）</span></p>
             </div>
           </div>
         </div>
@@ -689,27 +938,39 @@
             <thead>
               <tr>
                 <th></th>
-                <th>社長・人事・総務担当者<br /><span style="font-weight: 300; font-size: 9px">向け EAP<br />（アプリ・集団分析／面談のみ）</span></th>
-                <th class="rec-head2">ライト★<br /><span style="font-weight: 300; font-size: 9px">（アプリ・集団分析／担当者との面談、従業員面談）</span></th>
-                <th>スタンダード<br /><span style="font-weight: 300; font-size: 9px">（アプリ・集団分析／担当者との面談、従業員面談）</span></th>
+                <th>アプリ利用と<br />集団分析のみ<br /><span style="font-weight: 300; font-size: 9px">入口・訪問・面談なし</span></th>
+                <th class="rec-head2">ライト★主軸<br /><span style="font-weight: 300; font-size: 9px">月1回訪問＋従業員面談枠</span></th>
+                <th>スタンダード<br /><span style="font-weight: 300; font-size: 9px">月2回訪問＋従業員面談枠</span></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>EAPアプリ利用</td>
+                <td>専用Webアプリ利用</td>
+                <td><span class="circle">○</span></td>
+                <td class="rec-col"><span class="circle">○</span></td>
+                <td><span class="circle">○</span></td>
+              </tr>
+              <tr>
+                <td>アプリ管理・運用サポート（通常範囲）</td>
+                <td><span class="circle">○</span></td>
+                <td class="rec-col"><span class="circle">○</span></td>
+                <td><span class="circle">○</span></td>
+              </tr>
+              <tr>
+                <td>集団分析（個人特定なし・通常範囲）</td>
                 <td><span class="circle">○</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
                 <td><span class="circle">○</span></td>
               </tr>
               <tr>
                 <td>社長・人事・総務担当者との面談（対面・オンライン）</td>
-                <td><span class="circle">○</span></td>
+                <td><span class="dash">－</span><br /><span style="font-size:9px;color:var(--muted)">オプション可</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
                 <td><span class="circle">○</span></td>
               </tr>
               <tr>
-                <td>従業員向けチャット・オンライン相談</td>
-                <td><span class="dash">－</span></td>
+                <td>従業員向けチャット・オンライン相談（アプリ）</td>
+                <td><span class="circle">○</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
                 <td><span class="circle">○</span></td>
               </tr>
@@ -720,14 +981,14 @@
                 <td class="visit">月2回（定期）</td>
               </tr>
               <tr>
-                <td>巡回日の対面相談（1枠30分）</td>
-                <td><span class="dash">－</span></td>
-                <td class="rec-col"><span class="circle">○</span></td>
-                <td><span class="circle">○</span></td>
+                <td>訪問日の従業員向け対面相談（1枠30分・予約制）</td>
+                <td><span class="dash">－</span><br /><span style="font-size:9px;color:var(--muted)">オプション可</span></td>
+                <td class="rec-col visit">訪問ごとに枠あり</td>
+                <td class="visit">訪問ごとに枠あり</td>
               </tr>
               <tr>
-                <td>集団分析レポート・アプリ上の集団分析面談（役員・人事・総務向け）</td>
-                <td><span class="circle">○</span></td>
+                <td>集団分析の説明面談（役員・人事・総務向け）</td>
+                <td><span class="dash">－</span><br /><span style="font-size:9px;color:var(--muted)">レポート中心</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
                 <td><span class="circle">○</span></td>
               </tr>
@@ -737,22 +998,59 @@
             各プランの月額に<strong>含まない</strong>例：下記「オプション」の各項目、交通費（距離に応じて別途）、プランに定めた回数・枠を超える追加の訪問・面談など。
           </p>
           <div class="slots-wrap">
-            <h4>▸ 訪問時の従業員向け相談予約枠（ライト・スタンダード・1枠30分）</h4>
-            <div class="slots-grid">
-              <p>〜10人：<span>1枠（30分）</span></p>
-              <p>11〜20人：<span>2枠（30分×2）</span></p>
-              <p>21〜30人：<span>3枠（30分×3）</span></p>
-              <p>31人以上：<span>要相談</span></p>
-            </div>
+            <h4>▸ 訪問1回あたりの従業員向け面談枠（ライト・スタンダード・各枠30分・予約制）</h4>
+            <p style="font-size: 11px; color: var(--muted); margin: 0 0 0.5rem; line-height: 1.5">従業員数（常時使用の目安）に応じて枠数を設定します。<strong>職場共通の予約枠</strong>であり、全員分を毎月保証するものではありません。</p>
+            <table class="slots-table" style="width:100%;border-collapse:collapse;font-size:11px;margin-bottom:0.5rem">
+              <thead>
+                <tr>
+                  <th style="border:1px solid var(--border);padding:4px 6px;background:var(--sage-light)">従業員数</th>
+                  <th style="border:1px solid var(--border);padding:4px 6px;background:var(--sage-light)">ライト</th>
+                  <th style="border:1px solid var(--border);padding:4px 6px;background:var(--sage-light)">スタンダード</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">〜5名</td><td style="border:1px solid var(--border);padding:4px 6px">1枠</td><td style="border:1px solid var(--border);padding:4px 6px">1枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">6〜10名</td><td style="border:1px solid var(--border);padding:4px 6px">1枠</td><td style="border:1px solid var(--border);padding:4px 6px"><strong>2枠</strong></td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">11〜15名</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">16〜20名</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">21〜30名</td><td style="border:1px solid var(--border);padding:4px 6px">3枠</td><td style="border:1px solid var(--border);padding:4px 6px">3枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">31〜50名</td><td style="border:1px solid var(--border);padding:4px 6px">4枠</td><td style="border:1px solid var(--border);padding:4px 6px">4枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">51名以上</td><td colspan="2" style="border:1px solid var(--border);padding:4px 6px">個別お見積り</td></tr>
+              </tbody>
+            </table>
             <p style="font-size: 11.5px; color: var(--muted); margin: 0.65rem 0 0; line-height: 1.55">
-              スタンダードは訪問が月2回のため、上記は<strong>1回あたり</strong>の目安です（月内の合計枠数は訪問回数に応じて増えます。詳細はお問い合わせ時にご案内します）。
+              例：<strong>従業員10名・ライト</strong>＝月1回訪問×1枠（30分）／<strong>同規模・スタンダード</strong>＝月2回訪問×各2枠（計4枠・各30分）。スタンダードは枠数が<strong>訪問ごと</strong>に適用されます。
             </p>
           </div>
           <div class="slots-wrap" style="margin-top: 0.85rem">
-            <h4>▸ 人事・事業主向け面談（月額に含むおおむねの目安）</h4>
+            <h4>▸ 人事・事業主向け面談（ライト・スタンダード・月額に含む目安）</h4>
             <p style="font-size: 12px; color: var(--ink); margin: 0; line-height: 1.55">
-              社長・人事・総務担当者向け EAP（<strong>担当者面談中心</strong>・定期訪問なし）：人事・役員向けの面談・<strong>集団分析面談を含む</strong>月あたりの目安はお問い合わせ時にご案内します。ライト：<span style="color: var(--sage-dark); font-weight: 600">月合計60分まで</span>／スタンダード：<span style="color: var(--sage-dark); font-weight: 600">月合計90分まで</span>。超過分は下記オプションとなります。
+              <strong>アプリ利用と集団分析のみ</strong>のプランには含みません（必要ならオプション）。ライト：<span style="color: var(--sage-dark); font-weight: 600">月合計60分まで</span>／スタンダード：<span style="color: var(--sage-dark); font-weight: 600">月合計90分まで</span>。超過分は下記オプションとなります。
             </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <p class="sec-title">導入支援パック（任意・別契約・税別）</p>
+          <div class="onboard-eap">
+            <h4>ご自身でアプリ設定できる企業は月額のみでOK</h4>
+            <div class="onboard-eap-grid">
+              <div class="onboard-eap-item">
+                <strong>リモート導入</strong>
+                <p class="onboard-eap-price">無料※／¥39,800</p>
+                <p>Zoom・電話90分。※スタンダードは無料</p>
+              </div>
+              <div class="onboard-eap-item">
+                <strong>現場半日</strong>
+                <p class="onboard-eap-price">¥98,800</p>
+                <p>キックオフ・職員レクチャー・端末2台</p>
+              </div>
+              <div class="onboard-eap-item">
+                <strong>現場1日＋フォロー</strong>
+                <p class="onboard-eap-price">¥178,800</p>
+                <p>1日研修・1週間後リモート30分</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -766,65 +1064,114 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>追加の従業員面談枠（プラン外・1枠30分）</td><td>10,000円／枠</td></tr>
-              <tr><td>人事・事業主向け面談の超過（30分単位）</td><td>10,000円／30分</td></tr>
-              <tr><td>ストレスチェック実施（組織分析・レポート含）</td><td>一律 20,000円 or 2,000円/人 の高い方</td></tr>
-              <tr><td>キャリア検査（GATB・興味検査等）</td><td>3,000〜5,000円/人</td></tr>
-              <tr><td>心理検査（TEG等）</td><td>5,000〜8,000円/人</td></tr>
-              <tr><td>検査フィードバック面談</td><td>10,000円/人</td></tr>
-              <tr><td>高ストレス者面談</td><td>15,000円/回</td></tr>
-              <tr><td>オンライン面談（50分）</td><td>10,000円/回</td></tr>
-              <tr><td>セミナー・研修・定期勉強会</td><td>30,000円〜</td></tr>
+              <tr><td>追加の従業員面談枠（プラン外・1枠30分）</td><td>15,000円／枠</td></tr>
+              <tr><td>アプリ・集団分析のみプランからの訪問・面談の追加</td><td>別途お見積り</td></tr>
+              <tr><td>人事・事業主向け面談の超過（30分単位）</td><td>15,000円／30分</td></tr>
+              <tr><td>ストレスチェック実施（組織分析・レポート含）</td><td>一律 30,000円 or 2,500円/人 の高い方</td></tr>
+              <tr><td>キャリア検査（GATB・興味検査等）</td><td>4,500〜7,500円/人</td></tr>
+              <tr><td>心理検査（TEG等）</td><td>7,500〜12,000円/人</td></tr>
+              <tr><td>検査フィードバック面談</td><td>15,000円/人</td></tr>
+              <tr><td>高ストレス者面談</td><td>22,000円/回</td></tr>
+              <tr><td>オンライン面談（50分）</td><td>15,000円/回</td></tr>
+              <tr><td>セミナー・研修・定期勉強会</td><td>45,000円〜</td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="section">
-          <p class="sec-title">交通費・助成金</p>
-          <div class="two-col">
-            <div>
-              <div class="transport-cards">
-                <div class="transport-card free-card">
-                  <div class="transport-dist">15km以内</div>
-                  <div class="transport-price free">無料</div>
-                  <div class="transport-note">近隣エリア</div>
-                </div>
-                <div class="transport-card">
-                  <div class="transport-dist">15〜30km</div>
-                  <div class="transport-price">3,000円</div>
-                  <div class="transport-note">往復・税別</div>
-                </div>
-                <div class="transport-card">
-                  <div class="transport-dist">30〜50km</div>
-                  <div class="transport-price">5,000円</div>
-                  <div class="transport-note">往復・税別</div>
-                </div>
-                <div class="transport-card">
-                  <div class="transport-dist">50km以上</div>
-                  <div class="transport-price" style="font-size: 12px">実費精算</div>
-                  <div class="transport-note">要事前確認</div>
-                </div>
-              </div>
-              <div class="transport-footnote">
-                <p>上記は往復の交通費（ガソリン代・高速代含む）の目安です</p>
-                <p>50km以上の場合は事前にお見積りいたします</p>
-                <p>公共交通機関利用の場合は実費をご請求します</p>
-              </div>
+          <p class="sec-title">交通費（税別）</p>
+          <div class="transport-cards">
+            <div class="transport-card free-card">
+              <div class="transport-dist">15km以内</div>
+              <div class="transport-price free">無料</div>
+              <div class="transport-note">近隣エリア</div>
             </div>
-            <div class="subsidy-box">
-              <h4>助成金のご案内</h4>
-              <p style="font-size: 11.5px; color: var(--muted); margin: 0 0 0.5rem">導入時に活用できる助成金をご案内しています。お気軽にご相談ください。</p>
-              <ul>
-                <li>ストレスチェック関連助成金</li>
-                <li>EAP・メンタルヘルス関連助成金</li>
-                <li>その他活用可能な助成金</li>
-              </ul>
+            <div class="transport-card">
+              <div class="transport-dist">15〜30km</div>
+              <div class="transport-price">3,000円</div>
+              <div class="transport-note">往復・税別</div>
+            </div>
+            <div class="transport-card">
+              <div class="transport-dist">30〜50km</div>
+              <div class="transport-price">5,000円</div>
+              <div class="transport-note">往復・税別</div>
+            </div>
+            <div class="transport-card">
+              <div class="transport-dist">50km以上</div>
+              <div class="transport-price" style="font-size: 12px">実費精算</div>
+              <div class="transport-note">要事前確認</div>
             </div>
           </div>
+          <div class="transport-footnote">
+            <p>上記は往復の交通費（ガソリン代・高速代含む）の目安です</p>
+            <p>50km以上の場合は事前にお見積りいたします</p>
+            <p>公共交通機関利用の場合は実費をご請求します</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <p class="sec-title">補助金・助成金（使える可能性のある制度）</p>
+          <p style="font-size: 11px; color: var(--muted); margin: 0 0 0.5rem; line-height: 1.55">
+            採択・支給・本サービスの対象可否は<strong>保証しません</strong>。申請前に公式要項・商工会議所・社労士でご確認ください。ITツール登録・<strong>GビズID</strong>が必要な制度があります。
+          </p>
+          <div class="subsidy-table-wrap">
+            <table class="subsidy-table">
+              <thead>
+                <tr>
+                  <th>制度名</th>
+                  <th>補助の目安</th>
+                  <th>関連しうる経費</th>
+                  <th class="col-qr">公式HP（QR）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>デジタル化・AI導入補助金2026</strong></td>
+                  <td>率<strong>1/2〜2/3</strong>、額<strong>5万〜450万円</strong></td>
+                  <td>SaaS月額・導入関連費（<strong>ITツール登録・支援事業者</strong>が前提）</td>
+                  <td class="col-qr">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=112x112&amp;data=https%3A%2F%2Fit-shien.smrj.go.jp%2F" width="56" height="56" alt="" />
+                    <a href="https://it-shien.smrj.go.jp/">it-shien.smrj.go.jp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>団体経由産業保健活動推進助成金</strong></td>
+                  <td>最大<strong>90%</strong>、上限<strong>500万〜1,000万円</strong>/年</td>
+                  <td>健康教育・相談体制・EAP導入（<strong>商工会等経由</strong>）</td>
+                  <td class="col-qr">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=112x112&amp;data=https%3A%2F%2Fwww.johas.go.jp%2Focc-health%2Fsubsidy%2F" width="56" height="56" alt="" />
+                    <a href="https://www.johas.go.jp/occ-health/subsidy/">johas.go.jp</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>人材開発支援助成金</strong></td>
+                  <td>経費の<strong>最大75〜90%</strong></td>
+                  <td>操作研修・管理職向けメンタルヘルス研修</td>
+                  <td class="col-qr">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=112x112&amp;data=https%3A%2F%2Fwww.mhlw.go.jp%2Fstf%2Fseisakunitsuite%2Fbunya%2Fkoyou_roudou%2Fkoyou%2Fkyufukin%2Fd01-1.html" width="56" height="56" alt="" />
+                    <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/kyufukin/d01-1.html">厚労省</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>地域の支援制度</strong></td>
+                  <td>県・市・商工会で個別</td>
+                  <td>健康経営・介護／産業保健ICT等</td>
+                  <td class="col-qr">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=112x112&amp;data=https%3A%2F%2Fmirasapo-plus.go.jp%2F" width="56" height="56" alt="" />
+                    <a href="https://mirasapo-plus.go.jp/">mirasapo-plus</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="subsidy-flow">
+            <strong>申請の流れ（目安）：</strong>GビズID取得 → 制度・商工会で要件確認 → 見積・契約 → 交付申請（時期は要項による）。スタンダード2年＋補助1/2がすべて満たされた場合のイメージ：月額約12.9万円×24か月のうち、<strong>対象経費の最大約半額</strong>が助成される可能性（上限・登録状況で変動・シミュレーション）。
+          </p>
         </div>
 
         <div class="notes">
           <p>上記料金はすべて税別表示です</p>
+          <p>従業員向け面談枠は職場共通の予約枠（1枠30分）です。全従業員に毎月30分ずつを個別保証するものではありません</p>
           <p>個別相談内容は本人同意なく会社へ共有しません（生命・身体の安全に関わる緊急時等を除く）</p>
           <p>会社向け報告は、個人が特定されない集計・傾向情報を中心に行います</p>
           <p>200名以上の企業様はご要望に応じてお見積りいたします</p>
@@ -835,6 +1182,7 @@
           <p class="catch">「相談できる場所がある」という安心感が、従業員の日常を支えます</p>
           <p>makes-momo &nbsp;|&nbsp; お問い合わせはお気軽にどうぞ</p>
         </div>
+      </div>
       </div>
       <p class="ryokin-cta-bottom js-no-print">
         <a href="./index.html#contact" class="btn btn-primary">お問い合わせ</a>
@@ -860,6 +1208,7 @@
         />
         <p class="site-qr-footer-url"><a href="https://www.makesmomo.com/">www.makesmomo.com</a></p>
       </div>
+      <p class="footer-trial-status" role="status">本サイトのEAPサービスは<strong>試験運用中</strong>です。料金・機能・契約条件は予告なく変更される場合があります。</p>
       <p class="footer-copy">© <span id="js-year"></span> makes-momo. All Rights Reserved.</p>
     </div>
   </footer>
@@ -867,9 +1216,66 @@
   <script src="./script.js?v=20260426b"></script>
   <script>
     (function () {
-      var btn = document.getElementById("ryokinPrintBtn");
-      if (btn) {
-        btn.addEventListener("click", function () {
+      var ZOOM_KEY = "ryokinZoom";
+      var ZOOM_LEVELS = [90, 100, 110, 125, 150];
+      var wrap = document.getElementById("ryokinDocWrap");
+      var doc = document.getElementById("ryokinDoc");
+      var zoomBtns = document.querySelectorAll(".ryokin-zoom-btn[data-zoom]");
+      var currentZoom = 100;
+
+      function applyZoom(pct) {
+        currentZoom = pct;
+        if (wrap) {
+          wrap.style.zoom = pct === 100 ? "" : String(pct / 100);
+        }
+        if (doc) {
+          doc.style.fontSize = "";
+        }
+        zoomBtns.forEach(function (b) {
+          var on = Number(b.getAttribute("data-zoom")) === pct;
+          b.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        try {
+          localStorage.setItem(ZOOM_KEY, String(pct));
+        } catch (e) {}
+      }
+
+      function stepZoom(delta) {
+        var i = ZOOM_LEVELS.indexOf(currentZoom);
+        if (i < 0) i = 1;
+        i = Math.max(0, Math.min(ZOOM_LEVELS.length - 1, i + delta));
+        applyZoom(ZOOM_LEVELS[i]);
+      }
+
+      var saved = 100;
+      try {
+        saved = Number(localStorage.getItem(ZOOM_KEY)) || 100;
+      } catch (e) {}
+      if (ZOOM_LEVELS.indexOf(saved) >= 0) applyZoom(saved);
+
+      zoomBtns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          applyZoom(Number(b.getAttribute("data-zoom")));
+        });
+      });
+      var outBtn = document.getElementById("ryokinZoomOut");
+      var inBtn = document.getElementById("ryokinZoomIn");
+      var resetBtn = document.getElementById("ryokinZoomReset");
+      if (outBtn) outBtn.addEventListener("click", function () { stepZoom(-1); });
+      if (inBtn) inBtn.addEventListener("click", function () { stepZoom(1); });
+      if (resetBtn) resetBtn.addEventListener("click", function () { applyZoom(100); });
+
+      var largeBtn = document.getElementById("ryokinPrintLargeBtn");
+      if (largeBtn) {
+        largeBtn.addEventListener("click", function () {
+          var on = document.body.classList.toggle("ryokin-print-large");
+          largeBtn.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+      }
+
+      var printBtn = document.getElementById("ryokinPrintBtn");
+      if (printBtn) {
+        printBtn.addEventListener("click", function () {
           window.print();
         });
       }

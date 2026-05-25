@@ -933,12 +933,78 @@ a {
 }
 
 /* === 助成金カード（シンプル化／公式サイトボタン中心） === */
+.price-band-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+}
+@media (max-width: 640px) {
+  .price-band-mini {
+    grid-template-columns: 1fr;
+  }
+}
+.price-band-item {
+  text-align: center;
+  padding: 0.85rem 0.65rem;
+  border: 1px solid var(--color-border, #dde5e8);
+  border-radius: 12px;
+  background: var(--color-surface, #fff);
+}
+.price-band-item--rec {
+  border-color: var(--color-primary, #1b3a6b);
+  box-shadow: 0 0 0 2px rgba(27, 58, 107, 0.12);
+}
+.price-band-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-muted, #5c6560);
+  margin-bottom: 0.35rem;
+}
+.price-band-yen {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--color-primary, #1b3a6b);
+  letter-spacing: -0.02em;
+}
+.price-band-per {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--color-muted, #5c6560);
+  margin-top: 0.25rem;
+}
+
 .subsidy-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
   max-width: 960px;
   margin: 1.5rem auto 0;
+}
+
+.subsidy-cards--qr {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1080px;
+}
+
+@media (max-width: 900px) {
+  .subsidy-cards--qr {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .subsidy-cards--qr {
+    grid-template-columns: 1fr;
+  }
+}
+
+.subsidy-card-qr {
+  display: block;
+  margin: 0.5rem auto 0.35rem;
+  border-radius: 6px;
 }
 
 .subsidy-card {
@@ -3731,6 +3797,26 @@ a {
 
 .footer-info a:hover {
   color: #ffffff;
+}
+
+.footer-trial-status {
+  margin: 0 0 0.75rem;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+  background: rgba(255, 200, 80, 0.12);
+  border: 1px solid rgba(255, 200, 80, 0.35);
+  border-radius: 8px;
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-trial-status strong {
+  color: #ffe08a;
+  font-weight: 700;
 }
 
 .footer-copy {
