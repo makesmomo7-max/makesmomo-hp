@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260603a" />
+  <link rel="stylesheet" href="./styles.css?v=20260603b" />
   <style>
     .ryokin-page {
       --sage: #3b6d4a;
@@ -557,7 +557,7 @@
     }
     .ryokin-doc .price-glance-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 0.5rem;
       padding: 0.6rem 0.6rem 0.65rem;
     }
@@ -820,7 +820,7 @@
           <div class="app-banner">
             <p class="app-banner-main"><strong>全プラン共通（月額込み）：</strong>専用Webアプリ<strong>利用料</strong>・<strong>アプリ管理</strong>（初期設定・運用サポート）・<strong>集団分析</strong>（個人特定なし）</p>
             <p class="app-banner-sub">
-              <strong>おすすめ（主軸）はライト・スタンダード</strong>です。職場への定期訪問と、訪問日の<strong>従業員向け対面面談枠（各30分・予約制）</strong>を月額に含みます。<strong>アプリ利用と集団分析のみ</strong>のプランは、訪問・面談を含まない<strong>入口</strong>です（訪問・面談はオプションで追加可能）。
+              <strong>おすすめ（主軸）はライトプラン</strong>です。職場への定期訪問（月1回の出張健康相談）と、訪問日の<strong>従業員向け対面面談枠（各30分・予約制）</strong>を月額に含みます。<strong>アプリ利用と集団分析のみ</strong>のプランは、訪問・面談を含まない<strong>入口</strong>です（訪問・面談はオプションで追加可能）。
             </p>
           </div>
           <div class="scope-note" role="note" style="margin-bottom: 0.75rem">
@@ -848,27 +848,13 @@
               <article class="pricing-plan-card pricing-plan-card--popular">
                 <span class="pricing-plan-badge">人気</span>
                 <h3 class="pricing-plan-name">② ライトプラン</h3>
-                <ul class="pricing-plan-features">
-                  <li>アプリ利用</li>
-                  <li>ストレスチェック</li>
-                  <li>集団分析</li>
-                  <li><strong>月1回訪問</strong></li>
-                </ul>
-              </article>
-              <article class="pricing-plan-card">
-                <h3 class="pricing-plan-name">③ スタンダードプラン</h3>
-                <ul class="pricing-plan-features">
-                  <li>アプリ利用</li>
-                  <li>ストレスチェック</li>
-                  <li>集団分析</li>
-                  <li><strong>月2回訪問</strong></li>
-                </ul>
+                <p class="pricing-plan-summary">アプリ利用と集団分析と<br />月1回出張健康相談</p>
               </article>
             </div>
           </div>
           <div class="price-glance" aria-label="企業規模別の月額料金">
             <p class="price-glance-title" role="heading" aria-level="2">企業規模別 月額料金（税別）</p>
-            <p class="price-glance-lead">月額総額は従業員数の帯で変わります。<strong>アプリ利用・管理・集団分析は全プラン込み。</strong>訪問と従業員向け面談枠は<strong>ライト・スタンダード</strong>に含みます。</p>
+            <p class="price-glance-lead">月額総額は従業員数の帯で変わります。<strong>アプリ利用・管理・集団分析は全プラン込み。</strong>出張健康相談と従業員向け面談枠は<strong>ライトプラン</strong>に含みます。</p>
             <div class="price-glance-tiers">
               <div class="price-glance-tier">
                 <p class="price-glance-tier-head">従業員 〜10名</p>
@@ -880,13 +866,8 @@
                     <p class="price-glance-peek">訪問・面談枠なし</p>
                   </div>
                   <div class="price-glance-card price-glance-card--rec">
-                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">主軸</span></p>
+                    <p class="price-glance-name">ライト<br /><small>月1回出張健康相談</small> <span class="price-glance-badge">主軸</span></p>
                     <p class="price-glance-amount">5.3<small>万円</small></p>
-                    <p class="price-glance-unit">税別 ／ 月</p>
-                  </div>
-                  <div class="price-glance-card">
-                    <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
-                    <p class="price-glance-amount">8.9<small>万円</small></p>
                     <p class="price-glance-unit">税別 ／ 月</p>
                   </div>
                 </div>
@@ -901,16 +882,10 @@
                     <p class="price-glance-peek">満枠20名 目安 ¥2,440/人</p>
                   </div>
                   <div class="price-glance-card price-glance-card--rec">
-                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">主軸</span></p>
+                    <p class="price-glance-name">ライト<br /><small>月1回出張健康相談</small> <span class="price-glance-badge">主軸</span></p>
                     <p class="price-glance-amount">7.9<small>万円</small></p>
                     <p class="price-glance-unit">税別 ／ 月</p>
                     <p class="price-glance-peek">満枠20名 目安 ¥3,940/人</p>
-                  </div>
-                  <div class="price-glance-card">
-                    <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
-                    <p class="price-glance-amount">12.9<small>万円</small></p>
-                    <p class="price-glance-unit">税別 ／ 月</p>
-                    <p class="price-glance-peek">満枠20名 目安 ¥6,440/人</p>
                   </div>
                 </div>
               </div>
@@ -924,16 +899,10 @@
                     <p class="price-glance-peek">満枠50名 目安 ¥1,376/人</p>
                   </div>
                   <div class="price-glance-card price-glance-card--rec">
-                    <p class="price-glance-name">ライト<br /><small>月1回訪問</small> <span class="price-glance-badge">主軸</span></p>
+                    <p class="price-glance-name">ライト<br /><small>月1回出張健康相談</small> <span class="price-glance-badge">主軸</span></p>
                     <p class="price-glance-amount">11.9<small>万円</small></p>
                     <p class="price-glance-unit">税別 ／ 月</p>
                     <p class="price-glance-peek">満枠50名 目安 ¥2,376/人</p>
-                  </div>
-                  <div class="price-glance-card">
-                    <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
-                    <p class="price-glance-amount">19.9<small>万円</small></p>
-                    <p class="price-glance-unit">税別 ／ 月</p>
-                    <p class="price-glance-peek">満枠50名 目安 ¥3,976/人</p>
                   </div>
                 </div>
               </div>
@@ -946,12 +915,7 @@
                     <p class="price-glance-peek price-glance-peek--padded">規模に合わせてお見積り</p>
                   </div>
                   <div class="price-glance-card price-glance-card--rec">
-                    <p class="price-glance-name">ライト <span class="price-glance-badge">主軸</span><br /><small>月1回訪問</small></p>
-                    <p class="price-glance-amount price-glance-amount--plain">応相談</p>
-                    <p class="price-glance-peek price-glance-peek--padded">規模に合わせてお見積り</p>
-                  </div>
-                  <div class="price-glance-card">
-                    <p class="price-glance-name">スタンダード<br /><small>月2回訪問</small></p>
+                    <p class="price-glance-name">ライト <span class="price-glance-badge">主軸</span><br /><small>月1回出張健康相談</small></p>
                     <p class="price-glance-amount price-glance-amount--plain">応相談</p>
                     <p class="price-glance-peek price-glance-peek--padded">規模に合わせてお見積り</p>
                   </div>
@@ -982,15 +946,6 @@
                 </p>
                 <p class="pricing-per-capita-each">約 <strong>2,380</strong> 円／人</p>
               </article>
-              <article class="pricing-per-capita-card">
-                <p class="pricing-per-capita-plan">スタンダードプラン</p>
-                <p class="pricing-per-capita-total">
-                  <span class="pricing-per-capita-total-label">月額総額（税別）</span>
-                  <strong>19.9</strong><small>万円</small>
-                  <span class="pricing-per-capita-unit">／ 月</span>
-                </p>
-                <p class="pricing-per-capita-each">約 <strong>3,980</strong> 円／人</p>
-              </article>
             </div>
             <p class="pricing-per-capita-foot">従業員のメンタル不調による休職・離職リスクの低減や、職場定着支援を目的とした法人向けサービスです。1人あたりの金額は当該帯の月額総額を従業員50名で割った目安です。</p>
           </div>
@@ -999,8 +954,7 @@
             <div class="slots-grid">
               <p>全プラン共通：<span>アプリ利用・管理・集団分析</span></p>
               <p>アプリ利用と集団分析のみ：<span>上記3項目のみ（訪問・面談はオプション）</span></p>
-              <p>ライト（主軸）：<span>訪問月1回＋面談枠（下表）</span></p>
-              <p>スタンダード：<span>訪問月2回＋面談枠（6〜10名は訪問あたり2枠）</span></p>
+              <p>ライト（主軸）：<span>月1回出張健康相談＋面談枠（下表）</span></p>
             </div>
           </div>
         </div>
@@ -1012,8 +966,7 @@
               <tr>
                 <th></th>
                 <th>アプリ利用と<br />集団分析のみ<br /><span style="font-weight: 300; font-size: 9px">入口・訪問・面談なし</span></th>
-                <th class="rec-head2">ライト★主軸<br /><span style="font-weight: 300; font-size: 9px">月1回訪問＋従業員面談枠</span></th>
-                <th>スタンダード<br /><span style="font-weight: 300; font-size: 9px">月2回訪問＋従業員面談枠</span></th>
+                <th class="rec-head2">ライト★主軸<br /><span style="font-weight: 300; font-size: 9px">月1回出張健康相談＋面談枠</span></th>
               </tr>
             </thead>
             <tbody>
@@ -1021,49 +974,41 @@
                 <td>専用Webアプリ利用</td>
                 <td><span class="circle">○</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
-                <td><span class="circle">○</span></td>
               </tr>
               <tr>
                 <td>アプリ管理・運用サポート（通常範囲）</td>
                 <td><span class="circle">○</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
-                <td><span class="circle">○</span></td>
               </tr>
               <tr>
                 <td>集団分析（個人特定なし・通常範囲）</td>
                 <td><span class="circle">○</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
-                <td><span class="circle">○</span></td>
               </tr>
               <tr>
                 <td>社長・人事・総務担当者との面談（対面・オンライン）</td>
                 <td><span class="dash">－</span><br /><span style="font-size:9px;color:var(--muted)">オプション可</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
-                <td><span class="circle">○</span></td>
               </tr>
               <tr>
                 <td>従業員向けチャット・オンライン相談（アプリ）</td>
                 <td><span class="circle">○</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
-                <td><span class="circle">○</span></td>
               </tr>
               <tr>
-                <td>専門家の訪問</td>
+                <td>専門家の出張健康相談</td>
                 <td><span class="dash">－</span></td>
                 <td class="visit rec-col">月1回（定期）</td>
-                <td class="visit">月2回（定期）</td>
               </tr>
               <tr>
                 <td>訪問日の従業員向け対面相談（1枠30分・予約制）</td>
                 <td><span class="dash">－</span><br /><span style="font-size:9px;color:var(--muted)">オプション可</span></td>
                 <td class="rec-col visit">訪問ごとに枠あり</td>
-                <td class="visit">訪問ごとに枠あり</td>
               </tr>
               <tr>
                 <td>集団分析の説明面談（役員・人事・総務向け）</td>
                 <td><span class="dash">－</span><br /><span style="font-size:9px;color:var(--muted)">レポート中心</span></td>
                 <td class="rec-col"><span class="circle">○</span></td>
-                <td><span class="circle">○</span></td>
               </tr>
             </tbody>
           </table>
@@ -1071,34 +1016,33 @@
             各プランの月額に<strong>含まない</strong>例：下記「オプション」の各項目、交通費（距離に応じて別途）、プランに定めた回数・枠を超える追加の訪問・面談など。
           </p>
           <div class="slots-wrap">
-            <h4>▸ 訪問1回あたりの従業員向け面談枠（ライト・スタンダード・各枠30分・予約制）</h4>
+            <h4>▸ 出張健康相談1回あたりの従業員向け面談枠（ライト・各枠30分・予約制）</h4>
             <p style="font-size: 11px; color: var(--muted); margin: 0 0 0.5rem; line-height: 1.5">従業員数（常時使用の目安）に応じて枠数を設定します。<strong>職場共通の予約枠</strong>であり、全員分を毎月保証するものではありません。</p>
             <table class="slots-table" style="width:100%;border-collapse:collapse;font-size:11px;margin-bottom:0.5rem">
               <thead>
                 <tr>
                   <th style="border:1px solid var(--border);padding:4px 6px;background:var(--sage-light)">従業員数</th>
                   <th style="border:1px solid var(--border);padding:4px 6px;background:var(--sage-light)">ライト</th>
-                  <th style="border:1px solid var(--border);padding:4px 6px;background:var(--sage-light)">スタンダード</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td style="border:1px solid var(--border);padding:4px 6px">〜5名</td><td style="border:1px solid var(--border);padding:4px 6px">1枠</td><td style="border:1px solid var(--border);padding:4px 6px">1枠</td></tr>
-                <tr><td style="border:1px solid var(--border);padding:4px 6px">6〜10名</td><td style="border:1px solid var(--border);padding:4px 6px">1枠</td><td style="border:1px solid var(--border);padding:4px 6px"><strong>2枠</strong></td></tr>
-                <tr><td style="border:1px solid var(--border);padding:4px 6px">11〜15名</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td></tr>
-                <tr><td style="border:1px solid var(--border);padding:4px 6px">16〜20名</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td></tr>
-                <tr><td style="border:1px solid var(--border);padding:4px 6px">21〜30名</td><td style="border:1px solid var(--border);padding:4px 6px">3枠</td><td style="border:1px solid var(--border);padding:4px 6px">3枠</td></tr>
-                <tr><td style="border:1px solid var(--border);padding:4px 6px">31〜50名</td><td style="border:1px solid var(--border);padding:4px 6px">4枠</td><td style="border:1px solid var(--border);padding:4px 6px">4枠</td></tr>
-                <tr><td style="border:1px solid var(--border);padding:4px 6px">51名以上</td><td colspan="2" style="border:1px solid var(--border);padding:4px 6px">個別お見積り</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">〜5名</td><td style="border:1px solid var(--border);padding:4px 6px">1枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">6〜10名</td><td style="border:1px solid var(--border);padding:4px 6px">1枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">11〜15名</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">16〜20名</td><td style="border:1px solid var(--border);padding:4px 6px">2枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">21〜30名</td><td style="border:1px solid var(--border);padding:4px 6px">3枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">31〜50名</td><td style="border:1px solid var(--border);padding:4px 6px">4枠</td></tr>
+                <tr><td style="border:1px solid var(--border);padding:4px 6px">51名以上</td><td style="border:1px solid var(--border);padding:4px 6px">個別お見積り</td></tr>
               </tbody>
             </table>
             <p style="font-size: 11.5px; color: var(--muted); margin: 0.65rem 0 0; line-height: 1.55">
-              例：<strong>従業員10名・ライト</strong>＝月1回訪問×1枠（30分）／<strong>同規模・スタンダード</strong>＝月2回訪問×各2枠（計4枠・各30分）。スタンダードは枠数が<strong>訪問ごと</strong>に適用されます。
+              例：<strong>従業員10名・ライト</strong>＝月1回の出張健康相談×1枠（30分）。日常はアプリで相談し、対面が必要な方が訪問日に予約します。
             </p>
           </div>
           <div class="slots-wrap" style="margin-top: 0.85rem">
-            <h4>▸ 人事・事業主向け面談（ライト・スタンダード・月額に含む目安）</h4>
+            <h4>▸ 人事・事業主向け面談（ライト・月額に含む目安）</h4>
             <p style="font-size: 12px; color: var(--ink); margin: 0; line-height: 1.55">
-              <strong>アプリ利用と集団分析のみ</strong>のプランには含みません（必要ならオプション）。ライト：<span style="color: var(--sage-dark); font-weight: 600">月合計60分まで</span>／スタンダード：<span style="color: var(--sage-dark); font-weight: 600">月合計90分まで</span>。超過分は下記オプションとなります。
+              <strong>アプリ利用と集団分析のみ</strong>のプランには含みません（必要ならオプション）。ライト：<span style="color: var(--sage-dark); font-weight: 600">月合計60分まで</span>。超過分は下記オプションとなります。
             </p>
           </div>
         </div>
@@ -1111,7 +1055,7 @@
               <div class="onboard-eap-item">
                 <strong>リモート導入</strong>
                 <p class="onboard-eap-price">無料※／¥39,800</p>
-                <p>Zoom・電話90分。※スタンダードは無料</p>
+                <p>Zoom・電話90分。※ライトは¥39,800（アプリのみは同額）</p>
               </div>
               <div class="onboard-eap-item">
                 <strong>現場半日</strong>
@@ -1238,7 +1182,7 @@
             </table>
           </div>
           <p class="subsidy-flow">
-            <strong>申請の流れ（目安）：</strong>GビズID取得 → 制度・商工会で要件確認 → 見積・契約 → 交付申請（時期は要項による）。スタンダード2年＋補助1/2がすべて満たされた場合のイメージ：月額約12.9万円×24か月のうち、<strong>対象経費の最大約半額</strong>が助成される可能性（上限・登録状況で変動・シミュレーション）。
+            <strong>申請の流れ（目安）：</strong>GビズID取得 → 制度・商工会で要件確認 → 見積・契約 → 交付申請（時期は要項による）。ライト2年＋補助1/2がすべて満たされた場合のイメージ：月額約7.9万円×24か月のうち、<strong>対象経費の最大約半額</strong>が助成される可能性（上限・登録状況で変動・シミュレーション）。
           </p>
         </div>
 
