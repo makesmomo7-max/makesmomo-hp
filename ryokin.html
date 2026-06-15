@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260523d" />
+  <link rel="stylesheet" href="./styles.css?v=20260603a" />
   <style>
     .ryokin-page {
       --sage: #3b6d4a;
@@ -691,6 +691,13 @@
         padding: 0.4rem 0.55rem;
         margin-bottom: 0.45rem;
       }
+      .ryokin-doc .pricing-renewal,
+      .ryokin-doc .pricing-per-capita {
+        padding: 0.4rem 0.55rem;
+        margin-bottom: 0.45rem;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
       .ryokin-doc .app-banner,
       .ryokin-doc .scope-note {
         font-size: 9.5pt;
@@ -826,9 +833,42 @@
               <strong>守秘の考え方：</strong>従業員の個別相談は、まずチャット・オンライン相談から開始できます。個別相談内容は<strong>本人同意なく会社へ共有しません</strong>。会社向けには、個人が特定されない集計・傾向情報を報告します（生命・身体の安全に関わる緊急時等を除く）。
             </p>
           </div>
-          <div class="price-glance" aria-label="月額料金の早見表">
-            <p class="price-glance-title" role="heading" aria-level="2">ひと目で分かる 月額料金（税別）</p>
-            <p class="price-glance-lead">月額は従業員数の帯で変わります。<strong>アプリ利用・管理・集団分析は全プラン込み。</strong>訪問と従業員向け面談枠は<strong>ライト・スタンダード</strong>に含みます（枠数は下表・各枠30分）。</p>
+          <div class="pricing-renewal" aria-label="料金プラン">
+            <p class="pricing-table-heading">料金プラン</p>
+            <p class="pricing-table-sub">全プランにアプリ・ストレスチェック・集団分析を含みます。訪問の有無で選べます（表示は税別）。</p>
+            <div class="pricing-plan-grid">
+              <article class="pricing-plan-card">
+                <h3 class="pricing-plan-name">① アプリプラン</h3>
+                <ul class="pricing-plan-features">
+                  <li>アプリ利用</li>
+                  <li>ストレスチェック</li>
+                  <li>集団分析</li>
+                </ul>
+              </article>
+              <article class="pricing-plan-card pricing-plan-card--popular">
+                <span class="pricing-plan-badge">人気</span>
+                <h3 class="pricing-plan-name">② ライトプラン</h3>
+                <ul class="pricing-plan-features">
+                  <li>アプリ利用</li>
+                  <li>ストレスチェック</li>
+                  <li>集団分析</li>
+                  <li><strong>月1回訪問</strong></li>
+                </ul>
+              </article>
+              <article class="pricing-plan-card">
+                <h3 class="pricing-plan-name">③ スタンダードプラン</h3>
+                <ul class="pricing-plan-features">
+                  <li>アプリ利用</li>
+                  <li>ストレスチェック</li>
+                  <li>集団分析</li>
+                  <li><strong>月2回訪問</strong></li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <div class="price-glance" aria-label="企業規模別の月額料金">
+            <p class="price-glance-title" role="heading" aria-level="2">企業規模別 月額料金（税別）</p>
+            <p class="price-glance-lead">月額総額は従業員数の帯で変わります。<strong>アプリ利用・管理・集団分析は全プラン込み。</strong>訪問と従業員向け面談枠は<strong>ライト・スタンダード</strong>に含みます。</p>
             <div class="price-glance-tiers">
               <div class="price-glance-tier">
                 <p class="price-glance-tier-head">従業員 〜10名</p>
@@ -918,6 +958,41 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="pricing-renewal pricing-per-capita" aria-label="従業員1人あたりの月額費用">
+            <h2 class="pricing-per-capita-title">従業員1人あたりの月額費用（目安）</h2>
+            <p class="pricing-per-capita-lead">従業員数に応じて1人あたりの費用は変動します。以下は代表的な利用例です。</p>
+            <p class="pricing-per-capita-scenario">■ 従業員50名の場合</p>
+            <div class="pricing-per-capita-grid">
+              <article class="pricing-per-capita-card">
+                <p class="pricing-per-capita-plan">アプリプラン</p>
+                <p class="pricing-per-capita-total">
+                  <span class="pricing-per-capita-total-label">月額総額（税別）</span>
+                  <strong>6.9</strong><small>万円</small>
+                  <span class="pricing-per-capita-unit">／ 月</span>
+                </p>
+                <p class="pricing-per-capita-each">約 <strong>1,380</strong> 円／人</p>
+              </article>
+              <article class="pricing-per-capita-card pricing-per-capita-card--popular">
+                <p class="pricing-per-capita-plan">ライトプラン</p>
+                <p class="pricing-per-capita-total">
+                  <span class="pricing-per-capita-total-label">月額総額（税別）</span>
+                  <strong>11.9</strong><small>万円</small>
+                  <span class="pricing-per-capita-unit">／ 月</span>
+                </p>
+                <p class="pricing-per-capita-each">約 <strong>2,380</strong> 円／人</p>
+              </article>
+              <article class="pricing-per-capita-card">
+                <p class="pricing-per-capita-plan">スタンダードプラン</p>
+                <p class="pricing-per-capita-total">
+                  <span class="pricing-per-capita-total-label">月額総額（税別）</span>
+                  <strong>19.9</strong><small>万円</small>
+                  <span class="pricing-per-capita-unit">／ 月</span>
+                </p>
+                <p class="pricing-per-capita-each">約 <strong>3,980</strong> 円／人</p>
+              </article>
+            </div>
+            <p class="pricing-per-capita-foot">従業員のメンタル不調による休職・離職リスクの低減や、職場定着支援を目的とした法人向けサービスです。1人あたりの金額は当該帯の月額総額を従業員50名で割った目安です。</p>
           </div>
           <div class="slots-wrap" style="margin-top: 0.85rem">
             <h4>▸ 各プランに含まれる目安（1か月）</h4>

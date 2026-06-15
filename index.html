@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260523b" />
+  <link rel="stylesheet" href="./styles.css?v=20260603a" />
 </head>
 <body data-hp-revision="20260427a">
   <!-- 公開HP：主軸はEAP・巡回相談。ストレスチェックはオプション。更新確認: data-hp-revision と styles.css の ?v= -->
@@ -568,23 +568,77 @@
       <div class="container">
         <p class="section-en">Price</p>
         <h2 class="section-title">料金・プラン</h2>
-        <p class="section-lead">全プランにアプリ・管理・集団分析を込み。<strong>おすすめは訪問＋面談枠込みのライト</strong>です。まずは<strong>アプリ利用と集団分析のみ</strong>から始めることもできます（表示価格は税別）。</p>
-        <div class="price-band-mini" aria-label="月額の目安（従業員10名以下）">
-          <div class="price-band-item">
-            <span class="price-band-label">アプリ・集団分析のみ</span>
-            <strong class="price-band-yen">¥3.3万/月</strong>
-            <span class="price-band-per">訪問・面談枠なし</span>
-          </div>
-          <div class="price-band-item price-band-item--rec">
-            <span class="price-band-label">ライト（主軸・月1回訪問）</span>
-            <strong class="price-band-yen">¥5.3万/月</strong>
-          </div>
-          <div class="price-band-item">
-            <span class="price-band-label">スタンダード（月2回）</span>
-            <strong class="price-band-yen">¥8.9万/月</strong>
+        <p class="section-lead">全プランにアプリ・ストレスチェック・集団分析を込み。<strong>おすすめは訪問込みのライトプラン</strong>です。月額総額と1人あたりの目安の両方をご確認いただけます（表示価格は税別）。</p>
+
+        <div class="pricing-renewal" aria-label="料金プラン">
+          <div class="pricing-plan-grid">
+            <article class="pricing-plan-card">
+              <h3 class="pricing-plan-name">① アプリプラン</h3>
+              <ul class="pricing-plan-features">
+                <li>アプリ利用</li>
+                <li>ストレスチェック</li>
+                <li>集団分析</li>
+              </ul>
+            </article>
+            <article class="pricing-plan-card pricing-plan-card--popular">
+              <span class="pricing-plan-badge">人気</span>
+              <h3 class="pricing-plan-name">② ライトプラン</h3>
+              <ul class="pricing-plan-features">
+                <li>アプリ利用</li>
+                <li>ストレスチェック</li>
+                <li>集団分析</li>
+                <li><strong>月1回訪問</strong></li>
+              </ul>
+            </article>
+            <article class="pricing-plan-card">
+              <h3 class="pricing-plan-name">③ スタンダードプラン</h3>
+              <ul class="pricing-plan-features">
+                <li>アプリ利用</li>
+                <li>ストレスチェック</li>
+                <li>集団分析</li>
+                <li><strong>月2回訪問</strong></li>
+              </ul>
+            </article>
           </div>
         </div>
-        <p class="price-band-note" style="text-align:center;font-size:0.78rem;color:var(--color-muted);margin:-0.75rem 0 1.25rem">面談枠は職場共通の予約枠（全員分を毎月保証しません）。詳細は<a href="./ryokin.html">料金表</a>（税別）</p>
+
+        <div class="pricing-renewal pricing-per-capita" aria-label="従業員1人あたりの月額費用">
+          <h3 class="pricing-per-capita-title">従業員1人あたりの月額費用（目安）</h3>
+          <p class="pricing-per-capita-lead">従業員数に応じて1人あたりの費用は変動します。以下は代表的な利用例です。</p>
+          <p class="pricing-per-capita-scenario">■ 従業員50名の場合</p>
+          <div class="pricing-per-capita-grid">
+            <article class="pricing-per-capita-card">
+              <p class="pricing-per-capita-plan">アプリプラン</p>
+              <p class="pricing-per-capita-total">
+                <span class="pricing-per-capita-total-label">月額総額（税別）</span>
+                <strong>6.9</strong><small>万円</small>
+                <span class="pricing-per-capita-unit">／ 月</span>
+              </p>
+              <p class="pricing-per-capita-each">約 <strong>1,380</strong> 円／人</p>
+            </article>
+            <article class="pricing-per-capita-card pricing-per-capita-card--popular">
+              <p class="pricing-per-capita-plan">ライトプラン</p>
+              <p class="pricing-per-capita-total">
+                <span class="pricing-per-capita-total-label">月額総額（税別）</span>
+                <strong>11.9</strong><small>万円</small>
+                <span class="pricing-per-capita-unit">／ 月</span>
+              </p>
+              <p class="pricing-per-capita-each">約 <strong>2,380</strong> 円／人</p>
+            </article>
+            <article class="pricing-per-capita-card">
+              <p class="pricing-per-capita-plan">スタンダードプラン</p>
+              <p class="pricing-per-capita-total">
+                <span class="pricing-per-capita-total-label">月額総額（税別）</span>
+                <strong>19.9</strong><small>万円</small>
+                <span class="pricing-per-capita-unit">／ 月</span>
+              </p>
+              <p class="pricing-per-capita-each">約 <strong>3,980</strong> 円／人</p>
+            </article>
+          </div>
+          <p class="pricing-per-capita-foot">従業員のメンタル不調による休職・離職リスクの低減や、職場定着支援を目的とした法人向けサービスです。</p>
+        </div>
+
+        <p class="price-band-note" style="text-align:center;font-size:0.82rem;color:var(--color-muted);margin:0 0 1.25rem">〜10名・11〜20名など<strong>企業規模別の月額総額</strong>は<a href="./ryokin.html">料金表</a>をご覧ください。面談枠は職場共通の予約枠です（全員分を毎月保証しません）。</p>
         <div class="price-scheme" aria-label="料金プランの選び方">
           <div class="price-scheme-step"><span>1</span>主軸プランを選ぶ</div>
           <div class="price-scheme-arrow" aria-hidden="true">→</div>
@@ -601,7 +655,7 @@
               <li>アプリ・管理・集団分析は全プラン月額込み</li>
               <li>51名以上・枠超過はオプション・個別見積もり</li>
             </ul>
-            <a href="./ryokin.html" class="btn btn-primary">EAP料金表を見る</a>
+            <a href="./ryokin.html" class="btn btn-primary">企業規模別の料金表を見る</a>
           </article>
 
           <div class="price-quick-options">
