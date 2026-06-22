@@ -1,4 +1,4 @@
-# デプロイチェックリスト（makesmomo.com）
+# デプロイチェックリスト（eap.makesmomo.com）
 
 この手順どおりに実施すれば、公開ミス（404）をかなり防げます。
 
@@ -7,6 +7,8 @@
 ## 0. 公開対象フォルダ（固定）
 
 - 公開HPの正本は **`C:\Users\Owner\Desktop\makesmomo-hp`**
+- 公開ドメインは **`hoken.makesmomo.com`**（momoはたらく健康相談室 / EAP LP）
+- コーポレートサイトは **`C:\Users\Owner\Desktop\makes-momo-HP`** → `www.makesmomo.com`
 - `makes-momo-site` は旧LP/旧Netlify試作。新規更新しない
 - `makes-momo-eap` はEAPアプリ本体。公開HPとして混ぜない
 
@@ -27,14 +29,21 @@
 1. `makesmomo-hp` で変更を確認
 2. 必要に応じて commit / push
 3. Vercel プロジェクト `makesmomo-hp` の Production を確認
-4. `https://www.makesmomo.com/` と `https://makesmomo-hp.vercel.app/` を開く
+4. `https://eap.makesmomo.com/` と `https://makesmomo-hp.vercel.app/` を開く
+
+### DNS（お名前.com 等）
+
+```
+hoken  A  76.76.21.21
+```
+
+Vercel Domains で `hoken.makesmomo.com` を追加済み。`makesmomo.com` / `www.makesmomo.com` はコーポレートサイト側（`makesmomo-corporate`）のプロジェクトに付け替える。
 
 ---
 
 ## 3. 公開後チェック（1分）
 
-- [ ] `https://makesmomo.com/` が表示される
-- [ ] `https://www.makesmomo.com/` が表示される
+- [ ] `https://hoken.makesmomo.com/` が表示される
 - [ ] 主要導線が開ける
   - [ ] 予約ページ
   - [ ] 料金ページ
