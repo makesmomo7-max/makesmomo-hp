@@ -234,7 +234,7 @@ a {
   position: absolute;
   inset: 0;
   z-index: 0;
-  /* 動画読み込み前：ポスター画像なし・深いネイビー単色 */
+  /* 動画読み込み前：eap-hero-poster.jpg（poster属性）＋深いネイビー */
   background-color: #001f3f;
 }
 

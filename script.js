@@ -37,12 +37,12 @@ function setCurrentYear() {
   }
 }
 
-/** ヒーロー背景動画：ゆったり再生（表示は CSS で常時可視） */
+/** ヒーロー背景動画：ストーリー映像は等倍（字幕付き） */
 function setupHeroVideoPlaybackRate() {
   const video = document.querySelector(".hero-bg-video");
   if (!video) return;
 
-  const rate = 0.5;
+  const rate = 1;
 
   const apply = () => {
     try {
