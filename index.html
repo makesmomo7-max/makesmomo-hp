@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260801e" />
+  <link rel="stylesheet" href="./styles.css?v=20260801f" />
 </head>
 <body data-hp-revision="20260427a">
   <!-- 公開HP：主軸はEAP・巡回相談。ストレスチェックはオプション。更新確認: data-hp-revision と styles.css の ?v= -->
@@ -849,25 +849,12 @@
       </div>
     </section>
 
-    <!-- ===================== ステップ7: CTA + 問い合わせセクション ===================== -->
-    <section id="contact" class="section section-contact section-midnight">
-      <div class="contact-bg" aria-hidden="true">
-        <video
-          class="contact-bg-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          poster="./meeting-room.jpg"
-        >
-          <source src="./counter-coworking.mp4" type="video/mp4" />
-        </video>
-        <div class="contact-bg-overlay"></div>
-      </div>
-      <div class="container">
-        <p class="section-en">Contact</p>
-        <h2 class="section-title">お問い合わせはこちら（メールフォーム）</h2>
-        <div class="contact-inner">
+    <!-- ===================== ステップ7: 問い合わせ＋ストーリー ===================== -->
+    <section id="contact" class="section section-contact section-midnight section-contact--split">
+      <div class="contact-split">
+        <div class="contact-split-form">
+          <p class="section-en">Contact</p>
+          <h2 class="section-title" id="contact-title">お問い合わせはこちら（メールフォーム）</h2>
           <div class="contact-form-wrap">
             <h3>メールでのお問い合わせ</h3>
             <form class="contact-form" action="#" method="post">
@@ -884,21 +871,34 @@
 
             <div class="contact-qr" aria-label="Googleフォーム">
               <p class="contact-qr-note">Googleフォームからもお問い合わせいただけます</p>
-            <div class="contact-qr-actions">
-              <a class="contact-qr-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfY0aNJsXz2kIKYMlD_L8pp1_arBvuPrcPNJvo6rG8Th0KhaA/viewform" target="_blank" rel="noopener noreferrer" aria-label="Googleフォームを開く">
-                <img
-                  src="./Google�t�H�[���p�q�R�[�h.JPG"
-                  alt="GoogleフォームQRコード"
-                  class="contact-qr-image"
-                  onerror="this.style.display='none';"
-                />
-              </a>
-              <a class="btn btn-outline contact-qr-web-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfY0aNJsXz2kIKYMlD_L8pp1_arBvuPrcPNJvo6rG8Th0KhaA/viewform" target="_blank" rel="noopener noreferrer">
-                Webからお問い合わせ（Googleフォーム）
-              </a>
-            </div>
+              <div class="contact-qr-actions">
+                <a class="contact-qr-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfY0aNJsXz2kIKYMlD_L8pp1_arBvuPrcPNJvo6rG8Th0KhaA/viewform" target="_blank" rel="noopener noreferrer" aria-label="Googleフォームを開く">
+                  <img
+                    src="./google-form-qr.jpg"
+                    alt="GoogleフォームQRコード"
+                    class="contact-qr-image"
+                    onerror="this.style.display='none';"
+                  />
+                </a>
+                <a class="btn btn-outline contact-qr-web-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfY0aNJsXz2kIKYMlD_L8pp1_arBvuPrcPNJvo6rG8Th0KhaA/viewform" target="_blank" rel="noopener noreferrer">
+                  Webからお問い合わせ（Googleフォーム）
+                </a>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="contact-split-story" id="story" aria-hidden="true">
+          <video
+            class="contact-story-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="./eap-hero-poster.jpg"
+          >
+            <source src="./eap-story.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>
@@ -906,17 +906,6 @@
 
   <!-- ===================== ステップ8: フッター ===================== -->
   <footer class="site-footer">
-    <div class="footer-story" id="story">
-      <video
-        class="footer-story-video"
-        controls
-        playsinline
-        preload="metadata"
-        poster="./eap-hero-poster.jpg"
-      >
-        <source src="./eap-story.mp4" type="video/mp4" />
-      </video>
-    </div>
     <div class="container footer-inner footer-inner--bottom">
       <p class="footer-trial-status" role="status">本サイトのEAPサービスは<strong>試験運用中</strong>です。料金・機能・契約条件は予告なく変更される場合があります。</p>
       <p class="footer-copy">© <span id="js-year"></span> makes momo. All Rights Reserved.</p>

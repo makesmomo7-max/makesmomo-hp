@@ -3549,6 +3549,59 @@ a {
     linear-gradient(160deg, #001226 0%, #001f3f 62%, #082b54 100%);
 }
 
+/* お問い合わせ × ストーリー：左右半分 */
+.section-contact--split {
+  padding: 0;
+  overflow: hidden;
+}
+
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: min(100vh, 920px);
+  align-items: stretch;
+}
+
+.contact-split-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 56px) clamp(20px, 3vw, 40px);
+  min-width: 0;
+}
+
+.contact-split-form .section-en {
+  margin-bottom: 8px;
+}
+
+.contact-split-form .section-title {
+  margin-bottom: 20px;
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+}
+
+.section-contact--split .contact-form-wrap {
+  max-width: none;
+  margin-inline: 0;
+  width: 100%;
+}
+
+.contact-split-story {
+  position: relative;
+  min-height: 360px;
+  background: #0f172a;
+  overflow: hidden;
+}
+
+.contact-story-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #0f172a;
+}
+
 .contact-inner {
   display: grid;
   grid-template-columns: 1fr;
@@ -3739,7 +3792,7 @@ a {
 .site-footer {
   background: #1e293b;
   color: rgba(255, 255, 255, 0.92);
-  padding: 0;
+  padding: 20px 0 24px;
 }
 
 .footer-inner {
@@ -3873,7 +3926,7 @@ a {
   color: #ffffff;
 }
 
-/* フッター：字幕付きストーリー（全幅） */
+/* フッター：字幕付きストーリー（全幅）※連絡セクションへ移動済みのため未使用可 */
 .footer-story {
   width: 100%;
   margin: 0;
@@ -3888,6 +3941,26 @@ a {
   aspect-ratio: 16 / 9;
   object-fit: contain;
   background: #0f172a;
+}
+
+@media (max-width: 900px) {
+  .contact-split {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .contact-split-story {
+    min-height: min(56vw, 420px);
+    order: -1;
+  }
+
+  .contact-split-form {
+    padding: 28px 16px 36px;
+  }
+
+  .section-contact--split .contact-qr-image {
+    width: 120px;
+  }
 }
 
 /* ===================== レスポンシブ（768px以下：ハンバーガーメニュー） ===================== */
