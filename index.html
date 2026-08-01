@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=20260603b" />
+  <link rel="stylesheet" href="./styles.css?v=20260801c" />
 </head>
 <body data-hp-revision="20260427a">
   <!-- 公開HP：主軸はEAP・巡回相談。ストレスチェックはオプション。更新確認: data-hp-revision と styles.css の ?v= -->
@@ -51,7 +51,7 @@
           playsinline
           poster="./eap-hero-poster.jpg"
         >
-          <source src="./eap-story.mp4" type="video/mp4" />
+          <source src="./eap-story-bg.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="hero-overlay"></div>
@@ -911,17 +911,20 @@
         <p class="footer-logo">makes-momo</p>
         <a href="#contact" class="btn btn-primary footer-contact-btn">お問い合わせ</a>
       </div>
-      <div class="site-qr-footer" aria-label="公式サイトのQRコード">
-        <p class="site-qr-footer-label">公式サイト</p>
-        <img
-          src="./makesmomo-site-qr.png"
-          width="160"
-          height="160"
-          alt="https://hoken.makesmomo.com へつながるQRコード"
-          class="site-qr-footer-img"
-          loading="lazy"
-        />
-        <p class="site-qr-footer-url"><a href="https://hoken.makesmomo.com/">hoken.makesmomo.com</a></p>
+      <div class="footer-story" id="story">
+        <p class="footer-story-label">ストーリー</p>
+        <p class="footer-story-lead">最後まで見ると、ヒーロー映像の意味がわかります。</p>
+        <div class="footer-story-player">
+          <video
+            class="footer-story-video"
+            controls
+            playsinline
+            preload="metadata"
+            poster="./eap-hero-poster.jpg"
+          >
+            <source src="./eap-story.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
       <p class="footer-trial-status" role="status">本サイトのEAPサービスは<strong>試験運用中</strong>です。料金・機能・契約条件は予告なく変更される場合があります。</p>
       <p class="footer-copy">© <span id="js-year"></span> makes-momo. All Rights Reserved.</p>
