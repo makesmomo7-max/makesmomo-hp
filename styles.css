@@ -3739,7 +3739,7 @@ a {
 .site-footer {
   background: #1e293b;
   color: rgba(255, 255, 255, 0.92);
-  padding: 40px 0 24px;
+  padding: 32px 0 0;
 }
 
 .footer-inner {
@@ -3755,6 +3755,11 @@ a {
   margin-bottom: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-inner--bottom {
+  padding-top: 20px;
+  padding-bottom: 24px;
 }
 
 .footer-logo {
@@ -3868,35 +3873,12 @@ a {
   color: #ffffff;
 }
 
-/* フッター：字幕付きストーリー（ヒーローの意味づけ） */
+/* フッター：字幕付きストーリー（全幅） */
 .footer-story {
-  max-width: 720px;
-  margin: 0 auto 28px;
-  padding: 20px 0 0;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-story-label {
-  margin: 0 0 6px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.footer-story-lead {
-  margin: 0 0 16px;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.footer-story-player {
-  overflow: hidden;
-  border-radius: 14px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   background: #0f172a;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
 .footer-story-video {
@@ -3904,6 +3886,7 @@ a {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
+  object-fit: contain;
   background: #0f172a;
 }
 
