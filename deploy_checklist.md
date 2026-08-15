@@ -7,7 +7,7 @@
 ## 0. 公開対象フォルダ（固定）
 
 - 公開HPの正本は **`C:\Users\Owner\Desktop\makesmomo-hp`**
-- 公開ドメインは **`hoken.makesmomo.com`**（momoはたらく健康相談室 / EAP LP）
+- 公開ドメインは **`hoken.makesmomo.com`**（はたらく健康相談室 LP）
 - コーポレートサイトは **`C:\Users\Owner\Desktop\makes-momo-HP`** → `www.makesmomo.com`
 - `makes-momo-site` は旧LP/旧Netlify試作。新規更新しない
 - `makes-momo-eap` はEAPアプリ本体。公開HPとして混ぜない

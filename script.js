@@ -123,7 +123,7 @@ function setupSelfCheckForm() {
       `<p class="self-check-result-message">${message}</p>`,
       `<p class="self-check-result-advice">${advice}</p>`,
       '<div class="self-check-result-actions">',
-      '<a class="btn btn-primary" href="./index.html#contact">momoはたらく健康相談室へ</a>',
+      '<a class="btn btn-primary" href="./index.html#contact">はたらく健康相談室へ</a>',
       '<a class="btn btn-outline" href="./eap-leaflet.html">従業員向け案内を見る</a>',
       "</div>",
     ].join("");

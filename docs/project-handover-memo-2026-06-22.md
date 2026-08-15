@@ -7,7 +7,7 @@
 
 ## 本リポジトリ（makesmomo-hp）の位置づけ
 
-- **役割**: momoはたらく健康相談室（EAP・巡回相談の営業 LP）
+- **役割**: はたらく健康相談室 LP
 - **移行先ドメイン**: `https://hoken.makesmomo.com`
 - **Vercel**: `makesmomo-hp`
 - **本番から外すドメイン**: `makesmomo.com` / `www.makesmomo.com` → コーポレートサイトへ

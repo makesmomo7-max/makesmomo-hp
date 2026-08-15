@@ -37,7 +37,7 @@ Vercel プロジェクト: `makesmomo-hp`
 
 主な公開URL:
 
-- `https://hoken.makesmomo.com/`（momoはたらく健康相談室 / EAP・巡回相談 LP）
+- `https://hoken.makesmomo.com/`（はたらく健康相談室 LP）
 - `https://makesmomo-hp.vercel.app/`（Vercel デフォルト）
 
 コーポレートサイト（`makesmomo-corporate`）は `https://www.makesmomo.com/` で別プロジェクトとして運用します。
