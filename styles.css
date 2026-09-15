@@ -4037,6 +4037,22 @@ a {
   text-align: center;
 }
 
+.footer-legal-links {
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.footer-legal-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+}
+
+.footer-legal-links a:hover {
+  color: #ffffff;
+}
+
 .site-qr-footer {
   margin: 0 0 20px;
   padding: 20px 0 0;

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>運営会社情報｜はたらく健康相談室</title>
+  <meta name="description" content="はたらく健康相談室を運営するmakes momoの事業者情報です。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=20260801g" />
+  <style>
+    .company-table { max-width: 760px; margin: 2rem auto 0; border-top: 1px solid var(--color-border); }
+    .company-row { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--color-border); }
+    .company-row dt { font-weight: 700; color: var(--color-text-main); }
+    .company-row dd { margin: 0; line-height: 1.8; color: var(--color-text-muted); }
+    @media (max-width: 560px) {
+      .company-row { grid-template-columns: 1fr; gap: 0.35rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="logo" aria-label="健康相談室トップへ">
+        <span class="logo-text">MakesMOMO</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list" style="display:flex;gap:1rem;align-items:center;">
+          <li><a href="./index.html">健康相談室トップ</a></li>
+          <li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+          <li class="nav-cta-item">
+            <a href="./index.html#contact" class="nav-cta-link">相談窓口へ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="company-info" class="section" aria-labelledby="company-info-title">
+      <div class="container">
+        <p class="section-en">Company</p>
+        <h1 class="section-title" id="company-info-title">運営会社情報</h1>
+        <p class="section-lead">「はたらく健康相談室」は、下記の事業者が運営しています。</p>
+
+        <dl class="company-table">
+          <div class="company-row">
+            <dt>屋号</dt>
+            <dd>makes momo</dd>
+          </div>
+          <div class="company-row">
+            <dt>代表者</dt>
+            <dd>安原 奈那（看護師・公認心理師）</dd>
+          </div>
+          <div class="company-row">
+            <dt>事業内容</dt>
+            <dd>
+              EAP（従業員支援プログラム）・巡回健康相談<br />
+              ストレスチェックの実施<br />
+              企業向け産業保健サービス全般
+            </dd>
+          </div>
+          <div class="company-row">
+            <dt>対応エリア</dt>
+            <dd>岡山県内（訪問対応）</dd>
+          </div>
+          <div class="company-row">
+            <dt>お問い合わせ</dt>
+            <dd><a href="./index.html#contact" style="color:var(--color-primary);text-decoration:underline;">本サイトのお問い合わせフォーム</a>よりご連絡ください。</dd>
+          </div>
+        </dl>
+
+        <p class="self-check-back" style="margin-top:2.5rem">
+          <a href="./index.html">← はたらく健康相談室トップへ</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner footer-inner--bottom">
+      <p class="footer-trial-status" role="status">本サイトのEAPサービスは<strong>試験運用中</strong>です。</p>
+      <p class="footer-legal-links"><a href="./company-info.html">運営会社情報</a><span aria-hidden="true"> ／ </span><a href="./privacy-policy.html">プライバシーポリシー</a></p>
+      <p class="footer-copy">© <span id="js-year"></span> makes momo. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js?v=20260801b"></script>
+</body>
+</html>
