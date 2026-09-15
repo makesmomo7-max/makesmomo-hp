@@ -122,6 +122,23 @@ a {
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--color-text-main);
+  white-space: nowrap;
+}
+
+.logo-text-accent {
+  color: #42a4af;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  height: 1.6em;
+  color: var(--color-text-main);
+}
+
+.logo-mark svg {
+  height: 100%;
+  width: auto;
 }
 
 .nav {
